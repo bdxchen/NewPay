@@ -1,0 +1,42 @@
+<!--
+  Generated template for the RecoveryImportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center"> {{'recovery_import.title' | translate}}</ion-title>
+        <ion-buttons end="" icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="background-color: #eef5fd !important">
+    <ion-list style="margin-top: 10px">
+        <!--<ion-item no-lines>-->
+            <!--<ion-label item-start>-->
+                <!--{{'recovery_import.account' | translate}}-->
+            <!--</ion-label>-->
+            <!--<p item-end> {{account}}</p>-->
+        <!--</ion-item>-->
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label item-start style="padding: 10px 0;">
+                {{'recovery_import.brainKey' | translate}}
+            </ion-label>
+            <!--<p item-end> 从钱包备份文件恢复(.bin)</p>-->
+            <ion-textarea item-end [(ngModel)]="getKeyBrain" value="{{getKeyBrain}}" rows="5" cols="20"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <p style="width: 94%;margin-left: 3%;color: #888888;font-size: 13px">{{'recovery_import.memo' | translate}}</p>
+    <button ion-button style="background-color: #f9c215; margin:20% auto 0;width: 94%; display: block;" tappable (click)="recoveryKey()">
+        {{'recovery_import.confirm' | translate}}
+    </button>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "name": "ppdpay",
+  "app_id": "a72397c5",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://www.fcloudchain.com:8082/api"
+    }
+  ]
+}

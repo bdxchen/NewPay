@@ -1,0 +1,86 @@
+<!--<ion-header>-->
+
+<!--<ion-navbar color="secondary">-->
+<!--<ion-title>账户余额</ion-title>-->
+<!---->
+<!--</ion-navbar>-->
+
+<!--</ion-header>-->
+<ion-header no-border>
+    <ion-toolbar color="primary">
+        <ion-buttons left tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'balance_detail.balance_title' | translate }}</ion-title>
+        <ion-buttons right tappable (click)="addDigitals()">
+            <button ion-button icon-only>
+                <ion-icon name="md-add"></ion-icon>
+            </button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+<ion-content class="cards-bg">
+    <div class="BGAl">
+        <div style="text-align: center;">
+            <img class="c-icon-jgwablogo" *ngIf="currencyCoin!=''" src="assets/img/legalMoney/{{currencyCoin}}.png" style="width: 4rem;height: 4rem"/>
+            <!--<i class="c-icon-jgwablogo"></i>-->
+            <span style="font-size: 4rem; width: 100%; color: #fff;">{{Allasset}}</span>
+        </div>
+        <div class="totalZC">{{'balance_detail.totalAssets' | translate }} ({{'balance_detail.convert' | translate
+            }}{{currencyCoin}})
+        </div>
+    </div>
+
+    <!--<ul [dragula]='"bag-one"' [dragulaModel]='data'>-->
+    <!--<li *ngFor="let item of data">{{item.SearchD.symbol}}</li>-->
+    <!--<li *ngFor="let item of data">{{item.SearchD.symbol}}</li>-->
+    <!--</ul>-->
+
+    <ion-list no-lines>
+        <!--<div [dragula]='"bag-one"' [dragulaModel]='data'>-->
+        <div *ngFor="let d of data">
+            <ion-item tappable (click)="toggleDetails(d)">
+                <img class="animated infinite bounce"  *ngIf="d.SearchD.symbol=='BTS'" src="assets/img/balance/BitEUR.png"
+                     style="width: 25px;" item-start>
+                <img class="animated infinite bounce" *ngIf="d.SearchD.symbol=='CNY'" src="assets/img/balance/BitCNY.png"
+                     style="width: 25px;" item-start>
+                <img class="animated infinite bounce" *ngIf="d.SearchD.symbol=='USD'" src="assets/img/balance/BitUSD.png"
+                     style="width: 25px;" item-start>
+                <img class="animated infinite bounce" *ngIf="d.SearchD.symbol=='PHP'" src="assets/img/balance/BitPHP.png"
+                     style="width: 25px;" item-start>
+                <!--<img *ngIf="d.SearchD.symbol=='USD'" src="assets/img/balance/BitUSD.png" style="width: 21px;height: 21px;" item-start>-->
+                <span item-left>{{d.SearchD.symbol}}</span>
+                <span item-right class="heihui">{{d.SearchD.amount}}</span>
+                <img src="{{d.icon}}" style="width: 21px;height: 21px" item-end>
+            </ion-item>
+            <div *ngIf="d.showDetails" class="changeTixian">
+
+                <div tappable (click)="toTopup(d.SearchD)">
+                    <img src="assets/img/balance/chongzhi.png" style="width: 18px;height: 18px;">
+                    <p>{{'balance_detail.refill' | translate }}</p>
+                </div>
+                <div tappable (click)="toWithdraw(d.SearchD)">
+                    <img src="assets/img/balance/tixian.png" style="width: 18px;height: 18px;">
+                    <p>{{'balance_detail.getCash' | translate }}</p>
+                </div>
+                <div tappable (click)="toTransfer(d.SearchD)">
+                    <img src="assets/img/balance/zhuanzhang.png" style="width: 18px;height: 18px;">
+                    <p>{{'balance_detail.transfer' | translate }}</p>
+                </div>
+                <!--<div tappable (click)="ChargingMoney(d.SearchD)">-->
+                <!--<img src="assets/img/balance/tibi.png" style="width: 18px;height: 18px;">-->
+                <!--<p>{{'balance_detail.refillCoin' | translate }}</p>-->
+                <!--</div>-->
+                <!--<div tappable (click)="Currency(d.SearchD)">-->
+                <!--<img src="assets/img/balance/chongbi.png" style="width: 18px;height: 18px;">-->
+                <!--<p>{{'balance_detail.transferCoin' | translate }}</p>-->
+                <!--</div>-->
+            </div>
+            <!--</div>-->
+        </div>
+    </ion-list>
+
+</ion-content>

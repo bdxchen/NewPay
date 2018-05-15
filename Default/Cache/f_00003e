@@ -1,0 +1,3569 @@
+webpackJsonp([51],{
+
+/***/ 138:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StorageService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var StorageService = (function () {
+    function StorageService() {
+    }
+    StorageService.prototype.write = function (key, value) {
+        if (value) {
+            //value = ""+ value
+            value = value;
+        }
+        localStorage.setItem(key, value);
+    };
+    StorageService.prototype.read = function (key) {
+        var value = localStorage.getItem(key);
+        if (value && value != "undefined" && value != "null") {
+            return value;
+        }
+        return null;
+    };
+    return StorageService;
+}());
+StorageService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], StorageService);
+
+//# sourceMappingURL=storage-service.js.map
+
+/***/ }),
+
+/***/ 139:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BankModelProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/*
+  Generated class for the BackModelProvider provider.
+
+  See https://angular.io/guide/dependency-injection for more info on providers
+  and Angular DI.
+*/
+var BankModelProvider = (function () {
+    function BankModelProvider(confService, http, httpUtils) {
+        this.confService = confService;
+        this.http = http;
+        this.httpUtils = httpUtils;
+        console.log('Hello BackModelProvider Provider');
+    }
+    BankModelProvider.prototype.getbankM = function () {
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'account/banks');
+    };
+    //account/thirdpart
+    BankModelProvider.prototype.getThirdpart = function () {
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'account/thirdparts');
+    };
+    // account/digitals 查询全部数字货币账号  登录 成功以后 ，俩种情况
+    // 1: 有账号 对比 本地账号 是否 与中心 的账号相同,如果相同则 那么说明 是正确的账户 如果不相同 清空本地数据，需要重新导入
+    // 2: 没账号 需要创建新的账号  和 密码
+    BankModelProvider.prototype.getdigitals = function () {
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'account/digitals');
+    };
+    //添加数字货币账号
+    // account/digitals POST
+    // {
+    //     "account":"fcc001", //bts 账号，btc 地址
+    //     "coin_type":"bts" //bts btc eth
+    // }
+    BankModelProvider.prototype.AddGetdigitals = function (digitals) {
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'account/digitals', digitals, '');
+    };
+    return BankModelProvider;
+}());
+BankModelProvider = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__["a" /* HttpUtils */]])
+], BankModelProvider);
+
+//# sourceMappingURL=bank-model.js.map
+
+/***/ }),
+
+/***/ 151:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 151;
+
+/***/ }),
+
+/***/ 194:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../pages/auth/forget-password/forgetpassword.module": [
+		628,
+		50
+	],
+	"../pages/auth/forget-password/password-reset/password-reset.module": [
+		629,
+		49
+	],
+	"../pages/auth/login/login.module": [
+		630,
+		9
+	],
+	"../pages/auth/password/password.module": [
+		631,
+		48
+	],
+	"../pages/auth/register/fundpassword/fundpassword.module": [
+		632,
+		8
+	],
+	"../pages/auth/register/register.module": [
+		633,
+		47
+	],
+	"../pages/balance/balance-detail/balance-detail.module": [
+		634,
+		7
+	],
+	"../pages/balance/charging-money/charging-money.module": [
+		635,
+		6
+	],
+	"../pages/balance/currency-detail/currency-detail.module": [
+		636,
+		46
+	],
+	"../pages/balance/currency/currency.module": [
+		637,
+		11
+	],
+	"../pages/balance/set-cu-money/set-cu-money.module": [
+		638,
+		45
+	],
+	"../pages/financial/currencysel/currencysel.module": [
+		639,
+		44
+	],
+	"../pages/financial/flowdetail/bill-detail/bill-detail.module": [
+		640,
+		43
+	],
+	"../pages/financial/flowdetail/flowdetail.module": [
+		641,
+		42
+	],
+	"../pages/financial/pay/account-pay/account-pay.module": [
+		642,
+		5
+	],
+	"../pages/financial/pay/pay.module": [
+		643,
+		14
+	],
+	"../pages/financial/pay/scan-pay/scan-pay.module": [
+		644,
+		41
+	],
+	"../pages/financial/receive/receive-success/receiv-success.module": [
+		645,
+		40
+	],
+	"../pages/financial/receive/receive.module": [
+		646,
+		10
+	],
+	"../pages/financial/receive/request-receive/request-receive.module": [
+		647,
+		39
+	],
+	"../pages/financial/receive/request-setting/request-setting.module": [
+		648,
+		38
+	],
+	"../pages/financial/receive/set-money/set-money.module": [
+		649,
+		37
+	],
+	"../pages/financial/topup/topup.module": [
+		650,
+		36
+	],
+	"../pages/financial/transfer/transfer.module": [
+		651,
+		4
+	],
+	"../pages/financial/transfer2/transfer2.module": [
+		652,
+		3
+	],
+	"../pages/financial/transferreceipt/transferreceipt.module": [
+		653,
+		35
+	],
+	"../pages/financial/withdraw/withdraw-success/withdraw-success.module": [
+		654,
+		34
+	],
+	"../pages/financial/withdraw/withdraw.module": [
+		656,
+		2
+	],
+	"../pages/friends/frienddetail/frienddetail.module": [
+		655,
+		33
+	],
+	"../pages/friends/friends.module": [
+		657,
+		12
+	],
+	"../pages/home/home.module": [
+		658,
+		13
+	],
+	"../pages/home/opening/openging.module": [
+		659,
+		32
+	],
+	"../pages/invitation/invitation.module": [
+		660,
+		31
+	],
+	"../pages/mine/about/about.module": [
+		661,
+		30
+	],
+	"../pages/mine/alipay/alipay-add/alipay-add.module": [
+		662,
+		29
+	],
+	"../pages/mine/alipay/alipay.module": [
+		663,
+		28
+	],
+	"../pages/mine/bankcard-add/bankcard-add.module": [
+		664,
+		27
+	],
+	"../pages/mine/bankcard/bankcard.module": [
+		665,
+		26
+	],
+	"../pages/mine/changepwd/changepwd.module": [
+		667,
+		25
+	],
+	"../pages/mine/contact/contact.module": [
+		666,
+		24
+	],
+	"../pages/mine/document/document.module": [
+		668,
+		23
+	],
+	"../pages/mine/document/identity-authentication/identity-authentication.module": [
+		669,
+		22
+	],
+	"../pages/mine/head-upload/head-upload.module": [
+		670,
+		21
+	],
+	"../pages/mine/mine.module": [
+		671,
+		20
+	],
+	"../pages/mine/my-wallet/backups-key/backups-key.module": [
+		672,
+		19
+	],
+	"../pages/mine/my-wallet/my-wallet.module": [
+		673,
+		1
+	],
+	"../pages/mine/my-wallet/recovery-import/recovery-import.module": [
+		675,
+		0
+	],
+	"../pages/mine/mymessage/mymessage.module": [
+		674,
+		18
+	],
+	"../pages/mine/setting/setting.module": [
+		676,
+		17
+	],
+	"../pages/setting-language/setting-language.module": [
+		677,
+		16
+	],
+	"../pages/tabs/tabs.module": [
+		678,
+		15
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 194;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 20:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConfService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ConfService = (function () {
+    function ConfService() {
+        //public baseUrl: string = 'http://192.168.0.156/payservice';
+        //public baseUrl: string = 'http://localhost:8080';
+        // public baseUrl: string = 'http://58.87.90.166';
+        //    http://www.fcloudchain.com/img/profile/ff8080815fc4a5a2015fc7b68e810062_image.jpeg
+        this.baseUrlTemp = 'assets/data/';
+        this.baseImgUrl = 'http://www.fcloudchain.com/img';
+        this.baseUrl = 'http://www.fcloudchain.com/payservice/v1/';
+    }
+    return ConfService;
+}());
+ConfService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [])
+], ConfService);
+
+//# sourceMappingURL=conf-service.js.map
+
+/***/ }),
+
+/***/ 21:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HttpUtils; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__providers_util_service_storage_service__ = __webpack_require__(138);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var HttpUtils = (function () {
+    //isDebug:boolean = false;
+    function HttpUtils(http, storageService, toastCtrl, loadingCtr) {
+        this.http = http;
+        this.storageService = storageService;
+        this.toastCtrl = toastCtrl;
+        this.loadingCtr = loadingCtr;
+        this.isDebug = false;
+        console.log('Hello HttpRequestService Provider');
+    }
+    /*
+     需要token验证的httppost
+     */
+    HttpUtils.prototype.httppost = function (url, request) {
+        if (this.isDebug) {
+            return this.httpget(url);
+        }
+        if (url === "" || url === null) {
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw("Url Error,Try again!");
+        }
+        else {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json'
+            });
+            headers.append('X-Auth-Token', this.storageService.read('token') + "");
+            var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+                headers: headers
+            });
+            return this.http.post(url, request, options);
+        }
+    };
+    /*
+     不需要token验证的httppost
+     */
+    HttpUtils.prototype.httpPostNoToken = function (url, request) {
+        if (this.isDebug) {
+            return this.httpget(url);
+        }
+        if (url === "" || url === null) {
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw("Url Error,Try again!");
+        }
+        else {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json'
+            });
+            var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+                headers: headers
+            });
+            debugger;
+            return this.http.post(url, request, options);
+        }
+    };
+    /*
+     需要token验证的httpget
+     */
+    HttpUtils.prototype.httpget = function (url) {
+        if (url === "" || url === null) {
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw("Url Error,Try again!");
+        }
+        else {
+            var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({
+                'Content-Type': 'application/json;charset=UTF-8'
+            });
+            headers.append('X-Auth-Token', this.storageService.read('token') + "");
+            var options = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({
+                headers: headers
+            });
+            return this.http.get(url, options);
+        }
+    };
+    /*
+     不需要token验证的httpget
+     */
+    HttpUtils.prototype.httpgetNoToken = function (url) {
+        if (url === "" || url === null) {
+            return __WEBPACK_IMPORTED_MODULE_3_rxjs_Observable__["Observable"].throw("Url Error,Try again!");
+        }
+        else {
+            /*  let headers = new Headers();
+             let options = new RequestOptions({
+             headers: headers
+             });*/
+            return this.http.get(url);
+        }
+    };
+    HttpUtils.prototype.getNotoken = function (url, paramObj) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        return this.http.get(url + this.toQueryString(paramObj), new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.postNotoken = function (url, paramObj) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        return this.http.post(url, this.toBodyString(paramObj), new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.postBodyNotoken = function (url, paramObj, content) {
+        var _this = this;
+        // this.loading(content)
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        return this.http.post(url, paramObj, new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.getTokennoParamNoLoading = function (url) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        headers.append('X-Auth-Token', this.storageService.read('token') + "");
+        return this.http.get(url, new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess1(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.getTokennoParam = function (url, content) {
+        var _this = this;
+        this.loading(content);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        headers.append('X-Auth-Token', this.storageService.read('token') + "");
+        return this.http.get(url, new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.getToken = function (url, paramObj, content) {
+        var _this = this;
+        this.loading(content);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]();
+        headers.append('X-Auth-Token', this.storageService.read('token') + "");
+        return this.http.get(url + this.toQueryString(paramObj))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.postToken = function (url, paramObj, content) {
+        var _this = this;
+        this.loading(content);
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        headers.append('X-Auth-Token', this.storageService.read('token') + "");
+        return this.http.post(url, this.toBodyString(paramObj), new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.postBodyToken = function (url, paramObj, content) {
+        var _this = this;
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
+        headers.append('X-Auth-Token', this.storageService.read('token') + "");
+        return this.http.post(url, paramObj, new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers }))
+            .toPromise()
+            .then(function (res) { return _this.handleSuccess(res.json()); })
+            .catch(function (error) { return _this.handleError(error); });
+    };
+    HttpUtils.prototype.handleSuccess = function (result) {
+        // this.loader.dismiss();
+        if (result.ret_code == "1") {
+            // alert(result.ret_msg);//这里使用ToastController
+            // this.TaostGlobal(result.ret_msg)
+        }
+        else if (result.ret_code = '0') {
+            // alert(result.ret_msg);//这里使用ToastController
+            this.TaostGlobal(result.ret_msg);
+        }
+        return result;
+    };
+    HttpUtils.prototype.handleSuccess1 = function (result) {
+        if (result.ret_code == "1") {
+            // alert(result.ret_msg);//这里使用ToastController
+            // this.TaostGlobal(result.ret_msg)
+        }
+        else if (result.ret_code = '0') {
+            // alert(result.ret_msg);//这里使用ToastController
+            this.TaostGlobal(result.ret_msg);
+        }
+        return result;
+    };
+    HttpUtils.prototype.handleError = function (error) {
+        var msg = '请求失败';
+        if (error.status == 0) {
+            msg = '请求地址错误';
+        }
+        else if (error.status == 400) {
+            msg = '请求无效';
+            console.log('请检查参数类型是否匹配');
+        }
+        else if (error.status == 404) {
+            msg = '请求资源不存在';
+            console.error(msg + '，请检查路径是否正确');
+        }
+        else if (error.status == 502) {
+            msg = '网络连接错误';
+            console.error(msg + '，请检查网络是否连接');
+        }
+        else {
+            msg = '网络连接错误';
+            console.error(msg + '，请检查网络是否连接');
+        }
+        console.log(error);
+        // this.loader.dismiss();
+        this.TaostGlobal(msg);
+        // alert(msg);//这里使用ToastController
+        return { success: false, msg: msg };
+    };
+    HttpUtils.prototype.TaostGlobal = function (msg) {
+        var toast = this.toastCtrl.create({
+            message: msg,
+            duration: 3000,
+        });
+        toast.present();
+    };
+    HttpUtils.prototype.loading = function (content) {
+        this.loader = this.loadingCtr.create({
+            // spinner: 'hide',
+            content: content,
+        });
+        this.loader.present();
+    };
+    /**
+     * @param obj　参数对象
+     * @return {string}　参数字符串
+     * @example
+     *  声明: var obj= {'name':'',age:23};
+     *  调用: toQueryString(obj);
+     *  返回: "?name=%E5%B0%8F%E5%86%9B&age=23"
+     */
+    HttpUtils.prototype.toQueryString = function (obj) {
+        var ret = [];
+        for (var key in obj) {
+            key = encodeURIComponent(key);
+            var values = obj[key];
+            if (values && values.constructor == Array) {
+                var queryValues = [];
+                for (var i = 0, len = values.length, value = void 0; i < len; i++) {
+                    value = values[i];
+                    queryValues.push(this.toQueryPair(key, value));
+                }
+                ret = ret.concat(queryValues);
+            }
+            else {
+                ret.push(this.toQueryPair(key, values));
+            }
+        }
+        return '?' + ret.join('&');
+    };
+    /**
+     *
+     * @param obj
+     * @return {string}
+     *  声明: var obj= {'name':'',age:23};
+     *  调用: toQueryString(obj);
+     *  返回: "name=%E5%B0%8F%E5%86%9B&age=23"
+     */
+    HttpUtils.prototype.toBodyString = function (obj) {
+        var ret = [];
+        for (var key in obj) {
+            key = encodeURIComponent(key);
+            var values = obj[key];
+            if (values && values.constructor == Array) {
+                var queryValues = [];
+                for (var i = 0, len = values.length, value = void 0; i < len; i++) {
+                    value = values[i];
+                    queryValues.push(this.toQueryPair(key, value));
+                }
+                ret = ret.concat(queryValues);
+            }
+            else {
+                ret.push(this.toQueryPair(key, values));
+            }
+        }
+        return ret.join('&');
+    };
+    HttpUtils.prototype.toQueryPair = function (key, value) {
+        if (typeof value == 'undefined') {
+            return key;
+        }
+        return key + '=' + encodeURIComponent(value === null ? '' : String(value));
+    };
+    return HttpUtils;
+}());
+HttpUtils = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */],
+        __WEBPACK_IMPORTED_MODULE_7__providers_util_service_storage_service__["a" /* StorageService */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* LoadingController */]])
+], HttpUtils);
+
+//# sourceMappingURL=http-utils.js.map
+
+/***/ }),
+
+/***/ 271:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JPush; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ionic_native_core__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * @name JPush
+ * @description
+ * This plugin does something
+ *
+ * @usage
+ * ```
+ * import { JPush } from 'ionic3-jpush';
+ *
+ * JPush.functionName('Hello', 123)
+ *   .then((something: any) => doSomething(something))
+ *   .catch((error: any) => console.log(error));
+ *
+ * ```
+ */
+var JPush = (function () {
+    function JPush() {
+    }
+    /**
+     * 调用此 API，用来开启 JPush SDK 提供的推送服务。
+     * 开发者 App 可以通过调用停止推送服务 API 来停止极光推送服务。当又需要使用极光推送服务时，则必须要调用恢复推送服务 API。
+     * 本功能是一个完全本地的状态操作，也就是说：停止推送服务的状态不会保存到服务器上。
+     * 如果停止推送服务后，开发者 App 被重新安装，或者被清除数据，JPush SDK 会恢复正常的默认行为（因为保存在本地的状态数据被清除掉了）。
+     * 本功能其行为类似于网络中断的效果，即：推送服务停止期间推送的消息，恢复推送服务后，如果推送的消息还在保留的时长范围内，则客户端是会收到离线消息。
+     *
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.init = function () {
+        return; // We add return; here to avoid any IDE / Compiler errors
+    };
+    /**
+     * Android:
+  
+    * 开发者 App 可以通过调用停止推送服务 API 来停止极光推送服务，当又需要使用极光推送服务时，则必须要调用恢复推送服务 API。
+    * 调用了本 API 后，JPush 推送服务完全被停止，具体表现为：
+    * JPush Service 不在后台运行。
+    * 收不到推送消息。
+    * 不能通过 init 方法恢复，而需要调用 resumePush 恢复。
+    * 极光推送其他所有的 API 调用都无效。
+    * iOS:
+    *
+    * 不推荐调用，因为这个 API 只是让你的 DeviceToken 失效，在 设置－通知 中您的应用程序没有任何变化。建议设置一个 UI 界面， 提醒用户在 设置－通知 中关闭推送服务。
+    *
+    * @returns {Promise<any>}
+    * @memberof JPush
+    */
+    JPush.prototype.stopPush = function () {
+        return;
+    };
+    ;
+    /**
+     * 恢复推送服务。调用了此 API 后:
+     * Android 平台:
+     * 极光推送完全恢复正常工作。
+     * iOS 平台:
+     * 重新去 APNS 注册。
+     *
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.resumePush = function () {
+        return;
+    };
+    ;
+    /**
+     * Android 平台: 用来检查 Push Service 是否已经被停止。
+     * iOS 平台: 平台检查推送服务是否注册。
+     *
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.isPushStopped = function () {
+        return;
+    };
+    ;
+    /**
+     * 集成了 JPush SDK 的应用程序在第一次成功注册到 JPush 服务器时，JPush 服务器会给客户端返回一个唯一的该设备的标识 - RegistrationID。 JPush SDK 会以广播的形式发送 RegistrationID 到应用程序。
+     * 应用程序可以把此 RegistrationID 保存以自己的应用服务器上，然后就可以根据 RegistrationID 来向设备推送消息或者通知。
+     *
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.getRegistrationID = function () {
+        return;
+    };
+    ;
+    /**
+     * 设置标签。注意这个接口是覆盖逻辑，而不是增量逻辑。即新的调用会覆盖之前的设置。
+     *
+     * @param {{ sequence: number, tags?: string[] }} params  tags: Array，标签数组
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.setTags = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 新增标签。
+     *
+     * @param {{ sequence: number, tags?: string[] }} params  tags: Array，标签数组。
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.addTags = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 删除标签
+     *
+     * @param {{ sequence: number }} params
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.deleteTags = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 清除所有标签。
+     *
+     * @param {{ sequence: number }} params
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.cleanTags = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 获取当前绑定的所有标签。
+     *
+     * @param {{ sequence: number }} params
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.getAllTags = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 查询指定tag与当前用户绑定的状态。
+     *
+     * @param {{ sequence: number, tag: string }} params  tag: string，待查询的 tag。
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.checkTagBindState = function (params) {
+        return;
+    };
+    ;
+    /**
+     * 设置别名。注意这个接口是覆盖逻辑，而不是增量逻辑。即新的调用会覆盖之前的设置。
+     *
+     * @param {{ sequence: number, alias?: string }} params
+     * sequence: number。用户自定义的操作序列号, 同操作结果一起返回，用来标识一次操作的唯一性。
+     * alias: string。 每次调用设置有效的别名将覆盖之前的设置。 有效的别名组成：字母（区分大小写）、数字、下划线、汉字、特殊字符@!#$&*+=.|。 限制：alias 命名长度限制为 40 字节（判断长度需采用 UTF-8 编码）。
+     * @returns {Promise<any>}
+     * @memberof JPush
+     */
+    JPush.prototype.setAlias = function (params) {
+        return;
+    };
+    ;
+    JPush.prototype.deleteAlias = function (params) {
+        return;
+    };
+    ;
+    JPush.prototype.getAlias = function (params) {
+        return;
+    };
+    ;
+    JPush.prototype.setBadge = function (badgeNum) {
+        return;
+    };
+    ;
+    JPush.prototype.setApplicationIconBadgeNumber = function (badgeNum) {
+        return;
+    };
+    ;
+    JPush.prototype.getApplicationIconBadgeNumber = function () {
+        return;
+    };
+    ;
+    JPush.prototype.getUserNotificationSettings = function () {
+        return;
+    };
+    ;
+    JPush.prototype.addLocalNotificationForIOS = function (option) {
+        return;
+    };
+    ;
+    JPush.prototype.deleteLocalNotificationWithIdentifierKeyInIOS = function (identifierKey) {
+        return;
+    };
+    ;
+    JPush.prototype.clearAllLocalNotifications = function () {
+        return;
+    };
+    ;
+    JPush.prototype.setLocation = function (latitude, longitude) {
+        return;
+    };
+    ;
+    JPush.prototype.isPlatformIOS = function () {
+        return;
+    };
+    ;
+    JPush.prototype.addDismissActions = function (actions, categoryId) {
+        return;
+    };
+    ;
+    JPush.prototype.addNotificationActions = function (actions, categoryId) {
+        return;
+    };
+    ;
+    JPush.prototype.openNotification = function () {
+        return;
+    };
+    ;
+    JPush.prototype.receiveNotification = function () {
+        return;
+    };
+    ;
+    JPush.prototype.receiveMessage = function () {
+        return;
+    };
+    ;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "init", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "stopPush", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "resumePush", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "isPushStopped", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "getRegistrationID", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "setTags", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "addTags", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "deleteTags", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "cleanTags", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "getAllTags", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "checkTagBindState", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "setAlias", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "deleteAlias", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "getAlias", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Number]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "setBadge", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Number]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "setApplicationIconBadgeNumber", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "getApplicationIconBadgeNumber", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "getUserNotificationSettings", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "addLocalNotificationForIOS", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [String]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "deleteLocalNotificationWithIdentifierKeyInIOS", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "clearAllLocalNotifications", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object, Object]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "setLocation", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])(), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "isPlatformIOS", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object, String]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "addDismissActions", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            platforms: ['iOS']
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', [Object, String]), 
+        __metadata('design:returntype', Promise)
+    ], JPush.prototype, "addNotificationActions", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            eventObservable: true,
+            event: 'jpush.openNotification',
+            element: document
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"])
+    ], JPush.prototype, "openNotification", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            eventObservable: true,
+            event: 'jpush.receiveNotification',
+            element: document
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"])
+    ], JPush.prototype, "receiveNotification", null);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["a" /* Cordova */])({
+            eventObservable: true,
+            event: 'jpush.receiveMessage',
+            element: document
+        }), 
+        __metadata('design:type', Function), 
+        __metadata('design:paramtypes', []), 
+        __metadata('design:returntype', __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"])
+    ], JPush.prototype, "receiveMessage", null);
+    JPush = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__ionic_native_core__["h" /* Plugin */])({
+            pluginName: 'JPush',
+            plugin: 'jpush-phonegap-plugin',
+            pluginRef: 'plugins.jPushPlugin',
+            repo: 'https://github.com/jpush/jpush-phonegap-plugin',
+            platforms: ['Android', 'iOS']
+        }), 
+        __metadata('design:paramtypes', [])
+    ], JPush);
+    return JPush;
+}());
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 274:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommonUtils; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var CommonUtils = (function () {
+    function CommonUtils(alertCtr, loadingCtrl) {
+        this.alertCtr = alertCtr;
+        this.loadingCtrl = loadingCtrl;
+        console.log('Hello BalanceService Provider');
+    }
+    CommonUtils.prototype.alertCommon = function (title, message) {
+        var alert = this.alertCtr.create({
+            title: title,
+            message: message,
+            buttons: [
+                {
+                    text: '确定',
+                    handler: function () {
+                        console.log('Buy clicked');
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    CommonUtils.prototype.showLoading = function () {
+        this.loading = this.loadingCtrl.create({
+            spinner: 'crescent',
+            content: '请稍等。。。'
+        });
+        this.loading.present();
+    };
+    CommonUtils.prototype.HideLoading = function () {
+        this.loading.dismiss();
+    };
+    return CommonUtils;
+}());
+CommonUtils = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* LoadingController */]])
+], CommonUtils);
+
+//# sourceMappingURL=commonUtils.js.map
+
+/***/ }),
+
+/***/ 275:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AuthService = (function () {
+    function AuthService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello AuthService Provider');
+    }
+    AuthService.prototype.login = function (request) {
+        return this.httpUtils.postBodyNotoken(this.confService.baseUrl + 'auth/login', request, '正在登录，等稍等...');
+    };
+    AuthService.prototype.logout = function (request) {
+        var obj = { "userid": request };
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'auth/logout', obj, '');
+    };
+    AuthService.prototype.register = function (request) {
+        if (request.userid === null || request.password === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert phone or password");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            var proxyUrl = "/api";
+            return this.httpUtils.httpPostNoToken(this.confService.baseUrl + 'auth/register', JSON.stringify(request)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                console.log(data);
+                return data;
+                /*if(typeof(data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length)
+                {
+                  console.log(res.json());
+                  let ret = new AckRegister();
+                  ret.ret_code = data.rc;
+                  ret.ret_msg = data.rm;
+                  return ret;
+                }
+                return null;*/
+            });
+        }
+    };
+    AuthService.prototype.getCode = function (request) {
+        debugger;
+        if (request.nationCode === null || request.phoneNo === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert phone or nationCode");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            return this.httpUtils.httpPostNoToken(this.confService.baseUrl + 'authcaptcha/sms', JSON.stringify(request)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                console.log(data);
+                return data;
+            });
+        }
+    };
+    AuthService.prototype.orderSearch = function () {
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'topup/orders/newly').map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    AuthService.prototype.checkOrders = function () {
+        return this.httpUtils.httpget(this.confService.baseUrl + 'topup/orders').map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //查询当前账户是否有资金密码
+    AuthService.prototype.checkFundingPassword = function () {
+        return this.httpUtils.httpget(this.confService.baseUrl + 'users/security/financial/exist').map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    // /users/userinfo 查询用户个人资料
+    AuthService.prototype.userInfo = function () {
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'users/userinfo');
+    };
+    //4 资金密码修改
+    AuthService.prototype.changeFinancialPwd = function (req) {
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/security/financial/modification', JSON.stringify(req)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //4 登陆密码修改
+    AuthService.prototype.changeLoginPwdSer = function (req) {
+        console.log(req);
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/security/login/modification', JSON.stringify(req)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //获取重置密码验证短信
+    AuthService.prototype.getResetLoginPwCode = function (request) {
+        debugger;
+        if (request.nationCode === null || request.phoneNo === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert phone or nationCode");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            return this.httpUtils.httpPostNoToken(this.confService.baseUrl + 'users/security/login/resetcaptcha', JSON.stringify(request)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                console.log(data);
+                return data;
+            });
+        }
+    };
+    //重置登录密码
+    AuthService.prototype.resetLoginPwdSer = function (req) {
+        console.log(JSON.stringify(req));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/security/login/resetpwd', JSON.stringify(req)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //订单助手
+    AuthService.prototype.orderSMG = function (req) {
+        console.log(JSON.stringify(req));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'assistant/list', JSON.stringify(req)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //订单详情
+    AuthService.prototype.orderDetail = function (type, req) {
+        console.log(JSON.stringify(req));
+        return this.httpUtils.httpget(this.confService.baseUrl + 'assistant/' + type + '/' + req).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__["a" /* HttpUtils */]])
+], AuthService);
+
+//# sourceMappingURL=user-auth-service.js.map
+
+/***/ }),
+
+/***/ 276:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TransferService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__messages_account_transfer_msg__ = __webpack_require__(595);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var TransferService = (function () {
+    function TransferService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello TransferService Provider');
+    }
+    TransferService.prototype.checkPayee = function (request) {
+        console.log(JSON.stringify(request));
+        var req = { uid: request.to_userid, un: request.to_userid };
+        return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/checkpyaee', JSON.stringify(req)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                console.log(res.json());
+                var ret = new __WEBPACK_IMPORTED_MODULE_3__messages_account_transfer_msg__["a" /* AckCheckPayee */]();
+                ret.ret_code = data.rc;
+                ret.ret_msg = data.rm;
+                return ret;
+            }
+            return null;
+        });
+    };
+    // 请求收款方账户有效性验证
+    TransferService.prototype.checkUserid = function (request) {
+        debugger;
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'users/verify', request, '');
+    };
+    TransferService.prototype.submitTransInfo = function (request) {
+        debugger;
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'transfer/orders', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    // /withdraw/coin
+    TransferService.prototype.submitwithdrawInfo = function (request) {
+        debugger;
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'withdraw/coin', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    //设置资金密码
+    TransferService.prototype.setFundPassword = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/security/financial', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    TransferService.prototype.transCompleted = function (request) {
+        console.log(JSON.stringify(request));
+        var req = { uid: request.userid, ono: request.order_no, tid: request.trans_id };
+        return this.httpUtils.httppost(this.confService.baseUrl + 'app/auth/trans-completed', JSON.stringify(req)).map(function (res) {
+            return res.json();
+        });
+    };
+    TransferService.prototype.checkBill = function () {
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'transfer/orders').map(function (res) {
+            return res.json();
+        });
+    };
+    TransferService.prototype.digitalCurrency = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/digitals/ba', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    TransferService.prototype.withdrawal = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'withdraw/confirm', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    //订单查询
+    TransferService.prototype.foundAssets = function () {
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'topup/orders').map(function (res) {
+            return res.json();
+        });
+    };
+    return TransferService;
+}());
+TransferService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], TransferService);
+
+//# sourceMappingURL=account-transfer-service.js.map
+
+/***/ }),
+
+/***/ 277:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ModalPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+// let templateUrl='';
+var ModalPage = (function () {
+    function ModalPage(navCtrl, params, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.params = params;
+        this.viewCtrl = viewCtrl;
+        // arr :string[];
+        this.arr2 = [];
+        console.log(params.get('userId'));
+    }
+    ModalPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad ModalPage');
+    };
+    ModalPage.prototype.TabNum = function (event) {
+        console.log(event);
+        var target = event.target || event.srcElement;
+        if (target) {
+            var dataLabel = event.target.getAttribute("data-label");
+            console.log(dataLabel);
+            if (dataLabel != "null") {
+                var flexPwd = document.getElementsByClassName("flexable password");
+                if (dataLabel != 'del') {
+                    if (this.arr2.length < 6) {
+                        this.arr2.push(dataLabel);
+                        if (this.arr2.length == 6) {
+                            var pwd = this.arr2.join("").toString();
+                            console.log(pwd);
+                            console.log("点击 了关闭");
+                            var data = { 'pwd': pwd };
+                            this.viewCtrl.dismiss(data);
+                        }
+                    }
+                    console.log(this.arr2);
+                    for (var i = 0; i < this.arr2.length; i++) {
+                        console.log(flexPwd);
+                        var chi = flexPwd[0].children;
+                        console.log(chi[i].getAttribute("style"));
+                        chi[i].setAttribute('style', 'opacity: 1;');
+                    }
+                }
+                else {
+                    if (this.arr2.length != 0) {
+                        console.log("del++++++++++++++");
+                        debugger;
+                        var num = void 0;
+                        if (this.arr2.length == 0) {
+                            num = this.arr2.length;
+                        }
+                        else {
+                            num = this.arr2.length - 1;
+                        }
+                        console.log(flexPwd);
+                        var chi = flexPwd[0].children;
+                        console.log(chi[this.arr2.length - 1].getAttribute("style"));
+                        chi[num].setAttribute('style', 'opacity: 0;');
+                        this.arr2.pop();
+                    }
+                }
+            }
+        }
+        console.log(this.arr2);
+    };
+    ModalPage.prototype.dismiss = function () {
+        // let data = { 'foo': 'bar' };
+        this.viewCtrl.dismiss();
+    };
+    ModalPage.prototype.closeModal = function () {
+        // let pwd =this.arr2.join("").toString()
+        // console.log(pwd);
+        // console.log("点击 了关闭")
+        // let data = { 'pwd': pwd };
+        this.viewCtrl.dismiss();
+    };
+    return ModalPage;
+}());
+ModalPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-modal',template:/*ion-inline-start:"/Users/wupeng/ppdpay-cli/src/pages/modal/modal.html"*/'<!--\n  Generated template for the ModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="modalCssTop">\n</div>\n<div ngClass="modalCssBottom">\n\n  <div class="inner-box">\n    <span class="iconfont icon-guanbi close" (click)="closeModal()">×</span>\n    <h1 class="titleQQ">{{\'modal.inputPw\' | translate}}</h1>\n    <div class="flexable password">\n      <div style="opacity: 0;" >●</div>\n      <div style="opacity: 0;" >●</div>\n      <div style="opacity: 0;" >●</div>\n      <div style="opacity: 0;" >●</div>\n      <div style="opacity: 0;" >●</div>\n      <div style="opacity: 0;" >●</div>\n      <!--●-->\n    </div>\n    <div class="notice color-lightblue">{{\'modal.inputPwMemo\' | translate}}</div>\n    <div class="input-box" (click)="TabNum($event)">\n      <div class="flexable">\n        <div class="input-key" data-label="1"></div>\n        <div class="input-key" data-label="2"></div>\n        <div class="input-key" data-label="3"></div>\n      </div>\n      <div class="flexable">\n      <div class="input-key" data-label="4">\n      </div>\n        <div class="input-key" data-label="5">\n      </div>\n        <div class="input-key" data-label="6">\n        </div>\n      </div>\n      <div class="flexable">\n        <div class="input-key" data-label="7"></div>\n        <div class="input-key" data-label="8"></div>\n        <div class="input-key" data-label="9"></div>\n      </div>\n      <div class="flexable">\n          <div></div>\n          <div class="input-key" data-label="0">\n          </div><div class="input-key" data-label="del"></div>\n        </div>\n  </div>\n  </div>\n  </div>'/*ion-inline-end:"/Users/wupeng/ppdpay-cli/src/pages/modal/modal.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ViewController */]])
+], ModalPage);
+
+//# sourceMappingURL=modal.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecoveryImportService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var RecoveryImportService = (function () {
+    function RecoveryImportService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        this.TemprecImp = { password: '' };
+        console.log('Hello AccountPubService Provider');
+    }
+    RecoveryImportService.prototype.recImport = function (request) {
+        this.TemprecImp.password = request;
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'users/security/financial/verify', this.TemprecImp, '');
+    };
+    return RecoveryImportService;
+}());
+RecoveryImportService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], RecoveryImportService);
+
+//# sourceMappingURL=recovery-import-service.js.map
+
+/***/ }),
+
+/***/ 280:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MineService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var MineService = (function () {
+    function MineService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello FriendService Provider');
+    }
+    //查询当前账户绑定的支付宝账户
+    MineService.prototype.aliacclist = function () {
+        console.log('aliacclist begin');
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'account/thirdparts').map(function (res) {
+            return res.json();
+        });
+    };
+    //解绑支付宝账户
+    MineService.prototype.deleteAlipay = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/thirdparts/unbind', JSON.stringify(request)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //查询当前绑定的有银行卡
+    MineService.prototype.bankCardcclist = function () {
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'account/banks').map(function (res) {
+            return res.json();
+        });
+    };
+    //解绑银行卡
+    MineService.prototype.deleteBankCard = function (request) {
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/banks/unbind', JSON.stringify(request)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //查询默认的用户资料
+    MineService.prototype.muserInfocclist = function () {
+        debugger;
+        return this.httpUtils.httpget(this.confService.baseUrl + 'users/userinfo').map(function (res) {
+            return res.json();
+        });
+    };
+    //修改用户资料
+    MineService.prototype.setUserinfo = function (request) {
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/updateuser', JSON.stringify(request)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //上传头像
+    MineService.prototype.uploadHeader = function (id) {
+        var request = { "id": id };
+        return this.httpUtils.httppost(this.confService.baseUrl + 'users/icon', JSON.stringify(request)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    //添加支付宝账号
+    MineService.prototype.addAlipay = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/thirdparts', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    //添加银行卡
+    MineService.prototype.addBankCard = function (request) {
+        debugger;
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/banks', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    //自动补充某行银行卡 信息
+    MineService.prototype.bankbinXXCard = function (id) {
+        debugger;
+        var request = { "bin": id };
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/banks/bankbin', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            return data;
+        });
+    };
+    return MineService;
+}());
+MineService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__["a" /* ConfService */],
+        __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__["a" /* HttpUtils */]])
+], MineService);
+
+//# sourceMappingURL=mine-service.js.map
+
+/***/ }),
+
+/***/ 281:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CountryNumService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CountryNumService = (function () {
+    function CountryNumService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello BalanceService Provider');
+    }
+    CountryNumService.prototype.getCountryNumber = function () {
+        //console.log(JSON.stringify(request));
+        return this.httpUtils.httpget(this.confService.baseUrlTemp + 'country/chineseCountryJson.json').map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            console.log(res.json());
+            var data = res.json();
+            return data;
+        });
+    };
+    return CountryNumService;
+}());
+CountryNumService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__["a" /* HttpUtils */]])
+], CountryNumService);
+
+//# sourceMappingURL=country-num-service.js.map
+
+/***/ }),
+
+/***/ 282:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AccountPubService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AccountPubService = (function () {
+    function AccountPubService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello AccountPubService Provider');
+    }
+    AccountPubService.prototype.checkFundpwd = function (request) {
+        if (request.userid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert userid or password");
+        }
+        else {
+            console.log(request);
+            var pwdUrl = "api/json/pub/check_fundpwd.json";
+            return this.httpUtils.httpget(pwdUrl).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                return data;
+            });
+        }
+    };
+    // getAlipay(): Observable<any>{
+    //      debugger
+    //      return this.httpUtils.httpget(this.confService.baseUrl + 'account/thirdparts/ba-qr').map(res => {
+    //          return res.json();
+    //      });
+    //  }
+    AccountPubService.prototype.getAlipay = function (request) {
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/thirdparts/ba-qr', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            console.log(data);
+            return data;
+        });
+    };
+    AccountPubService.prototype.submitOrder = function (request) {
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'topup/orders', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            console.log(data);
+            return data;
+        });
+    };
+    // "orderNo":"2",
+    // "payStatus":true  //取消是false
+    AccountPubService.prototype.confirmOrderZ = function (request) {
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + 'topup/confirm', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            console.log(data);
+            return data;
+        });
+    };
+    return AccountPubService;
+}());
+AccountPubService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_3__util_service_http_utils__["a" /* HttpUtils */]])
+], AccountPubService);
+
+//# sourceMappingURL=account-pub-service.js.map
+
+/***/ }),
+
+/***/ 287:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BackbuttonService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var BackbuttonService = (function () {
+    //构造函数 依赖注入
+    function BackbuttonService(platform, appCtrl, toastCtrl) {
+        this.platform = platform;
+        this.appCtrl = appCtrl;
+        this.toastCtrl = toastCtrl;
+        //控制硬件返回按钮是否触发，默认false
+        this.backButtonPressed = false;
+    }
+    //注册方法registerBackButtonAction
+    BackbuttonService.prototype.registerBackButtonAction = function (tabRef) {
+        var _this = this;
+        //registerBackButtonAction是系统自带的方法
+        this.platform.registerBackButtonAction(function () {
+            //获取NavController
+            debugger;
+            var activeNav = _this.appCtrl.getActiveNav();
+            //如果可以返回上一页，则执行pop
+            if (activeNav.canGoBack()) {
+                activeNav.pop();
+            }
+            else {
+                if (tabRef == null || tabRef._selectHistory[tabRef._selectHistory.length - 1] === tabRef.getByIndex(0).id) {
+                    //执行退出
+                    _this.showExit();
+                }
+                else {
+                    //选择首页第一个的标签
+                    tabRef.select(0);
+                }
+            }
+        });
+    };
+    //退出应用方法
+    BackbuttonService.prototype.showExit = function () {
+        var _this = this;
+        //如果为true，退出
+        if (this.backButtonPressed) {
+            this.platform.exitApp();
+        }
+        else {
+            //第一次按，弹出Toast
+            this.toastCtrl.create({
+                message: '再按一次退出应用',
+                duration: 2000,
+                position: 'bottom'
+            }).present();
+            //标记为true
+            this.backButtonPressed = true;
+            //两秒后标记为false，如果退出的话，就不会执行了
+            setTimeout(function () { return _this.backButtonPressed = false; }, 2000);
+        }
+    };
+    return BackbuttonService;
+}());
+BackbuttonService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* ToastController */]])
+], BackbuttonService);
+
+//# sourceMappingURL=backbutton-service.js.map
+
+/***/ }),
+
+/***/ 288:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchAccService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SearchAccService = (function () {
+    function SearchAccService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello SearchAcc Provider');
+    }
+    SearchAccService.prototype.getSearchAccM = function () {
+        //console.log(JSON.stringify(request));
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'account/inquiry/supportcointype');
+    };
+    SearchAccService.prototype.Adddigital = function (request) {
+        //console.log(JSON.stringify(request));
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'account/digitals/addasset', request, '');
+    };
+    //查询用户资产列表
+    //   account/digitals/assets  GET
+    SearchAccService.prototype.findAssets = function () {
+        //console.log(JSON.stringify(request));
+        return this.httpUtils.getTokennoParamNoLoading(this.confService.baseUrl + 'account/digitals/assets');
+    };
+    return SearchAccService;
+}());
+SearchAccService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], SearchAccService);
+
+//# sourceMappingURL=searchAcc-service.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppBrowserService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AppBrowserService = (function () {
+    function AppBrowserService() {
+    }
+    AppBrowserService.prototype.open = function (url) {
+        window.open(url, '_system', 'location=yes');
+        return false;
+    };
+    return AppBrowserService;
+}());
+AppBrowserService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+], AppBrowserService);
+
+//# sourceMappingURL=app-browser-service.js.map
+
+/***/ }),
+
+/***/ 291:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FriendService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__messages_friend_msg__ = __webpack_require__(599);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var FriendService = (function () {
+    function FriendService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello FriendService Provider');
+    }
+    FriendService.prototype.friendlist = function (request) {
+        console.log('friendlist begin');
+        if (request.userid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert userid or password");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            var req = { uid: request.userid };
+            return this.httpUtils.httpgetNoToken(this.confService.baseUrl + '/json/getfriendlist.json').map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                console.log(res.json());
+                if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                    console.log(res.json());
+                    /* let ret = new AckFriendList();
+                     ret.ret_code = data.rc;
+                     ret.ret_msg = data.rm;
+                     ret.friends = data.friendlist;*/
+                    return res.json();
+                }
+                return null;
+            });
+        }
+    };
+    FriendService.prototype.checkPhoneNumeber = function (request) {
+        return this.httpUtils.httppost(this.confService.baseUrl + 'account/inquiry/addressbook', JSON.stringify(request)).map(function (res) {
+            var data = res.json();
+            return data;
+        });
+    };
+    FriendService.prototype.frienddetail = function (request) {
+        if (request.friendid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please friendid");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            //let req = {uid:request.friendid};
+            //let url1 = "api/json/friend/get_frienddetail.json"
+            return this.httpUtils.httppost(this.confService.baseUrl + '/json/friend/get_frienddetail.json', JSON.stringify(request)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                console.log(res.json());
+                if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                    console.log(res.json());
+                    var ret = new __WEBPACK_IMPORTED_MODULE_5__messages_friend_msg__["a" /* AckFriendList */]();
+                    ret.ret_code = data.rc;
+                    ret.ret_msg = data.rm;
+                    ret.friends = data.friendlist;
+                    return ret;
+                }
+                return null;
+            });
+        }
+    };
+    return FriendService;
+}());
+FriendService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__["a" /* HttpUtils */]])
+], FriendService);
+
+//# sourceMappingURL=friend-service.js.map
+
+/***/ }),
+
+/***/ 294:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BalanceService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var BalanceService = (function () {
+    function BalanceService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello BalanceService Provider');
+    }
+    BalanceService.prototype.getBalance = function (request) {
+        if (request.userid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert userid or password");
+        }
+        else {
+            //console.log(JSON.stringify(request));
+            return this.httpUtils.httppost(this.confService.baseUrl + '/json/account/get-balance.json', JSON.stringify(request)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                console.log(res.json());
+                var data = res.json();
+                return data;
+            });
+        }
+    };
+    return BalanceService;
+}());
+BalanceService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__["a" /* HttpUtils */]])
+], BalanceService);
+
+//# sourceMappingURL=account-balance-service.js.map
+
+/***/ }),
+
+/***/ 295:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaAccountifService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BaAccountifService = (function () {
+    function BaAccountifService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        this.TemprecImp = { to_userid: '', coin_type: '' };
+        this.coin_type = { coin_type: '' };
+        console.log('Hello AccountPubService Provider');
+    }
+    //请求收款方账户有效性验证
+    BaAccountifService.prototype.recImport = function (request) {
+        this.TemprecImp.to_userid = request;
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'users/verify', this.TemprecImp, '');
+    };
+    BaAccountifService.prototype.monetaryxchangeRate = function (coin_type) {
+        this.coin_type.coin_type = '';
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'account/digitals/rate', this.coin_type, '');
+    };
+    ;
+    return BaAccountifService;
+}());
+BaAccountifService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], BaAccountifService);
+
+//# sourceMappingURL=Ba-accountif-service.js.map
+
+/***/ }),
+
+/***/ 296:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BankModalPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_bank_model_bank_model__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ng2_translate__ = __webpack_require__(84);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the BankModalPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var BankModalPage = (function () {
+    function BankModalPage(navCtrl, navParams, viewCtrl, bankModelservice, translate) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+        this.bankModelservice = bankModelservice;
+        this.translate = translate;
+        this.translate.get('login').subscribe(function (res) {
+            _this.translateObj = res;
+        });
+    }
+    BankModalPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    BankModalPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        console.log('ionViewDidLoad BankModalPage');
+        this.bankModelservice.getbankM().then(function (res) {
+            console.log(res);
+            _this.bankData = res.data;
+        }, function (err) {
+        });
+        this.bankModelservice.getThirdpart().then(function (res) {
+            console.log(res);
+            if (res.data) {
+                _this.thirdpart = res.data;
+            }
+        });
+    };
+    BankModalPage.prototype.bankchose = function (bank, type) {
+        console.log(bank);
+        this.viewCtrl.dismiss(bank, type);
+    };
+    return BankModalPage;
+}());
+BankModalPage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-bank-modal',template:/*ion-inline-start:"/Users/wupeng/ppdpay-cli/src/pages/bank-modal/bank-modal.html"*/'<!--\n  Generated template for the ModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="modalCssTop">\n</div>\n<div ngClass="modalCssBottom">\n  <div class="inner-box" style="bottom: 0;left: 0;width: 100%;height: 380px;">\n\n    <ion-header>\n      <ion-toolbar color="primary" >\n        <ion-buttons left onclick="" (click)="closeModal()">\n          <button ion-button icon-only>\n            <ion-icon name="ios-arrow-back"></ion-icon>\n          </button>\n        </ion-buttons>\n        <ion-title style="text-align: center">{{ \'bank_modal.choosePayModel\' | translate }}</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-content>\n      <ion-list radio-group>\n        <!--<ion-list-header>-->\n          <!--{{ \'bank_modal.bankCard\' | translate }}-->\n        <!--</ion-list-header>-->\n        <!--<ion-item no-lines style="border-bottom: 1px solid #dedede" *ngFor="let bank of bankData" (click)="bankchose(bank,\'3\')">-->\n          <!--<img item-start src="assets/img/withdraw/zsyhlogo.png" alt="" width="21px" height="21px"> <p item-left>{{bank.bankname}}</p>-->\n        <!--</ion-item>-->\n        <ion-list-header>\n          {{ \'bank_modal.aliPay\' | translate }}\n        </ion-list-header>\n        <ion-item no-lines style="border-bottom: 1px solid #dedede" *ngFor="let third of thirdpart" (click)="bankchose(third,\'2\')">\n          <img item-start src="assets/img/withdraw/zsyhlogo.png" alt="" width="21px" height="21px"> <p item-left>{{third.name}}</p>\n        </ion-item>\n      </ion-list>\n    </ion-content>\n  </div>\n</div>'/*ion-inline-end:"/Users/wupeng/ppdpay-cli/src/pages/bank-modal/bank-modal.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ViewController */],
+        __WEBPACK_IMPORTED_MODULE_2__providers_bank_model_bank_model__["a" /* BankModelProvider */], __WEBPACK_IMPORTED_MODULE_3_ng2_translate__["c" /* TranslateService */]])
+], BankModalPage);
+
+//# sourceMappingURL=bank-modal.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WithdrawService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__messages_account_withdraw_msg__ = __webpack_require__(600);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var WithdrawService = (function () {
+    function WithdrawService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello AuthService Provider');
+    }
+    WithdrawService.prototype.withdraw = function (request) {
+        console.log(JSON.stringify(request));
+        var req = { uid: request.userid, ti: { am: request.trans_info.amount, com: request.trans_info.comment, ct: request.trans_info.coin_type }, fno: request.financial_no };
+        return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/withdraw', JSON.stringify(req)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                console.log(res.json());
+                var ret = new __WEBPACK_IMPORTED_MODULE_3__messages_account_withdraw_msg__["b" /* AckWithdraw */]();
+                ret.ret_code = data.rc;
+                ret.ret_msg = data.rm;
+                ret.ba_account = data.baa;
+                ret.order_no = data.ono;
+                ret.trans_info.amount = data.ti.am;
+                ret.trans_info.coin_type = data.ti.ct;
+                ret.trans_info.comment = data.ti.com;
+                return ret;
+            }
+            return null;
+        });
+    };
+    WithdrawService.prototype.transBaCompleted = function (request) {
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/transba-completed', JSON.stringify(request)).map(function (res) {
+            return res.json();
+        });
+    };
+    WithdrawService.prototype.getwithdrawBa = function (request) {
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'withdraw/orders', request, '请稍等，正在加载。。');
+    };
+    WithdrawService.prototype.getWithdrawState = function (request) {
+        console.log(JSON.stringify(request));
+        return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/get-withdrawstate', JSON.stringify(request)).map(function (res) {
+            //解析后台服务返回的JSON为消息结构
+            var data = res.json();
+            if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                console.log(res.json());
+                var ret = new __WEBPACK_IMPORTED_MODULE_3__messages_account_withdraw_msg__["a" /* AckGetWithdrawState */]();
+                ret.ret_code = data.rc;
+                ret.ret_msg = data.rm;
+                ret.amount = data.am;
+                return ret;
+            }
+            return null;
+        });
+    };
+    return WithdrawService;
+}());
+WithdrawService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], WithdrawService);
+
+//# sourceMappingURL=account-withdraw-service.js.map
+
+/***/ }),
+
+/***/ 302:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PipesModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipes_order_by_order_by__ = __webpack_require__(601);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipes_oder_by_temp_oder_by_temp__ = __webpack_require__(602);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PipesModule = (function () {
+    function PipesModule() {
+    }
+    return PipesModule;
+}());
+PipesModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [__WEBPACK_IMPORTED_MODULE_1__pipes_order_by_order_by__["a" /* OrderBy */],
+            __WEBPACK_IMPORTED_MODULE_2__pipes_oder_by_temp_oder_by_temp__["a" /* OderByTempPipe */]],
+        imports: [],
+        exports: [__WEBPACK_IMPORTED_MODULE_1__pipes_order_by_order_by__["a" /* OrderBy */],
+            __WEBPACK_IMPORTED_MODULE_2__pipes_oder_by_temp_oder_by_temp__["a" /* OderByTempPipe */]]
+    })
+], PipesModule);
+
+//# sourceMappingURL=pipes.module.js.map
+
+/***/ }),
+
+/***/ 303:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CityPickerService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_toPromise__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var CityPickerService = (function () {
+    function CityPickerService(http) {
+        this.http = http;
+        console.log('Hello CityPicker Provider');
+    }
+    CityPickerService.prototype.getCitiesData = function () {
+        return this.http.get('./assets/data/city-data.json')
+            .toPromise()
+            .then(function (response) { return response.json(); })
+            .catch(function (err) {
+            return Promise.reject(err);
+        });
+    };
+    return CityPickerService;
+}());
+CityPickerService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], CityPickerService);
+
+//# sourceMappingURL=city-picker-service.js.map
+
+/***/ }),
+
+/***/ 305:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IentityAuth; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var IentityAuth = (function () {
+    function IentityAuth(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello SearchAcc Provider');
+    }
+    IentityAuth.prototype.identity = function (request) {
+        //console.log(JSON.stringify(request));
+        return this.httpUtils.postBodyToken(this.confService.baseUrl + 'users/identity', request, '');
+    };
+    return IentityAuth;
+}());
+IentityAuth = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_2__util_service_http_utils__["a" /* HttpUtils */]])
+], IentityAuth);
+
+//# sourceMappingURL=ientity-auth.js.map
+
+/***/ }),
+
+/***/ 306:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_module__ = __webpack_require__(311);
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_20" /* enableProdMode */])();
+
+
+Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 311:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export createTranslateLoader */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_clipboard__ = __webpack_require__(283);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_contacts__ = __webpack_require__(300);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_photo_library__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__(622);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_keyboard__ = __webpack_require__(298);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_device__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_camera__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_transfer__ = __webpack_require__(284);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__providers_jpush__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16_ionic2_city_picker__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_city_picker_service__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_ionic2_jpush_dist__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_service_imports__ = __webpack_require__(623);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_backbutton_service__ = __webpack_require__(287);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_modal_modal__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_bank_modal_bank_modal__ = __webpack_require__(296);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_payment_mode_payment_mode__ = __webpack_require__(627);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__ionic_native_barcode_scanner__ = __webpack_require__(279);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__ionic_native_file_chooser__ = __webpack_require__(292);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__ionic_native_file_path__ = __webpack_require__(293);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pipes_pipes_module__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__ionic_native_app_minimize__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__ionic_native_sms__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_ng2_translate__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__providers_bank_model_bank_model__ = __webpack_require__(139);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { Buffer } from 'buffer';
+//service模块导入
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createTranslateLoader(http) {
+    return new __WEBPACK_IMPORTED_MODULE_30_ng2_translate__["d" /* TranslateStaticLoader */](http, './assets/i18n', '.json');
+}
+var AppModule = (function () {
+    function AppModule() {
+    }
+    return AppModule;
+}());
+AppModule = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* MyApp */], __WEBPACK_IMPORTED_MODULE_21__pages_modal_modal__["a" /* ModalPage */], __WEBPACK_IMPORTED_MODULE_22__pages_bank_modal_bank_modal__["a" /* BankModalPage */], __WEBPACK_IMPORTED_MODULE_23__pages_payment_mode_payment_mode__["a" /* PaymentModePage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_16_ionic2_city_picker__["CityPickerModule"],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
+            __WEBPACK_IMPORTED_MODULE_30_ng2_translate__["b" /* TranslateModule */].forRoot({
+                provide: __WEBPACK_IMPORTED_MODULE_30_ng2_translate__["a" /* TranslateLoader */],
+                useFactory: (createTranslateLoader),
+                deps: [__WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]]
+            }),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* MyApp */], {
+                tabsHideOnSubPages: 'true',
+                iconMode: 'ios',
+                mode: 'ios',
+                backButtonText: '',
+                modalEnter: 'modal-slide-in',
+                modalLeave: 'modal-slide-out',
+                scrollAssist: false,
+                autoFocusAssit: false,
+                pageTransition: 'ios-transition',
+                tabsPlacement: 'bottom',
+            }, {
+                links: [
+                    { loadChildren: '../pages/auth/forget-password/forgetpassword.module#ForgetPasswordPageModule', name: 'ForgetPasswordPage', segment: 'forgetpassword', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/auth/forget-password/password-reset/password-reset.module#PasswordResetPageModule', name: 'PasswordResetPage', segment: 'password-reset', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/auth/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/auth/password/password.module#PasswordPageModule', name: 'PasswordPage', segment: 'password', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/auth/register/fundpassword/fundpassword.module#FundpasswordPageModule', name: 'FundpasswordPage', segment: 'fundpassword', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/auth/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/balance/balance-detail/balance-detail.module#BalanceDetailPageModule', name: 'BalanceDetailPage', segment: 'balance-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/balance/charging-money/charging-money.module#ChargingMoneyPageModule', name: 'ChargingMoneyPage', segment: 'charging-money', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/balance/currency-detail/currency-detail.module#CurrencyDetailPageModule', name: 'CurrencyDetailPage', segment: 'currency-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/balance/currency/currency.module#CurrencyPageModule', name: 'CurrencyPage', segment: 'currency', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/balance/set-cu-money/set-cu-money.module#SetCuMoneyPageModule', name: 'SetCuMoneyPage', segment: 'set-cu-money', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/currencysel/currencysel.module#CurrencyselPageModule', name: 'CurrencyselPage', segment: 'currencysel', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/flowdetail/bill-detail/bill-detail.module#BillDetailPageModule', name: 'BillDetailPage', segment: 'bill-detail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/flowdetail/flowdetail.module#FlowdetailPageModule', name: 'FlowdetailPage', segment: 'flowdetail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/pay/account-pay/account-pay.module#accountPayModule', name: 'accountPayPage', segment: 'account-pay', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/pay/pay.module#payPageModule', name: 'payPage', segment: 'pay', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/pay/scan-pay/scan-pay.module#ScanPayPageModule', name: 'ScanPayPage', segment: 'scan-pay', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/receive/receive-success/receiv-success.module#requestReceivePageModule', name: 'receiveSuccessPage', segment: 'receiv-success', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/receive/receive.module#receivePageModule', name: 'receivePage', segment: 'receive', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/receive/request-receive/request-receive.module#requestReceivePageModule', name: 'requestReceivePage', segment: 'request-receive', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/receive/request-setting/request-setting.module#requestReceivePageModule', name: 'requestSettingPage', segment: 'request-setting', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/receive/set-money/set-money.module#SetMoneyPageModule', name: 'SetMoneyPage', segment: 'set-money', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/topup/topup.module#TopupPageModule', name: 'TopupPage', segment: 'topup', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/transfer/transfer.module#TransferPageModule', name: 'TransferPage', segment: 'transfer', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/transfer2/transfer2.module#Transfer2PageModule', name: 'Transfer2Page', segment: 'transfer2', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/transferreceipt/transferreceipt.module#TransferreceiptPageModule', name: 'TransferreceiptPage', segment: 'transferreceipt', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/withdraw/withdraw-success/withdraw-success.module#WithdrawSuccessPageModule', name: 'WithdrawSuccessPage', segment: 'withdraw-success', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/friends/frienddetail/frienddetail.module#FrienddetailPageModule', name: 'FrienddetailPage', segment: 'frienddetail', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/financial/withdraw/withdraw.module#WithdrawPageModule', name: 'WithdrawPage', segment: 'withdraw', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/friends/friends.module#FriendsModule', name: 'FriendsPage', segment: 'friends', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home/home.module#HomeModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/home/opening/openging.module#OpeningPageModule', name: 'OpeningPage', segment: 'openging', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/invitation/invitation.module#InvitationPageModule', name: 'InvitationPage', segment: 'invitation', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/about/about.module#AboutPageModule', name: 'AboutPage', segment: 'about', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/alipay/alipay-add/alipay-add.module#AlipayAddPageModule', name: 'AlipayAddPage', segment: 'alipay-add', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/alipay/alipay.module#MyAlipayPageModule', name: 'MyAlipayPage', segment: 'alipay', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/bankcard-add/bankcard-add.module#BankcardAddPageModule', name: 'BankcardAddPage', segment: 'bankcard-add', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/bankcard/bankcard.module#BankcardPageModule', name: 'BankcardPage', segment: 'bankcard', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/changepwd/changepwd.module#ChangepwdPageModule', name: 'ChangepwdPage', segment: 'changepwd', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/document/document.module#DocumentPageModule', name: 'DocumentPage', segment: 'document', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/document/identity-authentication/identity-authentication.module#IdentityAuthenticationPageModule', name: 'IdentityAuthenticationPage', segment: 'identity-authentication', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/head-upload/head-upload.module#HeadUploadPageModule', name: 'HeadUploadPage', segment: 'head-upload', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/mine.module#MineModule', name: 'MinePage', segment: 'mine', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/my-wallet/backups-key/backups-key.module#BackupsKeyPageModule', name: 'BackupsKeyPage', segment: 'backups-key', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/my-wallet/my-wallet.module#MyWalletPageModule', name: 'MyWalletPage', segment: 'my-wallet', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/mymessage/mymessage.module#MymessagePageModule', name: 'MymessagePage', segment: 'mymessage', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/my-wallet/recovery-import/recovery-import.module#RecoveryImportPageModule', name: 'RecoveryImportPage', segment: 'recovery-import', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/mine/setting/setting.module#SettingPageModule', name: 'SettingPage', segment: 'setting', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/setting-language/setting-language.module#SettingLanguagePageModule', name: 'SettingLanguagePage', segment: 'setting-language', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tabs/tabs.module#TabsModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
+                ]
+            }),
+            __WEBPACK_IMPORTED_MODULE_27__pipes_pipes_module__["a" /* PipesModule */],
+        ],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicApp */]],
+        entryComponents: [
+            __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* MyApp */], __WEBPACK_IMPORTED_MODULE_21__pages_modal_modal__["a" /* ModalPage */], __WEBPACK_IMPORTED_MODULE_22__pages_bank_modal_bank_modal__["a" /* BankModalPage */], __WEBPACK_IMPORTED_MODULE_23__pages_payment_mode_payment_mode__["a" /* PaymentModePage */]
+        ],
+        providers: [
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_5__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_10__ionic_native_keyboard__["a" /* Keyboard */], __WEBPACK_IMPORTED_MODULE_24__ionic_native_barcode_scanner__["a" /* BarcodeScanner */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_clipboard__["a" /* Clipboard */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_contacts__["b" /* Contacts */], __WEBPACK_IMPORTED_MODULE_11__ionic_native_device__["a" /* Device */], __WEBPACK_IMPORTED_MODULE_28__ionic_native_app_minimize__["a" /* AppMinimize */],
+            { provide: __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* IonicErrorHandler */] }, __WEBPACK_IMPORTED_MODULE_20__providers_backbutton_service__["a" /* BackbuttonService */],
+            __WEBPACK_IMPORTED_MODULE_19__providers_service_imports__["a" /* SERVICES */], __WEBPACK_IMPORTED_MODULE_12__ionic_native_camera__["a" /* Camera */],
+            __WEBPACK_IMPORTED_MODULE_13__ionic_native_file__["a" /* File */],
+            __WEBPACK_IMPORTED_MODULE_14__ionic_native_file_transfer__["a" /* FileTransfer */], __WEBPACK_IMPORTED_MODULE_29__ionic_native_sms__["a" /* SMS */],
+            __WEBPACK_IMPORTED_MODULE_15__providers_jpush__["a" /* JPush */], __WEBPACK_IMPORTED_MODULE_17__providers_city_picker_service__["a" /* CityPickerService */], __WEBPACK_IMPORTED_MODULE_26__ionic_native_file_path__["a" /* FilePath */],
+            __WEBPACK_IMPORTED_MODULE_31__providers_bank_model_bank_model__["a" /* BankModelProvider */], __WEBPACK_IMPORTED_MODULE_8__ionic_native_photo_library__["a" /* PhotoLibrary */], __WEBPACK_IMPORTED_MODULE_25__ionic_native_file_chooser__["a" /* FileChooser */], __WEBPACK_IMPORTED_MODULE_18_ionic2_jpush_dist__["a" /* JPushService */]
+        ]
+    })
+], AppModule);
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 595:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ReqCheckPayee */
+/* unused harmony export CheckUid */
+/* unused harmony export Searchd */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AckCheckPayee; });
+/* unused harmony export ReqSubmitTransInfo */
+/* unused harmony export AckSubmitTransInfo */
+/* unused harmony export ReqTransCompleted */
+/* unused harmony export AckTransCompleted */
+/* unused harmony export DigitalCurrency */
+/* unused harmony export Withdrawal */
+//应答中头两个字段是消息错误码/状态码及错误信息/状态信息。
+//1、请求收款方账户有效性验证
+//messageid : /account/checkpyaee
+var ReqCheckPayee = (function () {
+    function ReqCheckPayee() {
+    }
+    return ReqCheckPayee;
+}());
+
+var CheckUid = (function () {
+    function CheckUid() {
+    }
+    return CheckUid;
+}());
+
+var Searchd = (function () {
+    function Searchd() {
+    }
+    return Searchd;
+}());
+
+//应答
+var AckCheckPayee = (function () {
+    function AckCheckPayee() {
+    }
+    return AckCheckPayee;
+}());
+
+//2、请求资金密码验证
+//3、请求提交转账信息
+//messageid : /account/submit-transinfo
+var ReqSubmitTransInfo = (function () {
+    function ReqSubmitTransInfo() {
+    }
+    return ReqSubmitTransInfo;
+}());
+
+//应答返回提现状态
+var AckSubmitTransInfo = (function () {
+    function AckSubmitTransInfo() {
+    }
+    return AckSubmitTransInfo;
+}());
+
+//3、请求通知Ba,数币转账已完成（ba-〉digital coin）
+//messageid : /account/trans-completed
+var ReqTransCompleted = (function () {
+    function ReqTransCompleted() {
+    }
+    return ReqTransCompleted;
+}());
+
+//应答
+var AckTransCompleted = (function () {
+    function AckTransCompleted() {
+    }
+    return AckTransCompleted;
+}());
+
+//获取数字货币账号
+var DigitalCurrency = (function () {
+    function DigitalCurrency() {
+    }
+    return DigitalCurrency;
+}());
+
+//请求提现
+var Withdrawal = (function () {
+    function Withdrawal() {
+    }
+    return Withdrawal;
+}());
+
+//# sourceMappingURL=account-transfer-msg.js.map
+
+/***/ }),
+
+/***/ 599:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ReqFriendList */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AckFriendList; });
+/* unused harmony export FriendInfo */
+/* unused harmony export ReqFriendDetail */
+/* unused harmony export AckFriendDetail */
+var ReqFriendList = (function () {
+    function ReqFriendList() {
+    }
+    return ReqFriendList;
+}());
+
+// 
+var AckFriendList = (function () {
+    function AckFriendList() {
+    }
+    return AckFriendList;
+}());
+
+var FriendInfo = (function () {
+    function FriendInfo() {
+    }
+    return FriendInfo;
+}());
+
+var ReqFriendDetail = (function () {
+    function ReqFriendDetail() {
+    }
+    return ReqFriendDetail;
+}());
+
+var AckFriendDetail = (function () {
+    function AckFriendDetail() {
+    }
+    return AckFriendDetail;
+}());
+
+//# sourceMappingURL=friend-msg.js.map
+
+/***/ }),
+
+/***/ 600:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ReqWithdraw */
+/* unused harmony export WithdrawbaModel */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AckWithdraw; });
+/* unused harmony export ReqTransBaCompleted */
+/* unused harmony export AckTransBaCompleted */
+/* unused harmony export ReqGetWithdrawState */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AckGetWithdrawState; });
+//应答中头两个字段是消息错误码/状态码及错误信息/状态信息。
+//法币提现
+//1、请求资金密码验证
+//2、请求提现
+//messageid : /account/withdraw
+var ReqWithdraw = (function () {
+    function ReqWithdraw() {
+    }
+    return ReqWithdraw;
+}());
+
+//提现
+var WithdrawbaModel = (function () {
+    function WithdrawbaModel() {
+    }
+    return WithdrawbaModel;
+}());
+
+//应答
+var AckWithdraw = (function () {
+    function AckWithdraw() {
+    }
+    return AckWithdraw;
+}());
+
+//3、请求通知Ba,数币转账已完成（ba-〉digital coin）
+//messageid : /account/transba-completed
+var ReqTransBaCompleted = (function () {
+    function ReqTransBaCompleted() {
+    }
+    return ReqTransBaCompleted;
+}());
+
+//应答
+var AckTransBaCompleted = (function () {
+    function AckTransBaCompleted() {
+    }
+    return AckTransBaCompleted;
+}());
+
+//4、请求提现状态(定时)
+//messageid : /account/get-withdrawstate
+var ReqGetWithdrawState = (function () {
+    function ReqGetWithdrawState() {
+    }
+    return ReqGetWithdrawState;
+}());
+
+//应答返回提现状态
+var AckGetWithdrawState = (function () {
+    function AckGetWithdrawState() {
+    }
+    return AckGetWithdrawState;
+}());
+
+//# sourceMappingURL=account-withdraw-msg.js.map
+
+/***/ }),
+
+/***/ 601:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OrderBy; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var OrderBy = OrderBy_1 = (function () {
+    function OrderBy() {
+    }
+    /*
+      Takes a value and makes it lowercase.
+     */
+    OrderBy._orderByComparator = function (a, b) {
+        if ((isNaN(parseFloat(a)) || !isFinite(a)) || (isNaN(parseFloat(b)) || !isFinite(b))) {
+            //Isn't a number so lowercase the string to properly compare
+            if (a.toLowerCase() < b.toLowerCase())
+                return -1;
+            if (a.toLowerCase() > b.toLowerCase())
+                return 1;
+        }
+        else {
+            //Parse strings as numbers to compare properly
+            if (parseFloat(a) < parseFloat(b))
+                return -1;
+            if (parseFloat(a) > parseFloat(b))
+                return 1;
+        }
+        return 0; //equal each other
+    };
+    OrderBy.prototype.transform = function (input, _a) {
+        var _b = _a[0], config = _b === void 0 ? '+' : _b;
+        if (!Array.isArray(input))
+            return input;
+        if (!Array.isArray(config) || (Array.isArray(config) && config.length == 1)) {
+            var propertyToCheck = !Array.isArray(config) ? config : config[0];
+            var desc = propertyToCheck.substr(0, 1) == '-';
+            //Basic array
+            if (!propertyToCheck || propertyToCheck == '-' || propertyToCheck == '+') {
+                return !desc ? input.sort() : input.sort().reverse();
+            }
+            else {
+                var property = propertyToCheck.substr(0, 1) == '+' || propertyToCheck.substr(0, 1) == '-'
+                    ? propertyToCheck.substr(1)
+                    : propertyToCheck;
+                return input.sort(function (a, b) {
+                    return !desc ? OrderBy_1._orderByComparator(a[property], b[property])
+                        : -OrderBy_1._orderByComparator(a[property], b[property]);
+                });
+            }
+        }
+        else {
+            //Loop over property of the array in order and sort
+            return input.sort(function (a, b) {
+                for (var i = 0; i < config.length; i++) {
+                    var desc = config[i].substr(0, 1) == '-';
+                    var property = config[i].substr(0, 1) == '+' || config[i].substr(0, 1) == '-'
+                        ? config[i].substr(1)
+                        : config[i];
+                    var comparison = !desc ?
+                        OrderBy_1._orderByComparator(a[property], b[property])
+                        : -OrderBy_1._orderByComparator(a[property], b[property]);
+                    //Don't return 0 yet in case of needing to sort by next property
+                    if (comparison != 0)
+                        return comparison;
+                }
+                return 0; //equal each other
+            });
+        }
+    };
+    return OrderBy;
+}());
+OrderBy = OrderBy_1 = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+        name: 'orderBy'
+    })
+], OrderBy);
+
+var OrderBy_1;
+//# sourceMappingURL=order-by.js.map
+
+/***/ }),
+
+/***/ 602:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OderByTempPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+/**
+ * Generated class for the OderByTempPipe pipe.
+ *
+ * See https://angular.io/docs/ts/latest/guide/pipes.html for more info on
+ * Angular Pipes.
+ */
+var OderByTempPipe = (function () {
+    function OderByTempPipe() {
+    }
+    /**
+     * Takes a value and makes it lowercase.
+     */
+    OderByTempPipe.prototype.transform = function (value) {
+        var args = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            args[_i - 1] = arguments[_i];
+        }
+        return value.toLowerCase();
+    };
+    return OderByTempPipe;
+}());
+OderByTempPipe = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Pipe */])({
+        name: 'oderByTemp',
+    })
+], OderByTempPipe);
+
+//# sourceMappingURL=oder-by-temp.js.map
+
+/***/ }),
+
+/***/ 622:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(269);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng2_translate__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_jpush__ = __webpack_require__(271);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_app_minimize__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_toPromise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ionic2_jpush_dist__ = __webpack_require__(140);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var MyApp = (function () {
+    function MyApp(jpush, platform, statusBar, splashScreen, translate, appMinimize, jPushService) {
+        var _this = this;
+        this.jpush = jpush;
+        this.platform = platform;
+        this.translate = translate;
+        this.appMinimize = appMinimize;
+        this.jPushService = jPushService;
+        this.rootPage = "LoginPage";
+        platform.ready().then(function () {
+            if (_this.platform.is('cordova')) {
+                // You are on a device, cordova plugins are accessible
+                statusBar.styleDefault();
+                splashScreen.hide();
+                // translate.setDefaultLang('en'); // 设置默认的语言包
+                _this.jPushService.init();
+                _this.jPushService.receiveNotification().subscribe(function (res) {
+                    console.log(res);
+                    console.log('收到点击通知事件');
+                });
+                var receiveNotification = _this.jPushService.receiveNotification()
+                    .subscribe(function (res) {
+                    console.log(res);
+                    console.log('收到通知');
+                });
+                var receiveMessage = _this.jPushService.receiveMessage()
+                    .subscribe(function (res) {
+                    console.log(res);
+                    console.log('收到自定义消息');
+                });
+                var backgroundNotification = _this.jPushService.backgroundNotification()
+                    .subscribe(function (res) {
+                    console.log(res);
+                    console.log('收到后台通知');
+                });
+                _this.platform.registerBackButtonAction(function () {
+                    _this.appMinimize.minimize();
+                });
+            }
+            else {
+                // Cordova not accessible, add mock data if necessary
+                localStorage.setItem('regid', 'xx');
+                console.log("Browser浏览器cordova处理");
+            }
+        });
+    }
+    return MyApp;
+}());
+MyApp = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/wupeng/ppdpay-cli/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/wupeng/ppdpay-cli/src/app/app.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__providers_jpush__["a" /* JPush */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+        __WEBPACK_IMPORTED_MODULE_4_ng2_translate__["c" /* TranslateService */],
+        __WEBPACK_IMPORTED_MODULE_6__ionic_native_app_minimize__["a" /* AppMinimize */], __WEBPACK_IMPORTED_MODULE_8_ionic2_jpush_dist__["a" /* JPushService */]])
+], MyApp);
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 623:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SERVICES; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util_service_http_utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util_service_storage_service__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_mock_service__ = __webpack_require__(624);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_app_browser_service__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__financial_service_account_pub_service__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__financial_service_account_topup_service__ = __webpack_require__(625);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__financial_service_account_transfer_service__ = __webpack_require__(276);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__financial_service_account_withdraw_service__ = __webpack_require__(297);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__financial_service_account_balance_service__ = __webpack_require__(294);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__countryNum_country_num_service__ = __webpack_require__(281);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__identity_ientity_auth__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__user_service_user_auth_service__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__user_service_friend_service__ = __webpack_require__(291);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__user_service_mine_service__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__home_searchAcc_service__ = __webpack_require__(288);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__providers_wallet_recovery_import_service__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__providers_transfer_Ba_accountif_service__ = __webpack_require__(295);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_common_commonUtils__ = __webpack_require__(274);
+// util-service
+
+
+
+
+
+// financial-service
+
+
+
+
+
+
+// user-service
+
+
+
+
+
+
+
+
+var SERVICES = [
+    __WEBPACK_IMPORTED_MODULE_10__countryNum_country_num_service__["a" /* CountryNumService */],
+    __WEBPACK_IMPORTED_MODULE_18__providers_common_commonUtils__["a" /* CommonUtils */],
+    // util-service
+    __WEBPACK_IMPORTED_MODULE_17__providers_transfer_Ba_accountif_service__["a" /* BaAccountifService */],
+    __WEBPACK_IMPORTED_MODULE_16__providers_wallet_recovery_import_service__["a" /* RecoveryImportService */],
+    __WEBPACK_IMPORTED_MODULE_0__util_service_http_utils__["a" /* HttpUtils */],
+    __WEBPACK_IMPORTED_MODULE_1__util_service_conf_service__["a" /* ConfService */],
+    __WEBPACK_IMPORTED_MODULE_2__util_service_storage_service__["a" /* StorageService */],
+    __WEBPACK_IMPORTED_MODULE_3__util_service_mock_service__["a" /* MockService */],
+    __WEBPACK_IMPORTED_MODULE_4__util_service_app_browser_service__["a" /* AppBrowserService */],
+    // financial-service
+    __WEBPACK_IMPORTED_MODULE_5__financial_service_account_pub_service__["a" /* AccountPubService */],
+    __WEBPACK_IMPORTED_MODULE_6__financial_service_account_topup_service__["a" /* TopupService */],
+    __WEBPACK_IMPORTED_MODULE_7__financial_service_account_transfer_service__["a" /* TransferService */],
+    __WEBPACK_IMPORTED_MODULE_8__financial_service_account_withdraw_service__["a" /* WithdrawService */],
+    __WEBPACK_IMPORTED_MODULE_9__financial_service_account_balance_service__["a" /* BalanceService */],
+    // user-service
+    __WEBPACK_IMPORTED_MODULE_12__user_service_user_auth_service__["a" /* AuthService */],
+    __WEBPACK_IMPORTED_MODULE_13__user_service_friend_service__["a" /* FriendService */],
+    __WEBPACK_IMPORTED_MODULE_14__user_service_mine_service__["a" /* MineService */],
+    __WEBPACK_IMPORTED_MODULE_15__home_searchAcc_service__["a" /* SearchAccService */],
+    __WEBPACK_IMPORTED_MODULE_11__identity_ientity_auth__["a" /* IentityAuth */]
+];
+//# sourceMappingURL=service.imports.js.map
+
+/***/ }),
+
+/***/ 624:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MockService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Generated class for the DataServiceProvider provider.
+
+  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
+  for more info on providers and Angular DI.
+*/
+var MockService = (function () {
+    function MockService(http) {
+        this.http = http;
+        console.log('Hello DataServiceProvider Provider');
+    }
+    MockService.prototype.getListDetails = function () {
+        return this.http.get('assets/data/products.json')
+            .map(function (response) { return response.json(); });
+    };
+    return MockService;
+}());
+MockService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+], MockService);
+
+//# sourceMappingURL=mock-service.js.map
+
+/***/ }),
+
+/***/ 625:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TopupService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__messages_account_topup_msg__ = __webpack_require__(626);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var TopupService = (function () {
+    function TopupService(confService, httpUtils) {
+        this.confService = confService;
+        this.httpUtils = httpUtils;
+        console.log('Hello TopupService Provider');
+    }
+    TopupService.prototype.getPaycode = function (request) {
+        if (request.userid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert userid or password");
+        }
+        else {
+            //console.log(JSON.stringify(request));
+            var req = { uid: request.userid, ti: { am: request.trans_info.amount, com: request.trans_info.comment, ct: request.trans_info.coin_type } };
+            return this.httpUtils.httppost(this.confService.baseUrl + '/app/account/get-paycode', JSON.stringify(req)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                    console.log(res.json());
+                    var ret = new __WEBPACK_IMPORTED_MODULE_5__messages_account_topup_msg__["a" /* AckGetPaycode */]();
+                    ret.ret_code = data.rc;
+                    ret.ret_msg = data.rm;
+                    ret.pay_code = data.pc;
+                    ret.order_no = data.ono;
+                    return ret;
+                }
+                return null;
+            });
+        }
+    };
+    TopupService.prototype.tranCaFinished = function (request) {
+        console.log(JSON.stringify(request));
+        var req = { uid: request.userid, ono: request.order_no };
+        return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/transca-completed', JSON.stringify(req)).map(function (res) {
+            return res.json();
+        });
+    };
+    TopupService.prototype.getTopupState = function (request) {
+        if (request.userid === null) {
+            return __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable__["Observable"].throw("Please insert phone or password");
+        }
+        else {
+            console.log(JSON.stringify(request));
+            var req = { uid: request.userid, ono: request.order_no };
+            return this.httpUtils.httppost(this.confService.baseUrl + '/app/auth/get-toppustate', JSON.stringify(req)).map(function (res) {
+                //解析后台服务返回的JSON为消息结构
+                var data = res.json();
+                if (typeof (data) == "object" && Object.prototype.toString.call(data).toLowerCase() == "[object object]" && !data.length) {
+                    console.log(res.json());
+                    var ret = new __WEBPACK_IMPORTED_MODULE_5__messages_account_topup_msg__["b" /* AckGetTopupState */]();
+                    ret.ret_code = data.rc;
+                    ret.ret_msg = data.rm;
+                    ret.amount = data.am;
+                    return ret;
+                }
+                return null;
+            });
+        }
+    };
+    return TopupService;
+}());
+TopupService = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__util_service_conf_service__["a" /* ConfService */], __WEBPACK_IMPORTED_MODULE_4__util_service_http_utils__["a" /* HttpUtils */]])
+], TopupService);
+
+//# sourceMappingURL=account-topup-service.js.map
+
+/***/ }),
+
+/***/ 626:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ReqGetPaycode */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AckGetPaycode; });
+/* unused harmony export ReqTransCaCompleted */
+/* unused harmony export ReqGetTopupState */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return AckGetTopupState; });
+//应答中头两个字段是消息错误码/状态码及错误信息/状态信息。
+//法币充值流程消息
+//1、请求获得CA的支付码
+//messageid : /account/get-paycode
+var ReqGetPaycode = (function () {
+    function ReqGetPaycode() {
+    }
+    return ReqGetPaycode;
+}());
+
+//应答返回CA的支付码
+var AckGetPaycode = (function () {
+    function AckGetPaycode() {
+    }
+    return AckGetPaycode;
+}());
+
+//2、请求通知Ca,法币转账已完成
+//messageid : /account/transca-completed
+var ReqTransCaCompleted = (function () {
+    function ReqTransCaCompleted() {
+    }
+    return ReqTransCaCompleted;
+}());
+
+//3、请求充值状态(定时)
+//messageid : /account/get-toppustate
+var ReqGetTopupState = (function () {
+    function ReqGetTopupState() {
+    }
+    return ReqGetTopupState;
+}());
+
+//应答返回充值状态
+var AckGetTopupState = (function () {
+    function AckGetTopupState() {
+    }
+    return AckGetTopupState;
+}());
+
+//# sourceMappingURL=account-topup-msg.js.map
+
+/***/ }),
+
+/***/ 627:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaymentModePage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(26);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the PaymentModePage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var PaymentModePage = (function () {
+    function PaymentModePage(navCtrl, navParams, viewCtrl) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
+    }
+    PaymentModePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad PaymentModePage');
+    };
+    PaymentModePage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
+    return PaymentModePage;
+}());
+PaymentModePage = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        selector: 'page-payment-mode',template:/*ion-inline-start:"/Users/wupeng/ppdpay-cli/src/pages/payment-mode/payment-mode.html"*/'<!--\n  Generated template for the ModalPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<div class="modalCssTop">\n</div>\n<div ngClass="modalCssBottom">\n  <div class="inner-box" style="bottom: 0;left: 0;width: 100%;height: 380px;">\n\n    <ion-header>\n      <ion-toolbar color="primary" >\n        <ion-buttons left onclick="" (click)="closeModal()">\n          <button ion-button icon-only>\n            <ion-icon name="ios-arrow-back"></ion-icon>\n          </button>\n        </ion-buttons>\n\n        <ion-title style="text-align: center">{{\'payment_mode.choosePayment\' | translate}}</ion-title>\n      </ion-toolbar>\n    </ion-header>\n    <ion-list radio-group style="margin-top: 44px" [(ngModel)]="langForm">\n      <ion-item no-lines style="border-bottom: 1px solid #dedede">\n        <ion-label><img src="assets/img/balance/BitCNY.png" alt="" width="21px" height="21px"> BitCNY</ion-label>\n        <ion-radio checked="false" value="zsyh"></ion-radio>\n      </ion-item>\n\n      <ion-item no-lines style="border-bottom: 1px solid #dedede">\n        <ion-label><img src="assets/img/balance/BTC.png" alt="" width="21px" height="21px"> BTC</ion-label>\n        <ion-radio checked="false" value="nyyh"></ion-radio>\n      </ion-item>\n\n      <ion-item no-lines style="border-bottom: 1px solid #dedede">\n      <ion-label>Python</ion-label>\n      <ion-radio value="python" disabled="true"></ion-radio>\n      </ion-item>\n    </ion-list>\n  </div>\n</div>'/*ion-inline-end:"/Users/wupeng/ppdpay-cli/src/pages/payment-mode/payment-mode.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* ViewController */]])
+], PaymentModePage);
+
+//# sourceMappingURL=payment-mode.js.map
+
+/***/ })
+
+},[306]);
+//# sourceMappingURL=main.js.map

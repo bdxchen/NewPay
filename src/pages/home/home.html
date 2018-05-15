@@ -1,0 +1,109 @@
+<!--<ion-header>-->
+<!--<ion-navbar >-->
+<!--<ion-title style="text-align: center">NewPay</ion-title>-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+<ion-header no-border>
+    <ion-navbar [class.show-background]="showToolbar">
+        <ion-title style="text-align: center">云投汇
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<!--[style.background-size]="headerImgSize"-->
+<!--[style.background-image]="'url('+ headerImgUrl+ ')'" -->
+<!--<ion-content  class="content"-->
+<!--(ionScroll)="onScroll($event)"-->
+<!--[class.transition]="transition"-->
+<!--cache-view="false">-->
+<ion-content class="no-scroll">
+
+    <div class="headerTopHome">
+        <ion-row padding>
+            <ion-col class="col-center" tappable (click)="viewDetailPage('payPage')">
+                <ion-img class="myproperty" src="assets/img/home/syZhifu.png"></ion-img>
+                <h4>支付</h4>
+                <!--<p style="color: white">支付</p>-->
+            </ion-col>
+            <ion-col class="col-center" tappable (click)="viewDetailPage('TransferPage')">
+                <ion-img class="myproperty" src="assets/img/home/syyue.png"></ion-img>
+                <!--<p style="color: white">余额</p>-->
+                <h4>转账</h4>
+            </ion-col>
+            <ion-col class="col-center" tappable (click)="viewDetailPage('receivePage')">
+                <ion-img class="myproperty" src="assets/img/home/sySK.png"></ion-img>
+                <!--<p style="color: white">收款</p>-->
+                <h4>{{'home.receive' | translate }}</h4>
+            </ion-col>
+        </ion-row>
+    </div>
+    <!--<ion-card ion-item class='card-third-aplication' no-border>-->
+    <!--<img  item-left src="assets/img/home/laba.png" alt="" style="width: 20px;margin-top: 5px;margin-left: 15.5px">-->
+    <!--<p no-margin item-left style="margin: 8px 1px 8px 0;"> 您有2条付款消息,</p>-->
+    <!--<button style="margin: 8px 1px 8px 0px!important;" ion-button item-left clear style="height: 20px">点击查看</button><p  item-left>！</p>-->
+    <!--</ion-card>-->
+    <ion-content class="content-scroll">
+        <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
+            <!--<ion-refresher-content>-->
+                <!--pullingIcon="arrow-dropdown"-->
+                <!--pullingText="Pull to refresh"-->
+                <!--refreshingSpinner="circles"-->
+                <!--refreshingText="Refreshing...">-->
+            <!--</ion-refresher-content>-->
+        <!--</ion-refresher>-->
+        <ion-list no-lines no-border>
+            <ion-item tappable (click)="homeSeeMore(assistants)" *ngFor="let assistants of assistantsList" style="margin-bottom: 1rem;">
+                <div>
+                    <!--<img style="margin-top: 4px; width: 21px;height:21px;vertical-align: middle" src="assets/img/home/zfzs.png">-->
+                    <p no-margin style="line-height: 30px; font-size: 1.5rem; color: #2A2B2D; font-weight: bold;">{{'home.payAssistant' | translate }}</p>
+                    <!--<ion-icon item-end name="ios-more"></ion-icon>-->
+                </div>
+                <div>
+                    <div class="currency">{{assistants.coin}}</div>
+                    <h2 style="font-size: 3rem; color: #2A2B2D; margin: 5px 0;"> {{assistants.quantity}}</h2>
+                </div>
+                <div style="height: 30px;line-height: 30px" *ngIf="assistants.asstype=='TOPUP'">
+                    <p *ngIf="assistants.status=='0'">{{'home.unpaid' | translate }} </p>
+                    <p *ngIf="assistants.status=='1'">{{'home.paid' | translate }} </p>
+                    <p *ngIf="assistants.status=='2'">{{'home.paidAndConfirm' | translate }} </p>
+                    <p *ngIf="assistants.status=='3'">{{'home.topupCompleted' | translate }} </p>
+                    <p *ngIf="assistants.status=='7'">{{'home.userCancel' | translate }} </p>
+                    <p *ngIf="assistants.status=='8'">{{'home.systemCancel' | translate }} </p>
+                    <p *ngIf="assistants.status=='9'">{{'home.timeoutCancel' | translate }} </p>
+                </div>
+                <div style="height: 30px;line-height: 30px" *ngIf="assistants.asstype=='WITHDRAW'">
+                    <p *ngIf="assistants.status=='0'">{{'home.waitingTX' | translate }} </p>
+                    <p *ngIf="assistants.status=='1'">{{'home.transferred' | translate }} </p>
+                    <p *ngIf="assistants.status=='2'">{{'home.transferAndComfirm' | translate }} </p>
+                    <p *ngIf="assistants.status=='3'">{{'home.withdrawCompleted' | translate }} </p>
+                    <p *ngIf="assistants.status=='8'">{{'home.withdrawFail' | translate }} </p>
+                    <p *ngIf="assistants.status=='9'">{{'home.withdrawTimeout' | translate }} </p>
+                </div>
+                <div style="height: 30px;line-height: 30px" *ngIf="assistants.asstype=='TRANSFER'">
+                    <p>{{'home.transferSucc' | translate }}</p>
+                </div>
+                <div style="height: 30px;line-height: 30px" *ngIf="assistants.asstype=='WITHDRAWCOIN'">
+                    <p>{{'home.transferCoinSucc' | translate }}</p>
+                </div>
+
+                <div>
+                    <p style=" font-size: 1.2rem; color: #2A2B2D; padding-bottom: 10px;">{{assistants.time}}</p>
+                </div>
+                <!--<ion-note>备注：请收款</ion-note>-->
+                <!--<div style="text-align: center">-->
+                <!--<button ion-button small outline color="light" style="line-height: 30px">查看更多</button>-->
+                <!--</div>-->
+                <div class="details">查看详情</div>
+            </ion-item>
+            <div *ngIf="showFlag" style="text-align: center;height: 50px;line-height: 50px;color: #888888">
+                {{'home.noMore' | translate }}
+            </div>
+        </ion-list>
+        <!--<ion-infinite-scroll *ngIf="!showFlag" (ionInfinite)="doInfinite($event)">-->
+            <!--<ion-infinite-scroll-content-->
+                    <!--loadingSpinner="bubbles"-->
+                    <!--loadingText="加载更多数据...">-->
+            <!--</ion-infinite-scroll-content>-->
+        <!--</ion-infinite-scroll>-->
+        <!--<div style="height: 165px"></div>-->
+    </ion-content>
+</ion-content>

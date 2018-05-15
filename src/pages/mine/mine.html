@@ -1,0 +1,102 @@
+<!--<ion-header>-->
+
+  <!--<ion-navbar>-->
+    <!--<ion-buttons begin>-->
+      <!--<button ion-button icon-only (click)="myMsg()">-->
+        <!--<ion-icon name="mail"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+    <!--<ion-buttons end>-->
+      <!--<button ion-button icon-only (click)="setting()">-->
+        <!--<ion-icon name="cog"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-buttons>-->
+  <!--</ion-navbar>-->
+
+<!--</ion-header>-->
+<ion-header no-border no-lines>
+  <ion-toolbar color="secondary">
+    <!--<ion-buttons start left (click)="myMsg()">-->
+    <!--<button ion-button icon-only color="royal">-->
+      <!--<ion-icon name="mail" md="md-mail"></ion-icon>-->
+    <!--</button>-->
+  <!--</ion-buttons>-->
+    <ion-buttons start left >
+      <button ion-button icon-only color="royal">
+        <ion-icon name="" md=""></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title content style="text-align: center">{{'mine.title' | translate}}</ion-title>
+    <ion-buttons right >
+      <button ion-button icon-only color="royal" tappable (click)="setting()">
+        <ion-icon name="ios-settings-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content cache-view="false">
+
+  <ion-item-group style="margin-top: 35px;font-size: 14px !important;">
+    <!--<ion-item>-->
+        <!--<p><ion-icon name="folder"></ion-icon>  我的资料</p>-->
+       <!--<ion-note item-end (click)="goDocument()">修改头像及二维码信息 > </ion-note>-->
+    <!--</ion-item>-->
+    <ion-list no-lines>
+      <!--<button ion-item (click)="goFlowdetail()">-->
+        <!--&lt;!&ndash;<ion-icon name="cart" item-start></ion-icon>&ndash;&gt;-->
+        <!--<img src="assets/img/mine/myZD.png" alt="" item-start width="21px" height="21px">-->
+        <!--{{'mine.myBill' | translate}}-->
+        <!--<ion-note item-end>{{'mine.myBillMemo' | translate}}</ion-note>-->
+      <!--</button>-->
+
+      <ion-item>
+        <p><ion-icon name="folder"></ion-icon>  我的账号</p>
+        <ion-note item-end (click)="goDocument()">{{account}} </ion-note>
+
+      </ion-item>
+
+
+      <button style="margin-top: 1px;border-bottom: 1px solid #f1f1f1" ion-item tappable (click)="goMyAlipay()">
+        <!--<ion-icon name="medical" item-start></ion-icon>-->
+        <!--<img src="assets/img/mine/myZFB.png" alt="" item-start width="21px" height="21px">-->
+        我的余额
+        <ion-note class="my_details" item-end><img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>
+
+      </button>
+
+      <!--<button style="margin-bottom: 15px;" ion-item tappable (click)="goBankCard()">-->
+        <!--&lt;!&ndash;<ion-icon name="cafe" item-start></ion-icon>&ndash;&gt;-->
+        <!--<img src="assets/img/mine/myYHK.png" alt="" item-start width="21px" height="21px">-->
+        <!--{{'mine.myBankCard' | translate}}-->
+        <!--<ion-note class="my_details" item-end>{{'mine.myBankCardMemo' | translate}} <img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>-->
+      <!--</button>-->
+
+      <!--<button style="border-bottom: 1px solid #f1f1f1" ion-item tappable (click)="goSecuritycenter()">-->
+        <!--&lt;!&ndash;<ion-icon name="beer" item-start></ion-icon>&ndash;&gt;-->
+        <!--<img src="assets/img/mine/myAQZX.png" alt="" item-start width="21px" height="21px">-->
+        <!--{{'mine.securityCenter' | translate}}-->
+        <!--<ion-note class="my_details" item-end>{{'mine.securityCenterMemo' | translate}} <img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>-->
+      <!--</button>-->
+
+      <button style="border-bottom: 1px solid #f1f1f1" ion-item tappable (click)="myWallet()">
+        <!--<ion-icon name="paw" item-start></ion-icon>-->
+        <img src="assets/img/mine/myMYBF.png" alt="" item-start width="21px" height="21px">
+        {{'mine.myWallet' | translate}}
+        <ion-note class="my_details" item-end>{{'mine.myWalletMemo' | translate}} <img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>
+      </button>
+
+      <button style="margin-top: 1px;border-bottom: 1px solid #f1f1f1" ion-item tappable (click)="goTestPage()">
+        进入测试页面
+        <ion-note class="my_details" item-end><img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>
+      </button>
+
+      <!--<button ion-item tappable (click)="goAbout()">-->
+        <!--<img src="assets/img/mine/myGYWM.png" alt="" item-start width="21px" height="21px">-->
+        <!--{{'mine.aboutUS' | translate}}-->
+        <!--<ion-note class="my_details" item-end>&lt;!&ndash;{{'mine.aboutUSMemo' | translate}}&ndash;&gt; <img class="f-right" src="assets/img/mine/right.png" alt="" width="16px"></ion-note>-->
+      <!--</button>-->
+
+    </ion-list>
+  </ion-item-group>
+</ion-content>

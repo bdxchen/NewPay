@@ -1,0 +1,29 @@
+<ion-header no-border  mode="md">
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="back()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">重置资金密码</ion-title>
+    <ion-buttons end icon-only >
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <ion-item no-lines style="text-align: center;border-bottom: 1px solid #dedede">
+      <ion-input type="number" item-start maxlength="8"  placeholder="{{'forgetPassword.verificationCode' | translate}}" [(ngModel)]="idcardno"  (keyup)="yanzmValid(idcardno)"   clearInput></ion-input>
+      <button item-end ion-button color="secondary" clear [disabled]="!verifyCode.disable" tappable (click)="getCode()" style="color: #0dacfa">{{verifyCode.verifyCodeTips}}</button>
+    </ion-item>
+    <ion-item no-lines style="text-align: center;border-bottom: 1px solid #dedede">
+      <ion-input placeholder="{{'forgetPassword.ZijinPwd' | translate}}" maxlength="6" [(ngModel)]="forget.ziJPwd" (keyup)="ZJMMValid(forget.ziJPwd)"></ion-input>
+    </ion-item>
+    <button style="display: block; width: 90%; margin: 3rem auto 0;" ion-button full  color="primary" tappable (click)="resetZJPassword()">{{'forgetPassword.submit' | translate}}</button>
+
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+page-receiv-success{
+  .content-ios {
+    color: #000;
+    background-color: rgb(238,245,253) !important;
+  }
+  .button-ios{
+    background-color: #2faff9;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .toolbar-ios-secondary .bar-button-primary-ios, .toolbar-ios-secondary .bar-button-default.bar-button-ios-primary, .toolbar-ios-secondary .bar-button-clear-ios-primary{
+    color: #ffffff;
+  }
+}

@@ -1,0 +1,73 @@
+page-transfer {
+  .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: #ffffff;
+    -webkit-box-shadow: inset 0 0px 0 0 #FFFFFF;
+    box-shadow: inset 0 0px 0 0 #FFFFFF;
+  }
+  .list-md .item-input.item-input-has-focus:last-child,
+  .list-md .item-input.input-has-focus:last-child{
+    border-bottom-color: #ffffff;
+    -webkit-box-shadow: inset 0 0px 0 0 #FFFFFF;
+    box-shadow: inset 0 0px 0 0 #FFFFFF;
+  }
+  .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: #ffffff;
+    -webkit-box-shadow: inset 0 0px 0 0 #FFFFFF;
+    box-shadow: inset 0 0px 0 0 #FFFFFF;
+  }
+  .content-ios {
+    color: #000;
+    background-color: rgb(238,245,253) !important;
+  }
+  .list-ios{
+    margin: -1px 0 5px;
+  }
+  .button-md{
+    background-color: #f9c215;
+  }
+  .list-md{
+    margin-left: -1px 0 5px;
+  }
+  .note-ios{
+    padding-left: 1.5rem;
+  }
+  .note-md{
+    padding-left: 1.5rem;
+  }
+  .button-block-ios{
+    margin-top: 7rem;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .button-block-md{
+    margin-top: 7rem;
+    width: 70%;
+    margin-left: 15%;
+  }
+  .button-ios{
+    background-color: #0dacfa;
+  }
+
+
+
+
+  .item-md{
+    padding-left: 2%;
+  }
+  .item-block{
+    min-height: 4rem;
+  }
+  .button-block-md{
+    width:92%;
+    margin:6rem auto;
+    opacity:.6;
+    font-size: 1.7rem;
+  }
+
+  .text-input-md{
+    margin: 10px 8px;
+  }
+  .list-md .item-input:last-child{
+    border:none;
+  }
+}

@@ -1,0 +1,42 @@
+<!--
+  Generated template for the TopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">{{ 'charging_money.transferCoin' | translate }}</ion-title>
+    <ion-buttons end icon-only >
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list style="margin-top: 2rem">
+
+    <ion-item no-lines>
+      <ion-label color="dark">{{ 'charging_money.account' | translate }}</ion-label>
+      <ion-input text-end placeholder="{{ 'charging_money.inputAccount' | translate }}"  [(ngModel)]="account" #am></ion-input>
+    </ion-item>
+    <ion-item no-lines style="margin-top: 1px;">
+      <ion-label color="dark">{{ 'charging_money.amount' | translate }}</ion-label>
+      <ion-input text-end placeholder="{{ 'charging_money.transferCoinAmount' | translate }}"  type="number" [(ngModel)]="money" tappable (ngModelChange)="changAmount($event)"></ion-input>
+    </ion-item>
+    <div class="keyongyue">
+      手续费: {{feel}}
+    </div>
+    <!--<ion-item no-lines style="margin-top: 1px;">-->
+      <!--<ion-label color="dark">{{ 'charging_money.memo' | translate }}</ion-label>-->
+      <!--<ion-input placeholder="{{ 'charging_money.addMemo' | translate }}"  [(ngModel)]="remarks" #am></ion-input>-->
+    <!--</ion-item>-->
+  </ion-list>
+  <button style="width: 70%;margin-left: 15%;background-color: #0dabfa;margin-top: 20%;" ion-button block tappable (click)="nextFinPwd()">{{ 'charging_money.confirm' | translate }}</button>
+</ion-content>

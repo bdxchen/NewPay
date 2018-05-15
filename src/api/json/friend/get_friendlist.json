@@ -1,0 +1,9 @@
+{
+  "ret_code" : "1",
+  "ret_msg" : "success",
+  "friendlist":[
+    {"profile": "http://d.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=8d4a8117b1003af34defd464001aea6a/8601a18b87d6277f25b653262f381f30e924fc0c.jpg", "name": "张三", "account": "18103313923", "status": 1},
+    {"profile": "http://p.3761.com/pic/60201392262626.jpg", "name": "李四","account": "16800039193", "status": 2},
+    {"profile": "http://img2.imgtn.bdimg.com/it/u=3637404049,2821183587&fm=214&gp=0.jpg", "name": "王麻子","account": "18133430103", "status": 3}
+  ]
+}

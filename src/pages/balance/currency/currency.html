@@ -1,0 +1,41 @@
+<!--
+  Generated template for the TopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">{{ 'currency.refillCoin' | translate }}</ion-title>
+    <ion-buttons end icon-only>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ewmSkST">
+    <ion-card class="card-basicTP">
+      <ion-item class="text-center">
+        <strong>{{ 'currency.refillCoinNewPay' | translate }}</strong>
+      </ion-item>
+      <!--<ion-img  style="width: 200px;height: 200px" src="assets/img/default-receive-qr.png"></ion-img>-->
+      <qrcode tappable (click)="openQR()" id="QrcodeRecC" [qrdata]="myAngularxQrCode" [size]="200" [level]="'M'"></qrcode>
+      <!--<ion-item class="text-center" style="margin-top: 5vw">-->
+        <!--<button ion-button small (click)="setMoney()">{{ 'currency.setAmount' | translate }}</button><button ion-button small (click)="copyAdd()">{{ 'currency.copyAddress' | translate }}</button>-->
+      <!--</ion-item>-->
+      <ion-row class="text-center" style="margin-top: 10vw">
+        <ion-col style="color: #0dacfa; font-size: 14px; border-right: #a4a4a4 1px solid; padding:0;" tappable (click)="setMoney()">{{ 'currency.setAmount' | translate }}</ion-col>
+        <ion-col style="color: #0dacfa; font-size: 14px; padding:0;" tappable (click)="copyAdd()">{{ 'currency.copyAddress' | translate }}</ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+
+
+</ion-content>

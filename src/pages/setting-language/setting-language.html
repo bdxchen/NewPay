@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SettingLanguagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+
+  <!--<ion-navbar>-->
+    <!--<ion-title>settingLanguage</ion-title>-->
+  <!--</ion-navbar>-->
+
+<!--</ion-header>-->
+<ion-header no-border>
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">{{'settingLanguage.title' | translate}}</ion-title>
+    <ion-buttons end icon-only >
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list radio-group [(ngModel)]="relationship" tappable (ionChange)="selectedLan()">
+    <ion-item *ngFor="let lang of langs">
+      <ion-label>{{lang.language}}</ion-label>
+      <ion-radio checked="true" value="{{lang.type}}"></ion-radio>
+    </ion-item>
+
+    <!--<ion-item>
+      <ion-label>English</ion-label>
+      <ion-radio checked="false" value="en"></ion-radio>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>繁体中文</ion-label>
+      <ion-radio checked="false" value="tw"></ion-radio>
+    </ion-item>-->
+  </ion-list>
+
+
+</ion-content>

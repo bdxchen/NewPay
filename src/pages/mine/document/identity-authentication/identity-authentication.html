@@ -1,0 +1,75 @@
+<ion-header no-border cache-view="false">
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'identity_authentication.title' | translate }}</ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list no-border style="margin-top: 10px">
+        <ion-item no-lines>
+            <ion-label>{{'identity_authentication.countyCode' | translate }}</ion-label>
+            <ion-select [selectOptions]="selectOptions" name="country" [(ngModel)]="countryNum" okText="{{'identity_authentication.ok' | translate }}" cancelText="{{'identity_authentication.cancel' | translate }}"
+                        (ngModelChange)="countryNum=$event; changeCountry()">
+                <!--<ion-option selected  *ngIf="sleletedOne">{{sleletedOne}}</ion-option>-->
+                <ion-option value="{{country.countryCode}}::{{country.phoneCode}}::{{country.countryName}}"
+                            *ngFor="let country of countryN" >{{country.countryName}}
+                </ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'identity_authentication.name' | translate }}</ion-label>
+            <ion-input text-end type="text" (keyup)="cardNamevalid(Cardname)" [(ngModel)]="Cardname"></ion-input>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'identity_authentication.IDsType' | translate }}</ion-label>
+            <ion-select [selectOptions]="selectOptionsQT" okText="{{'identity_authentication.ok' | translate }}"
+                        cancelText="{{'identity_authentication.cancel' | translate }}" name="card"
+                        [(ngModel)]="CredentialType" (ngModelChange)="CredentialType=$event; changeCredenty()">
+                <ion-option value="1">{{'identity_authentication.IDCard' | translate }}</ion-option>
+                <ion-option value="2">{{'identity_authentication.passport' | translate }}</ion-option>
+                <ion-option value="3">{{'identity_authentication.drivingLicence' | translate }}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'identity_authentication.IDsCode' | translate }}</ion-label>
+            <ion-input text-end type="text" (keyup)="cardNOvalid(CredentialNo)" [(ngModel)]="CredentialNo"></ion-input>
+        </ion-item>
+
+        <div no-lines style="margin-top: 10px;padding: 10px;background-color: white">
+            <ion-row><p style="color: #888; font-size: 1.5rem; margin: 5px;">{{'identity_authentication.uploadImg' | translate }}</p></ion-row>
+            <ion-row>
+                <ion-col *ngIf="uploadHeaderF==''" tappable (click)="presentActionSheet('front','1')">
+                    <img src="assets/img/identity/scanningZ.png" width="100%">
+                    <img class="colP" src="assets/img/identity/scanning.png">
+                    <p class="colPp">{{'identity_authentication.obverseSide' | translate }}</p>
+                </ion-col>
+                <ion-col *ngIf="uploadHeaderF!=''" (click)="presentActionSheet('front','2')">
+                    <img src="{{uploadHeaderF}}" width="100%">
+                </ion-col>
+                <ion-col *ngIf="uploadHeaderB==''" tappable (click)="presentActionSheet('back','1')">
+                    <img src="assets/img/identity/scanningB.png" width="100%">
+                    <img class="colP" src="assets/img/identity/scanning.png">
+                    <p class="colPp">{{'identity_authentication.reverseSide' | translate }}</p>
+                </ion-col>
+                <ion-col *ngIf="uploadHeaderB!=''" (click)="presentActionSheet('back','2')">
+                    <img src="{{uploadHeaderB}}" width="100%">
+                </ion-col>
+            </ion-row>
+            <ion-row><span class="colS">{{'identity_authentication.memo' | translate }}</span></ion-row>
+        </div>
+        <div class="btnDivCss">
+            <button ion-button full tappable (click)="submitAll()">{{'identity_authentication.confirm' | translate }}</button>
+        </div>
+        <p class="desc">{{'identity_authentication.desc' | translate }}</p>
+
+    </ion-list>
+</ion-content>

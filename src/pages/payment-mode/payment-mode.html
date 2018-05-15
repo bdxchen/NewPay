@@ -1,0 +1,40 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="modalCssTop">
+</div>
+<div ngClass="modalCssBottom">
+  <div class="inner-box" style="bottom: 0;left: 0;width: 100%;height: 380px;">
+
+    <ion-header>
+      <ion-toolbar color="primary" >
+        <ion-buttons left onclick="" tappable  (click)="closeModal()">
+          <button ion-button icon-only>
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+
+        <ion-title style="text-align: center">{{'payment_mode.choosePayment' | translate}}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-list radio-group style="margin-top: 44px" [(ngModel)]="langForm">
+      <ion-item no-lines style="border-bottom: 1px solid #dedede">
+        <ion-label><img src="assets/img/balance/BitCNY.png" alt="" width="21px" height="21px"> BitCNY</ion-label>
+        <ion-radio checked="false" value="zsyh"></ion-radio>
+      </ion-item>
+
+      <ion-item no-lines style="border-bottom: 1px solid #dedede">
+        <ion-label><img src="assets/img/balance/BTC.png" alt="" width="21px" height="21px"> BTC</ion-label>
+        <ion-radio checked="false" value="nyyh"></ion-radio>
+      </ion-item>
+
+      <!--<ion-item no-lines style="border-bottom: 1px solid #dedede">-->
+      <!--<ion-label>Python</ion-label>-->
+      <!--<ion-radio value="python" disabled="true"></ion-radio>-->
+      <!--</ion-item>-->
+    </ion-list>
+  </div>
+</div>

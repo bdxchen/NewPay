@@ -1,0 +1,70 @@
+<ion-header no-border cache-view="false">
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'document.title' | translate }}</ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-item-group margin-top="15px">
+        <ion-item tappable (click)="headUpload()">
+            <p> {{'document.myThumb' | translate }}</p>
+            <img *ngIf="uploadHeader!=''" item-right src="{{uploadHeader}}" style="width: 40px;
+    height: 40px;
+    border-radius: 50%;">
+
+            <img *ngIf="uploadHeader==''" item-right src="assets/img/default.png" style="width: 40px;
+    height: 40px;
+    border-radius: 50%;">
+            <ion-note item-end>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-note>
+        </ion-item>
+        <!--<ion-item no-lines>-->
+        <!--<p> 我的二维码</p>-->
+        <!--<ion-note item-end><ion-icon name="folder"></ion-icon> </ion-note>-->
+        <!--</ion-item>-->
+        <ion-item tappable (click)="nickname()">
+            <p>{{'document.nickname' | translate }}</p>
+            <ion-note item-end>{{nicknameL}}</ion-note>
+        </ion-item>
+        <ion-item tappable (click)="changesex()">
+            <p>{{'document.gender' | translate }}</p>
+            <ion-note item-right>{{sexradio}}</ion-note>
+            <ion-note item-end>
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </ion-note>
+        </ion-item>
+    </ion-item-group>
+
+    <ion-item no-lines style="margin-top: 10px" tappable (click)="identityAuthentication()">
+        <p>{{'document.indentity' | translate }}</p>
+        <img *ngIf="allinfo.id_status !='1' " item-right src="assets/img/Unauthorized.png" style="width: 17px;
+    height: 17px;
+    border-radius: 10%;">
+        <img *ngIf="allinfo.id_status =='1'" item-right src="assets/img/authorized.png" style="width: 17px;
+    height: 17px;
+    border-radius: 10%;">
+        <!--<ion-note item-right>{{allinfo.id_name}}</ion-note>-->
+        <ion-note *ngIf="allinfo.id_status=='0'" item-right>未认证</ion-note>
+        <ion-note *ngIf="allinfo.id_status=='2'" item-right>审核中</ion-note>
+        <ion-note *ngIf="allinfo.id_status=='1'" item-right>已认证</ion-note>
+        <ion-note *ngIf="allinfo.id_status=='3'" item-right>审核未通过</ion-note>
+        <!--<ion-note item-end><ion-icon name="ios-arrow-forward"></ion-icon> </ion-note>-->
+    </ion-item>
+
+    <ion-item no-lines style="margin-top: 10px" tappable (click)="applicationBusniess()">
+        <ion-note item-start style="color: #0DACFA!important;">{{'document.applyMerchant' | translate }}</ion-note>
+    </ion-item>
+    <div class="docBtn">
+        <button ion-button full tappable (click)="saveDocument()">{{'document.save' | translate }}</button>
+    </div>
+</ion-content>

@@ -1,0 +1,89 @@
+                                                                                                                                                                                                                                                                                                                       <!--
+  Generated template for the TopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+
+<!--<ion-navbar color="secondary">-->
+<!--<ion-title>充值</ion-title>-->
+<!--</ion-navbar>-->
+
+<!--</ion-header>-->
+
+<ion-header no-border>
+    <ion-toolbar color="primary">
+        <ion-buttons left onclick="" tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'topup.title' | translate}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+    <ion-list style="margin-top: 10px">
+        <button ion-item>
+            <img src="assets/img/topupAccount.png" style="width: 50px;height: 50px; margin: 12px 10px 12px 0;"
+                 item-start>
+            <h2>{{'topup.aliPay' | translate}}</h2>
+            <p>{{account}}</p>
+        </button>
+    </ion-list>
+    <ion-list>
+        <!--<ion-item no-lines>
+            <ion-label color="dark">{{'topup.bizhong' | translate}}</ion-label>
+            <ion-input text-end disabled [(ngModel)]="this.alipay.coin_type"></ion-input>
+        </ion-item>-->
+        <div class="topup_list">
+            <div class="p1">
+                <span>{{'topup.amount' | translate}}</span>
+                <div class="currency">{{currency}}</div>
+            </div>
+            <div class="p2">
+                <div class="symbol">{{'transfer2.price' | translate}}</div>
+                <input placeholder="{{'topup.inputAmount' | translate}}" tappable (keyup)="tofix(submitOrder.amount)" (ngModelChange)="changAmount($event)" [(ngModel)]="submitOrder.amount">
+                <div class="clear"></div>
+            </div>
+            <div class="p3">手续费{{feel}}元</div>
+        </div>
+        <!--<ion-item no-lines>
+            &lt;!&ndash;<ion-label stacked></ion-label>&ndash;&gt;
+            <ion-label stacked style="font-size: 1.5rem; margin: 9px;">{{'topup.amount' | translate}} <span
+                    class="currency">BitCNY</span></ion-label>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label color="dark" style="font-size: 2.7rem;">{{'transfer2.price' | translate}}</ion-label>
+            <ion-input style="font-size: 2.7rem; margin: 10px 0;" placeholder="{{'topup.inputAmount' | translate}}"
+                       type="text" tappable
+                       (keyup)="tofix(submitOrder.amount)" (ngModelChange)="changAmount($event)"
+                       [(ngModel)]="submitOrder.amount"></ion-input>
+        </ion-item>
+        <div class="keyongyue">
+            手续费{{feel}}元
+        </div>-->
+        <!--<ion-item style="margin-top: 1px">-->
+        <!--<ion-label color="dark">{{'topup.memo' | translate}}</ion-label>-->
+        <!--<ion-input placeholder="{{'topup.inputMemo' | translate}}" [(ngModel)]="submitOrder.comment"></ion-input>-->
+        <!--</ion-item>-->
+    </ion-list>
+    <div class="note">
+        <div>*{{'topup.onlyAliPay' | translate}}</div>
+        <div>*{{'topup.memoForPay' | translate}}</div>
+        <div>*{{'topup.maxmoney' |translate}}</div>
+    </div>
+
+    <button ion-button block tappable (click)="skipToAlipay()" style="width: 92%; display:block; margin:10% auto 0;font-size: 1.7rem;">
+        {{'topup.refill' |
+        translate}}
+    </button>
+
+    <div class="footer_tips">*{{'topup.topupTiS' | translate}}</div>
+</ion-content>

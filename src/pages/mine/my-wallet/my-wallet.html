@@ -1,0 +1,28 @@
+<!--
+  Generated template for the MyWalletPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border cache-view="false">
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'my_wallet.title' | translate}}</ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="background-color: #eef5fd !important">
+    <button ion-button style="margin: 20% auto;width: 92%; display:block; background-color: #f9c215" tappable
+            (click)="beifenMS()">{{'my_wallet.backupKey' | translate}}
+    </button>
+    <!--<button ion-button style="margin-top: 5%;width: 70%;margin-left: 15%;background-color: #2faff9" (click)="huifuDR()">{{'my_wallet.import' | translate}}</button>-->
+
+</ion-content>

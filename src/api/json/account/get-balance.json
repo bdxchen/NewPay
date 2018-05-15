@@ -1,0 +1,9 @@
+{
+	"ret_code" : "1",
+	"ret_msg" : "success",  
+	"data":[
+		{"coin_type": "BitUSD", "avail_amount": 200.00, "freeze_amount": 0.00, "comment": ""},
+		{"coin_type": "BitCNY", "avail_amount": 300.00,"freeze_amount": 0.00, "comment": ""},
+		{"coin_type": "BitEUO", "avail_amount": 400.00, "freeze_amount": 0.00, "comment": ""}
+	]
+}

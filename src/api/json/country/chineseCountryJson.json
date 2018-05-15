@@ -1,0 +1,77 @@
+{
+    "data": [
+        {
+            "countryName": "澳大利亚",
+            "countryPinyin": "ao da li ya",
+            "phoneCode": "61",
+            "countryCode": "AU"
+        },
+
+        {
+            "countryName": "加拿大",
+            "countryPinyin": "jia na da",
+            "phoneCode": "1",
+            "countryCode": "CA"
+        },
+        {
+            "countryName": "中国",
+            "countryPinyin": "zhong guo",
+            "phoneCode": "86",
+            "countryCode": "CN"
+        },
+        {
+            "countryName": "英国",
+            "countryPinyin": "ying guo",
+            "phoneCode": "44",
+            "countryCode": "GB"
+        },
+        {
+            "countryName": "中国香港特别行政区",
+            "countryPinyin": "zhong guo xiang gang te bie xing zheng qu",
+            "phoneCode": "852",
+            "countryCode": "HK"
+        },
+        {
+            "countryName": "日本",
+            "countryPinyin": "ri ben",
+            "phoneCode": "81",
+            "countryCode": "JP"
+        },
+        {
+            "countryName": "韩国",
+            "countryPinyin": "han guo",
+            "phoneCode": "82",
+            "countryCode": "KR"
+        },
+        {
+            "countryName": "中国澳门特别行政区",
+            "countryPinyin": "zhong guo ao men te bie xing zheng qu",
+            "phoneCode": "853",
+            "countryCode": "MO"
+        },
+        {
+            "countryName": "菲律宾",
+            "countryPinyin": "fei lu bin",
+            "phoneCode": "63",
+            "countryCode": "PH"
+        },
+        {
+            "countryName": "新加坡",
+            "countryPinyin": "xin jia po",
+            "phoneCode": "65",
+            "countryCode": "SG"
+        },
+        {
+            "countryName": "泰国",
+            "countryPinyin": "tai guo",
+            "phoneCode": "66",
+            "countryCode": "TH"
+        },
+        {
+            "countryName": "台湾",
+            "countryPinyin": "tai wan",
+            "phoneCode": "886",
+            "countryCode": "TW"
+        }
+    ]
+}

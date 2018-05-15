@@ -1,0 +1,44 @@
+<ion-header no-border cache-view="false">
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">{{'about.title' | translate}}</ion-title>
+    <ion-buttons end icon-only >
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content  isScrolling=false>
+  <div class="mineBgCss">
+    <div style="text-align: center">
+      <img class="bgLogo" src="assets/img/logo/logo.png">
+        <p style="color: #FFFFFF">NewPay {{app_version}}</p>
+      <div class="cardCssM">
+
+          <p style="padding-top: 20px; font-size: 1.6rem;">{{'about.concern' | translate}}</p>
+        <ion-img  style="width: 70%;height: 70vw" src="assets/img/default-receive-qr.png"></ion-img>
+      </div>
+      <!--<ion-card>-->
+        <!--<ion-item no-lines class="text-center">-->
+          <!--<p style="color: white">扫码关注</p>-->
+        <!--</ion-item>-->
+        <!--<ion-img  style="width: 200px;height: 200px" src="assets/img/default-receive-qr.png"></ion-img>-->
+        <!--&lt;!&ndash;<div id="qrcodeCanvas"></div>&ndash;&gt;-->
+      <!--</ion-card>-->
+
+
+    </div>
+    <div style="margin-left: 5%;color: white">
+      <p>{{'about.customerService' | translate}}</p>
+      <p>{{'about.hotline' | translate}}</p>
+
+    </div>
+    <div class="bottomPositionCss">{{'about.memo' | translate}}<br>{{'about.memo2' | translate}}</div>
+  </div>
+
+</ion-content>

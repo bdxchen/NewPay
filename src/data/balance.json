@@ -1,0 +1,5 @@
+[
+      { "currency": "BitUSD", "icon": "logo-usd" ,"amount": "200.00"},
+      { "currency": "BitCNY", "icon": "logo-yen" ,"amount": "300.00"},
+      { "currency": "BitEUO", "icon": "logo-euro" ,"amount": "400.00"}
+    ]

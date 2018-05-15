@@ -1,0 +1,116 @@
+page-register {
+  .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border-bottom-color: #f1f1f1;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .alert-md .alert-button-group {
+    padding: 0px 1px 5px 1px !important;
+  }
+  .item.item-md .checkbox-md {
+    position: static;
+    display: block;
+    margin: 9px 9px 9px 4px;
+  }
+  .logo {
+    width: 30%;
+    height: 20vw;
+    left: 35%;
+    top: 35%;
+    position: absolute;
+    z-index: 2;
+  }
+  a[disabled], button[disabled], [ion-button][disabled] {
+    opacity: 1;
+  }
+  .button-clear-md {
+    color: #FFFFFF;
+  }
+  .IMGST {
+    position: absolute;
+    top: auto;
+    left: 0;
+  }
+  ion-select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex: 3;
+    text-align: right;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  .item-md {
+    background-color: transparent;
+    padding:0 15px;
+  }
+  .registerCon {
+    position: absolute;
+    padding-top: 0px;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 41vw;
+  }
+  .button[icon-only] {
+    padding-top: 20px;
+  }
+  .inputSt {
+    height: 30px;
+    line-height: 35px;
+    font-size:1.5rem;
+    //border-bottom:1px solid #f1f1f1;
+  }
+  .leftSt {
+    display: inline-flex;
+    flex: 3;
+    //padding-left: 12px;
+    //padding-bottom: 3px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .button-clear-ios-secondary {
+    color: #0dacfa;
+  }
+
+  .button-clear-ios {
+    color: #ffffff;
+  }
+  .nextST {
+    background-color: rgb(251, 160, 18);
+    box-shadow: none!important;
+    border-radius: 4px;
+    font-size:1.4em;
+    margin-top:30px;
+  }
+  .btnST {
+    margin-top: 20%;
+  }
+  .login-container {
+    width: 100%;
+    margin:0;
+    padding: 50% 10% 0;
+    //height: 100%;
+  }
+  .item-ios {
+    padding-left: 0;
+  }
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+  }
+  .checkbox-ios .checkbox-icon {
+    border-color: #2faff9;
+    border-radius: 0%;
+  }
+  .checkbox-ios-dark .checkbox-checked {
+    background-color: #2faff9;
+  }
+
+  .text-input-md{
+    margin:0;
+  }
+  .label.label-md{
+    font-size:1.4rem;
+  }
+
+}

@@ -1,0 +1,52 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="modalCssTop" tappable (click)="closeModal()">
+</div>
+<div ngClass="modalCssBottom">
+
+  <div class="inner-box">
+    <span class="iconfont icon-guanbi close" tappable (click)="closeModal()">×</span>
+    <h1 class="titleQQ">{{'modal.inputPw' | translate}}</h1>
+    <div class="flexable password">
+      <div style="opacity: 0;" >●</div>
+      <div style="opacity: 0;" >●</div>
+      <div style="opacity: 0;" >●</div>
+      <div style="opacity: 0;" >●</div>
+      <div style="opacity: 0;" >●</div>
+      <div style="opacity: 0;" >●</div>
+      <!--●-->
+    </div>
+    <div class="fogetPsd"> <button ion-button small clear end (click)="fogetZijinPsd()">忘记资金密码</button>
+    </div>
+    <div class="notice color-lightblue">{{'modal.inputPwMemo' | translate}} </div>
+    <div class="input-box" tappable (click)="TabNum($event)">
+      <div class="flexable">
+        <div class="input-key" data-label="1"></div>
+        <div class="input-key" data-label="2"></div>
+        <div class="input-key" data-label="3"></div>
+      </div>
+      <div class="flexable">
+      <div class="input-key" data-label="4">
+      </div>
+        <div class="input-key" data-label="5">
+      </div>
+        <div class="input-key" data-label="6">
+        </div>
+      </div>
+      <div class="flexable">
+        <div class="input-key" data-label="7"></div>
+        <div class="input-key" data-label="8"></div>
+        <div class="input-key" data-label="9"></div>
+      </div>
+      <div class="flexable">
+          <div></div>
+          <div class="input-key" data-label="0">
+          </div><div class="input-key" data-label="del"></div>
+        </div>
+  </div>
+  </div>
+  </div>

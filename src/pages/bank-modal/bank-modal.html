@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ModalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<div class="modalCssTop" (click)="closeModal()">
+</div>
+<div ngClass="modalCssBottom">
+  <div class="inner-box" style="bottom: 0;left: 0;width: 100%;height: 380px;">
+
+    <ion-header>
+      <ion-toolbar color="primary" >
+        <ion-buttons left onclick="" (click)="closeModal()">
+          <button ion-button icon-only>
+            <ion-icon name="ios-arrow-back"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{ 'bank_modal.choosePayModel' | translate }}</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only>
+            <ion-icon name=""></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list radio-group style="margin-top: 1px">
+        <!--<ion-list-header>-->
+          <!--{{ 'bank_modal.bankCard' | translate }}-->
+        <!--</ion-list-header>-->
+        <!--<ion-item no-lines style="border-bottom: 1px solid #dedede" *ngFor="let bank of bankData" (click)="bankchose(bank,'3')">-->
+          <!--<img item-start src="assets/img/withdraw/zsyhlogo.png" alt="" width="21px" height="21px"> <p item-left>{{bank.bankname}}</p>-->
+        <!--</ion-item>-->
+        <!--<ion-list-header>-->
+          <!--{{ 'bank_modal.aliPay' | translate }}-->
+        <!--</ion-list-header>-->
+        <ion-item no-lines style="border-bottom: 1px solid #dedede" *ngFor="let third of thirdpart" (click)="bankchose(third,'2')">
+          <img item-start src="assets/img/alipaylogo.png" alt="" width="21px" height="21px"><span item-left >支付宝</span> <span style="color: #808080" item-right >{{third.name}}({{third.account}})</span>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<!--
+  Generated template for the HeadUploadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+
+  <ion-navbar>
+    <ion-title>头像上传</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+      <button ion-button full (click)="upload()" > 文件上传</button>
+    <button ion-button (click)="openPhoto()">打开摄像头</button>
+    <button ion-button (click)="upload()">文件上传</button>
+    <button ion-button (click)="download()">文件下载</button>
+
+    <div>
+        <img [src]="path" />
+    </div>
+</ion-content>

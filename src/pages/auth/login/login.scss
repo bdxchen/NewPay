@@ -1,0 +1,189 @@
+page-login {
+  .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+    border: none;
+    -webkit-box-shadow: inset 0 0px 0 0 #808080;
+    box-shadow: inset 0 0 0 0 #808080;
+  }
+
+  .button-clear-md {
+    color: #FFFFFF;
+  }
+  .item-md {
+    background-color: transparent;
+  }
+  .checkbox-ios .checkbox-icon {
+    border-color: #2faff9;
+    border-radius: 0;
+  }
+  .text-input::-moz-placeholder {
+    color: #ffffff;
+  }
+
+  .text-input:-ms-input-placeholder {
+    color: #ffffff;
+  }
+  ion-select {
+    flex: 3;
+    max-width: 100%;
+    text-align: end;
+  }
+  .text-input::-webkit-input-placeholder {
+    color: #ffffff;
+  }
+  $checkbox-md-border-bottom-width: 0px !default;
+  .checkbox-ios-dark .checkbox-checked {
+    background-color: #2faff9;
+  }
+  .checkbox-md .checkbox-icon {
+    border-color: #2faff9;
+  }
+  .item.item-md .checkbox-md {
+    margin: 4px 3px 0 4px !important;
+  }
+  .checkbox-md-dark .checkbox-checked {
+    background-color: #2faff9;
+  }
+  .label-ios {
+    margin: 11px 8px 11px 0;
+    color: white;
+  }
+  .label-md {
+    margin: 5px 0 11px 0;
+    color: white;
+  }
+  .input-ios[clearInput] .text-input {
+    color: white;
+  }
+  .input-md[clearInput] .text-input {
+    color: white;
+  }
+  .item-ios.item-block .item-inner {
+    border: none;
+  }
+  .item-ios {
+    background-color: transparent;
+  }
+  .select-alert-button-group {
+    display: none;
+  }
+  .button-ios.activated {
+    background-color: #f2f2f2 !important;
+  }
+  a[disabled], button[disabled], [ion-button][disabled] {
+    cursor: default;
+    opacity: 1;
+    pointer-events: none;
+  }
+  .button-clear-ios {
+    color: #ffffff;
+  }
+  @media screen and (max-height: 480px) {
+    .logo {
+      width: 75px;
+      height: 50px;
+      /* margin-top: 50px; */
+      /* margin-bottom: 50px; */
+      background: transparent;
+      position: absolute;
+      top: 50px;
+      /* margin-left: 50%; */
+      margin-left: -37.5px;
+    }
+    .loginBtn {
+      border-radius: 10px;
+      background: white;
+      margin-top: 20px;
+      color: #35abb5;
+    }
+  }
+  @media screen and (min-height: 568px) {
+    .logo {
+      width: 75px;
+      height: 50px;
+      /* margin-top: 50px; */
+      /* margin-bottom: 50px; */
+      background: transparent;
+      position: absolute;
+      top: 50px;
+      /* margin-left: 50%; */
+      margin-left: -37.5px;
+    }
+    .loginBtn {
+      border-radius: 10px;
+      background: white;
+      margin-top: 50px;
+      color: #35abb5;
+    }
+  }
+  .item.item-ios .checkbox-ios {
+    margin: 8px 1px 8px -8px;
+  }
+  ion-item {
+    padding-left: 0!important;
+    margin-bottom: 10px;
+  }
+
+  .inputCss {
+    -web-kit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    height: 40px;
+    border: none;
+  }
+
+  .login-container {
+    background-repeat: no-repeat;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-image: url(../assets/img/logo/loginback.png);
+    width: 100%;
+    //height: 190vw;
+    color: white;
+    //top: 0;
+    padding: 14vw;
+    text-align: center;
+    margin: 0 auto;
+
+  }
+
+  .scroll-content {
+    overflow-y: hidden;
+  }
+  .lineCss {
+    height: .55px;
+    border: none;
+    border-top: 1px solid #fff;
+  }
+  .button-outline-ios {
+    border-color: #ffffff !important;
+    color: #488aff;
+  }
+
+  .text-input-md{
+    margin:13px 8px 13px 0;
+  }
+  .button-inner{
+    font-size:1.3rem;
+  }
+  .button-md{
+    box-shadow: none!important;
+    border-radius: 4px;
+    font-size:1.4em;
+    //margin-top:30px;
+  }
+
+  ion-checkbox{
+    font-size:1.3rem;
+  }
+  button{  padding:0;}
+  .item-md.item-block .item-inner{
+    padding-right: 0;
+  }
+  .checkbox-md .checkbox-icon{
+    border:1px solid #fff;
+    background: transparent;
+    width: 15px;
+    height:15px;
+  }
+}

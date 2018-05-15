@@ -1,0 +1,48 @@
+<ion-header no-border>
+    <!--<ion-navbar >-->
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'account_pay.title' | translate }}</ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-list style="margin-top: 10px">
+        <ion-item no-lines>
+            <p>{{'account_pay.transferTo' | translate }} <a>{{receiveData.Account}}</a></p>
+        </ion-item>
+        <ion-item no-lines *ngIf="flagC==1">
+            <ion-label>{{'account_pay.coinType' | translate }}</ion-label>
+            <ion-select [selectOptions]="selectOptionsQT" [(ngModel)]="reqCheckPayee.symbol"
+                        okText="确定" cancelText="取消">
+                <ion-option *ngFor="let dataTemp of resQ" [value]="dataTemp.symbol">{{dataTemp.symbol}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px" *ngIf="flagC==2">
+            <ion-label>{{'account_pay.coinType' | translate }}</ion-label>
+            <p item-end>{{reqCheckPayee.symbol}}</p>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px" *ngIf="flagC==1">
+            <ion-label>{{'account_pay.amount' | translate }}:</ion-label>
+            <ion-input text-end placeholder="{{'account_pay.inputAmount' | translate }}"
+                       (keyup)="accPayValid(receiveData.money)" [(ngModel)]="receiveData.money"></ion-input>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px" *ngIf="flagC==2">
+            <ion-label>{{'account_pay.amount' | translate }}:</ion-label>
+            <p item-end>{{receiveData.money}}</p>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px; border: none;">
+            <ion-textarea placeholder="{{'account_pay.inputMemo' | translate }}"  maxlength="25"  rows="3" cols="20"  [(ngModel)]="remarkMemo"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <button style="margin: 3rem auto 0; width:92%; display: block; background-color: #f9a718; box-shadow: none;" ion-button tappable (click)="goTransfer()">{{'account_pay.transferBtn' | translate}}
+    </button>
+</ion-content>

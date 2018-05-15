@@ -1,0 +1,237 @@
+page-home{
+  .card-ios {
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 1px 2px transparent;
+    box-shadow: 0 1px 2px transparent;
+  }
+  .item-ios.item-block .item-inner {
+
+    border-bottom: 0px solid #c8c7cc;
+  }
+  .transition{
+    transition: background-size .3s ease-in;
+  }
+  .content{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+  }
+
+  .myproperty1{
+    width: 21px;
+    height: 25px;
+    background: transparent;
+    text-align:center;
+    margin-left: 21px;
+  }
+  .user-info {
+    width: 100%;
+    height: 135px;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    h4,p{
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.31);
+    }
+    h4{
+      font-size: 1em;
+      margin: 5px 0;
+    }
+    p{
+      padding:0 10px;
+      font-size: .8em;
+    }
+  }
+  //###################################
+
+  .noahtitle{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #09a3ad;
+    border-bottom:1px solid
+  }
+  .content-ios {
+    color: #000;
+    background-color: rgb(238,245,253) !important;
+  }
+  .myproperty {
+    height: 52px;
+    width: 45px;
+    background: transparent;
+    text-align: center;
+  }
+
+  .myapplication{
+    height:50px;
+    width: 50px;
+    background: transparent;
+    text-align:center
+  }
+
+  .col-center{
+    text-align:center
+  }
+  .no-scroll {
+    scroll-content {
+      overflow-y: hidden;
+    }
+  }
+  .card-basic{
+    padding: 0;
+    margin: 0;
+    height: 140px;
+    width: 100%;
+    background-color: #09a3ad;
+    border-bottom:1px solid #ffffff;
+    text-align: center;
+  }
+  .list-header-md{
+    min-height: 2.5rem;
+    border-top: 1px solid #dedede;
+  }
+  .list-md{
+    margin: -1px 0 1px;
+  }
+  .list-ios{
+    margin: -1px 0 1px;
+  }
+  .button-outline-ios-light{
+    color: #dedede;
+  }
+  .card-third-aplication{
+    padding: 0;
+    margin: 0;
+    margin-bottom: 15px;
+    height: 30px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .card-blank-aplication{
+    padding: 0;
+    margin: 0;
+    height: 15px;
+    width: 100%;
+    background-color: #dddddd;
+    border-bottom:1px solid #ffffff;
+  }
+
+
+  .card-more-aplication{
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    width: 100%;
+    background-color: #888888;
+    border-bottom:1px solid #ffffff;
+    text-align:center;
+    vertical-align:middle;
+  }
+  .label-ios {
+    margin: 1px 8px 11px 0;
+  }
+  .card-md p{
+    line-height: 30px;
+    padding-left: 10px;
+  }
+  .card-ios{
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+  }
+  .card-ios p{
+    line-height: 30px;
+    padding-left: 10px;
+  }
+  .card-aplication{
+    padding: 0;
+    margin: 0;
+    height: 280px;
+    width: 100%;
+  }
+
+  .card-account{
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    width: 100%;
+  }
+
+  .item-ios [item-left]{
+    margin: 8px 1px 8px 0px;
+  }
+  .button-small-ios{
+    height: 1.5em;
+  }
+  .headerTopHome{
+    position: relative;
+    top: 0;
+    left: 0;
+    //background-image: url(../assets/img/home/homeBg.png);
+    width: 100%;
+    /* margin-top: 20px; */
+    height: 150px;
+    padding-top: 5px;
+    //background-repeat: no-repeat;
+    //background-size: 100% 100%;
+    background-color: #f9c215;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    h4,p{
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.31);
+    }
+    h4{
+      font-size: 1.2em;
+      margin: 8px 0;
+    }
+    p{
+      padding:0 10px;
+      font-size: .8em;
+    }
+
+  }
+
+
+
+  .toolbar-background-md{
+    background: #fac212;
+  }
+  .currency{
+    padding: 6px 8px;
+    margin:5px 5px  0 0;
+    background: #EAEEF1;
+    border-radius: 16px;
+    color: #888;
+    font-size: 1.2rem;
+    text-align: center;
+    float: left;
+    display: inline-block;
+  }
+  .details{
+    width: 100%;
+    height:3rem;
+    line-height: 3rem;
+    text-align: center;
+    background: #fff;
+    color: #888;
+    font-size: 1.2rem;
+    border-top:1px solid #f1f1f1;
+  }
+  .label-md{
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+

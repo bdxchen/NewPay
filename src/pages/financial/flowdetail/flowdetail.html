@@ -1,0 +1,70 @@
+<!--
+  Generated template for the FlowdetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+
+  <!--<ion-navbar>-->
+    <!--<ion-title>流水明细</ion-title>-->
+  <!--</ion-navbar>-->
+
+<!--</ion-header>-->
+
+<ion-header no-border cache-view="false" mode="md">
+	<ion-toolbar color="secondary">
+		<ion-buttons left icon-only tappable (click)="goBack()">
+			<button ion-button icon-only>
+				<ion-icon name="ios-arrow-back"></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title style="text-align: center">我的账单</ion-title>
+		<ion-buttons end icon-only >
+			<button ion-button icon-only>
+				<ion-icon name=""></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<ion-list *ngFor="let tag of indexTags">
+		<ion-list-header no-lines style="margin-top: 1px">
+		  <ion-note>{{tag.occurtime}}</ion-note>
+		</ion-list-header>
+		<ion-item no-lines style="margin-top: 1px" tappable (click)="billDetail(item)">
+			<ion-avatar item-start>
+				<img src="assets/img/message/msgpush.png">
+			</ion-avatar>
+			<p item-left style="width: 80px">{{tag.occurtime}}</p>
+			<div>
+				<h4>+{{tag.amount}}</h4>
+				<p>{{tag.coin_type}}</p>
+			</div>
+			<ion-note item-end><ion-icon  name="ios-arrow-forward"></ion-icon></ion-note>
+
+
+
+
+		</ion-item>
+		<!--<ion-item no-lines style="margin-top: 1px">对方:{{tag.oppaccount}}</ion-item>-->
+		<!--<ion-item>金额:{{tag.amount}}</ion-item>-->
+		<!--<ion-item>金额:{{tag.amount}}</ion-item>-->
+	</ion-list>
+  <!--<ion-list>-->
+  	<!--<ion-card *ngFor="let tag of indexTags">-->
+	  <!--<ion-card-header>-->
+	    <!--{{tag.titletype}}-->
+	  <!--</ion-card-header>-->
+	  <!--<ion-card-content>-->
+	    <!--<p>时间:{{tag.occurtime}}</p>-->
+	    <!--<p>对方:{{tag.oppaccount}}</p>-->
+	    <!--<p>金额:{{tag.amount}}</p>-->
+	  <!--</ion-card-content>-->
+	  <!--<ion-card-content>-->
+	    <!--<p>状态:{{tag.status}}</p>-->
+	  <!--</ion-card-content>-->
+	<!--</ion-card>-->
+
+  <!--</ion-list>-->
+</ion-content>

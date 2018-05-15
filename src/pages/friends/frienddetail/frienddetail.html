@@ -1,0 +1,59 @@
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'frienddetail.title' | translate }}</ion-title>
+        <ion-buttons right icon-only tappable>
+            <button ion-button icon-only>
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <!--<div class="headerTop">-->
+    <!--<img src="assets/img/mine/ziliaoBG.png" alt="" >-->
+    <!--<div class="innerCss">-->
+    <!--<div class="leftCss"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=48412762,3957934545&fm=27&gp=0.jpg" alt="">-->
+    <!--</div>-->
+    <!--<div class="rightCss">-->
+    <!--<div class="changeRemark">-->
+    <!--<div class="div1">悠悠</div> <div class="div2">修改备注</div>-->
+    <!--</div>-->
+    <!--<p>账户:{{friendinfo.phoneNumber}}</p>-->
+    <!--&lt;!&ndash;<button ion-button outline small icon-left>&ndash;&gt;-->
+    <!--&lt;!&ndash;<ion-icon name="transferQQ"></ion-icon>&ndash;&gt;-->
+    <!--&lt;!&ndash;转账&ndash;&gt;-->
+    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <ion-list style="margin-top: 10px">
+        <ion-item no-lines>
+            <p item-start>{{'frienddetail.realName' | translate }}</p>
+            <p item-end>{{friendinfo.displayName}}</p>
+        </ion-item>
+        <ion-item no-lines style="margin-top:1px">
+            <p item-start>{{'frienddetail.phoneCode' | translate }}</p>
+            <p item-end>{{friendinfo.phoneNumber}}</p>
+        </ion-item>
+        <!--<ion-item no-lines style="margin-top:1px" >-->
+        <!--<p item-start>邮箱地址</p>-->
+        <!--<p item-end>youyou@qq.com</p>-->
+        <!--</ion-item>-->
+
+        <!--<div class="bottomCont" *ngIf="friendinfo.flag==1">-->
+        <!--<button  ion-button block>{{'frienddetail.invitation' | translate }}</button>-->
+        <!--</div>-->
+        <!--<div class="bottomCont" *ngIf="friendinfo.flag==2">-->
+        <!--<button  ion-button block disabled>{{'frienddetail.verified' | translate }}</button>-->
+        <!--</div>-->
+    </ion-list>
+
+
+</ion-content>
+ 

@@ -1,0 +1,47 @@
+{
+  "_from": "git+https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git",
+  "_id": "cordova-plugin-downloadmanager@0.0.1",
+  "_inBundle": false,
+  "_integrity": "sha1-tMn0wkXDOEGYp3eZ//KvN9uAE4g=",
+  "_location": "/cordova-plugin-downloadmanager",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager",
+    "rawSpec": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager",
+    "saveSpec": "git+https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git",
+    "fetchSpec": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git#c29c2c7c53eaa4ca861b471fb8351ba6fb0029c3",
+  "_spec": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager",
+  "_where": "/Users/wupeng/ppdpay-cli",
+  "author": {
+    "name": "Arpit Vasani"
+  },
+  "bugs": {
+    "url": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-downloadmanager",
+    "platforms": []
+  },
+  "deprecated": false,
+  "description": "A plugin to start system's default download manager.",
+  "homepage": "https://github.com/vasani-arpit/cordova-plugin-downloadmanager#readme",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "license": "ISC",
+  "name": "cordova-plugin-downloadmanager",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasani-arpit/cordova-plugin-downloadmanager.git"
+  },
+  "version": "0.0.1"
+}

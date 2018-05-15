@@ -1,0 +1,11 @@
+<div class="alert_modal">
+    <div class="box">
+        <p class="title">{{ 'document.modifyNickname' | translate }}</p>
+        <input placeholder="{{ 'document.inputNickname' | translate }}" [(ngModel)]="nikeName">
+
+        <div class="line">
+            <button class="cancel" (click)="cancel()">{{ 'document.cancel' | translate }}</button>
+            <button class="confirm" (click)="confirm()">{{ 'document.ok' | translate }}</button>
+        </div>
+    </div>
+</div>

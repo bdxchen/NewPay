@@ -1,0 +1,29 @@
+<!--
+  Generated template for the CountryCodePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<!--<ion-content  class="md-modal">-->
+  <!--<ion-list>-->
+      <!--<ion-item no-lines *ngFor="let temp  of data" style="border-bottom: 1px solid rgba(128,128,128,0.61)">-->
+          <!--<div item-start>{{temp.countryName}}</div>-->
+      <!--</ion-item>-->
+  <!--</ion-list>-->
+<!--</ion-content>-->
+<div  style="width: 100%;
+        position: absolute;
+        height: 100%;
+        background-color: #000000;
+        opacity: 0.4;
+        z-index: 999;" (click)="closeModal()">
+</div>
+<div class="md-modal">
+    <ion-list>
+    <ion-item no-lines *ngFor="let temp  of data" style="border-bottom: 1px solid rgba(128,128,128,0.61)" (click)="checkedCountry(temp)">
+        <img item-start src="assets/img/country/{{temp.countryCode}}.png"  style="width: 30px;height: 17px;vertical-align: middle;"/><div item-left>{{temp.countryName}}</div>
+    </ion-item>
+    </ion-list>
+</div>
+

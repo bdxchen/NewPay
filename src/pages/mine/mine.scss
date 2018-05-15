@@ -1,0 +1,136 @@
+page-mine {
+
+  .bar-button-default-ios, .bar-button-default.bar-button-ios-default, .bar-button-clear-ios-default {
+    color: #ffffff;
+  }
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 0;
+    bottom: 0;
+  }
+  .toolbar-md-secondary .toolbar-background-md {
+    background: #f9c215;
+  }
+
+  .item-ios.item-block .item-inner {
+    border-bottom: none;
+  }
+  .spanStyle {
+    white-space: nowrap; /*强制span不换行*/
+    //display: inline-block; /*将span当做块级元素对待*/
+    //width: 32px;  /*限制宽度*/
+    overflow: hidden; /*超出宽度部分隐藏*/
+    text-overflow: ellipsis; /*超出部分以点号代替*/
+    line-height: 1; /*数字与之前的文字对齐*/
+    //vertical-align: bottom;
+  }
+  .spanStyle h3{
+    display: inline-block;
+  }
+  .spanStyle span{
+    display: inline-block;
+  }
+  .ziliao {
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    position: absolute;
+    top: 0px;
+    height: 150px;
+  }
+  .leftZliao {
+    flex: 1;
+    //margin-top: 10%;
+  }
+  .leftZliao img{
+    margin-top: 20%;
+  }
+  .rightZiliao {
+    flex: 2;
+  }
+  .headerTop {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url("../assets/img/home/homeBg.png");
+    width: 100%;
+    height: 160px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+  }
+  .imgPBG {
+    position: absolute;
+    top: 30px;
+    height: 150px;
+    width: 90%;
+    margin-left: 5%;
+    border-radius: 6px;
+    }
+
+    .content-ios {
+      background-color: rgb(238, 245, 253) !important;
+    }
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+    .card-title {
+      position: absolute;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #000;
+    }
+  .item-ios ion-avatar ion-img, .item-ios ion-avatar img{
+    width: 80px;
+    height: 80px;
+  }
+
+
+}
+
+.headerTop{
+  height:130px!important;
+
+  ion-item{
+    top:0;
+  }
+
+  .my_name{
+    display: block;
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    font-size: 2.1rem;
+    max-width: 60%;
+    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+
+    &+button{
+      line-height: 25px;
+    }
+  }
+
+  h3{
+    color:#888;
+  }
+
+
+}
+
+.f-right{
+  margin: 2px 0 0 2px;
+}
+.my_details{
+  color: #888!important;
+  font-size: 1.4rem!important;
+}
+

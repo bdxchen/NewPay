@@ -1,0 +1,87 @@
+<ion-content fullscreen ionScroll="false" style="background-color: white !important;">
+    <div class="registerCon">
+        <img src="assets/img/register/registBack.png" class="IMGST">
+
+        <img class="logo" src="assets/img/logo/logo.png"/>
+        <div tappable (click)="goBack()">
+            <button ion-button clear start icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <div class="login-container">
+        <form #registerForm="ngForm">
+            <ion-list>
+                <!--<ion-item no-lines style="border-bottom: 1px solid #dedede;">-->
+                <!--<ion-label><img src="assets/img/country/{{country.countryCode}}.png"  style="width: 30px;height: 17px"/></ion-label>-->
+                <!--<ion-select [selectOptions]="selectOptions" name="country" [(ngModel)]="NEWcountry" (ngModelChange)="NEWcountry=$event; changeCountry()">-->
+                <!--<ion-option value="{{country.countryCode}}::{{country.phoneCode}}" *ngFor="let country of countryN"  okText="Okay" cancelText="Dismiss">{{country.countryName}}</ion-option>-->
+                <!--</ion-select>-->
+                <!--</ion-item>-->
+
+                <!--输入手机号-->
+                <ion-item>
+                    <ion-label>
+                        <span style="font-size: 1.5rem;">+{{countryCode}}</span>
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
+                    </ion-label>
+                    <ion-input placeholder="{{'register.inputTel' | translate }}" type="number" name="userid" [(ngModel)]="registerCredentials.userid" (keyup)="inputNameKu(registerCredentials.userid)" required></ion-input>
+                </ion-item>
+                <!--输入密码-->
+                <ion-item>
+                    <ion-input placeholder="{{'register.inputNewPw' | translate }}" type="password" name="password1" [(ngModel)]="registerCredentials.password" required></ion-input>
+                </ion-item>
+                <!--输入验证码-->
+                <!--<ion-item>
+
+                    <ion-input style="width:75%;" placeholder="{{'register.verificationCode' | translate }}" type="number" name="captcha" [(ngModel)]="registerCredentials.captcha" required></ion-input>
+                    <button ion-button [disabled]="!verifyCode.disable" tappable (click)="getCode()" style="color: #0dacfa">{{verifyCode.verifyCodeTips}}</button>
+                </ion-item>-->
+
+
+                <!--<ion-item no-lines style="border-bottom: 1px solid #dedede;">
+                    &lt;!&ndash;<ion-label>{{country.phoneCode}}</ion-label>&ndash;&gt;
+                    &lt;!&ndash;(click)="ZCcheckedGUOJBM()"&ndash;&gt;
+                    <div item-start style="color:#808080;" tappable>+{{countryCode}}
+                        <ion-icon ios="md-arrow-dropdown" md="md-arrow-dropdown"></ion-icon>
+                    </div>
+                    <ion-input placeholder="{{'register.inputTel' | translate }}" type="number" name="userid"
+                               [(ngModel)]="registerCredentials.userid"
+                               (keyup)="inputNameKu(registerCredentials.userid)" required></ion-input>
+                </ion-item>-->
+                <!--<ion-item no-lines style="border-bottom: 1px solid #dedede;">
+                    &lt;!&ndash;<ion-label floating>Username</ion-label>&ndash;&gt;
+                    <ion-input placeholder="{{'register.inputNewPw' | translate }}" type="password" name="password1"
+                               [(ngModel)]="registerCredentials.password" required></ion-input>
+                </ion-item>-->
+
+                <!--<ion-item no-lines style="border-bottom: 1px solid #dedede;">-->
+                <!--&lt;!&ndash;<ion-label floating>Username</ion-label>&ndash;&gt;-->
+                <!--<ion-input placeholder="{{'register.inputConfirmPw' | translate }}" type="password" name="password" [(ngModel)]="password1" required></ion-input>-->
+                <!--</ion-item>-->
+
+                <div style="display: flex;margin-top: 10px; padding-left: 15px">
+                    <div class="leftSt">
+                        <ion-input class="inputSt" placeholder="{{'register.verificationCode' | translate }}"
+                                   name="captcha" type="text" [(ngModel)]="registerCredentials.captcha"></ion-input>
+                    </div>
+                    <div style="display: inline-flex;flex: 1;">
+                        <button ion-button color="secondary" clear [disabled]="!verifyCode.disable" tappable (click)="getCode()" style="color: #0dacfa; height: 2.8rem; font-size: 1.4rem;">{{verifyCode.verifyCodeTips}}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="btnST">
+                    <button ion-button full class="nextST" tappable (click)="register()">{{'register.register' |
+                        translate }}
+                    </button>
+                </div>
+                <ion-item style="padding: 0; font-size: 1.4rem; color: #85d6fc;" no-lines no-padding no-margin>
+                    <ion-label item-end>{{'register.agreement' | translate }}</ion-label>
+                    <ion-checkbox name="cucumberZ" checked="false" [(ngModel)]="cucumberZ"
+                                  (ionChange)="updateCucumberZ()" [ngModelOptions]="{standalone: true}"></ion-checkbox>
+                </ion-item>
+            </ion-list>
+        </form>
+    </div>
+</ion-content>

@@ -1,0 +1,11 @@
+2017/12/14-16:59:44.053 144083 Reusing MANIFEST /Users/wupeng/ppdpay-cli/Default/IndexedDB/http_localhost_8100.indexeddb.leveldb/MANIFEST-000001
+2017/12/14-16:59:44.053 144083 Recovering log #49
+2017/12/14-16:59:44.053 144083 Reusing old log /Users/wupeng/ppdpay-cli/Default/IndexedDB/http_localhost_8100.indexeddb.leveldb/000049.log 
+2017/12/14-17:29:18.325 96219 Level-0 table #54: started
+2017/12/14-17:29:18.325 137791 Current memtable full; waiting...
+2017/12/14-17:29:18.326 96219 Level-0 table #54: 1570 bytes OK
+2017/12/14-17:29:18.326 96219 Delete type=0 #49
+2017/12/14-17:29:18.327 96219 Level-0 table #56: started
+2017/12/14-17:29:18.327 96219 Level-0 table #56: 0 bytes OK
+2017/12/14-17:29:18.327 96219 Delete type=0 #53
+2017/12/14-17:29:18.327 96219 Manual compaction at level-0 from '\x00\x0b\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x0c\x00\x00\x00' @ 0 : 0; will stop at (end)

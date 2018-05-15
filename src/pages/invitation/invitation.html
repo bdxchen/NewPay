@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">朋友详情</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="headerTop">
+    <div class="imgPBG">
+      <img src="assets/img/mine/ziliaoBG.png" alt="" width="100%" height="150px" >
+      <div class="ziliao">
+        <div class="leftZliao">
+          <img src="assets/img/mine/meinv.jpg" style="width: 90px;
+    height: 90px;
+    border-radius: 50%;">
+        </div>
+        <div class="rightZiliao">
+          <div class="spanStyle"><h3>悠悠</h3></div>
+          <div class="spanStyle" tappable (click)="goDocument()">
+            <img src="assets/img/mine/bianjiziliao.png" width="18px" height="18px" style="vertical-align: bottom">
+            修改备注
+          </div>
+          <p style="height: 10px;width: 75%;">电话:136833588698</p>
+          <p style="height: 10px;width: 75%;">地区:北京 朝阳</p>
+          <img src="assets/img/mine/erweima.png" style="position: absolute;
+          right: 2%;
+          bottom: 2%;width: 40px">
+        </div>
+      </div>
+    </div>
+
+    <!---->
+  </div>
+  <ion-item-group style="margin-top: 18%;font-size: 14px !important;">
+    <!--<ion-item>-->
+    <!--<p><ion-icon name="folder"></ion-icon>  我的资料</p>-->
+    <!--<ion-note item-end (click)="goDocument()">修改头像及二维码信息 > </ion-note>-->
+    <!--</ion-item>-->
+    <ion-list>
+      <ion-item>
+        <span item-start>真是姓名</span> <span item-end>元悠悠</span>
+      </ion-item>
+      <ion-item>
+        <span item-start>真是姓名</span> <span item-end>元悠悠</span>
+      </ion-item>
+      <button ion-button full style="margin-top: 3rem;width: 70%;margin-left: 15%;background-color: #0dacfa">邀请</button>
+    </ion-list>
+  </ion-item-group>
+</ion-content>

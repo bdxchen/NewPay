@@ -1,0 +1,62 @@
+page-bankcard{
+  .item-md{
+    //background-image: url(../assets/img/cardAdministration/ZSYH.png);
+    background-size: 100% 100%;
+  }
+  .button-ios-primary.activated{
+    background-color: #dedede;
+  }
+  .button-ios-primary{
+    background-color: #FFFFFF;
+    color: red;
+  }
+  .cardBtn{
+    width: 92%;
+    margin: 20% auto 0;
+  }
+  .cardBtn button{
+    border-color: #2faff9;
+    color: #2faff9;
+  }
+  .cardBtn button.activated{
+    //color: #0dacfa;
+    background-color: #0dacfa;
+  }
+  .cardBianjiBtn{
+    border-color: #2faff9;
+    color: #2faff9;
+  }
+  .cardBianjiBtn.activated{
+    color: #FFFFFF;
+    background-color: #de5b5b;
+  }
+  .list-ios > .item-block:last-child .item-inner, .list-ios > .item-wrapper:last-child .item-block .item-inner{
+    padding-right: 0px;
+  }
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+    background-image: url(../assets/img/cardAdministration/ZSYH.png);background-size:100% 100%;
+  }
+
+  .item-ios [item-start] {
+    margin: 9px 13px 8px 18%;
+    color: #FFFFFF;
+  }
+   .item-md [item-start] {
+    margin-left: 20%;
+    color: #FFFFFF;
+  }
+  .item-md p{
+    color: #FFFFFF;
+    margin: 10px 0px;
+  }
+  .cardBianji{
+    position: absolute;top: 10px;right: 10px;
+  }
+  .item-ios p{
+    color: #FFFFFF;
+    margin: 10px 0px;
+  }
+  //[padding] h1:first-child, [padding] h2:first-child, [padding] h3:first-child, [padding] h4:first-child, [padding] h5:first-child, [padding] h6:first-child{
+  //  margin-top: -0.3rem;
+  //}
+}

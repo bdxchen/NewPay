@@ -1,0 +1,23 @@
+page-country-code {
+  .md-modal {
+    border-radius: 3% !important;
+    width: 80%;
+    margin-left: 10%;
+    height: 57%;
+    margin-top: 42%;
+    background-color: white;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 1000;
+  }
+  .list-ios {
+
+    padding: 1px 20px 1px 20px;
+  }
+  .list-md {
+
+    padding: 1px 20px 1px 20px;
+  }
+
+}

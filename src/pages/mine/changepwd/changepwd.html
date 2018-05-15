@@ -1,0 +1,94 @@
+<ion-header no-border cache-view="false">
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'changepwd.title' | translate}}</ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="pwd" mode="md">
+            <ion-segment-button value="loginpwd">
+                {{'changepwd.changeLoginPw' | translate}}
+                <div class="bolder-sm"></div>
+            </ion-segment-button>
+            <ion-segment-button value="finpwd">
+                {{'changepwd.changeAssetPw' | translate}}
+                <div class="bolder-sm"></div>
+            </ion-segment-button>
+
+        </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="background-color: #eef5fd !important">
+
+    <div [ngSwitch]="pwd">
+        <ion-list *ngSwitchCase="'loginpwd'">
+            <ion-item no-lines>
+                <ion-input item-start type="number" placeholder="{{'forgetPassword.verificationCode' | translate}}"
+                          (keyup)="liginValidL(CaptchaL)"       [(ngModel)]="CaptchaL" clearInput></ion-input>
+                <button item-end ion-button color="secondary" clear [disabled]="!verifyCode.disableL" tappable
+                        (click)="getCodelogIN()" style="color: #0dacfa">{{verifyCode.verifyCodeTipsL}}
+                </button>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label>{{'changepwd.oldLoginPw' | translate}}</ion-label>
+                <ion-input placeholder="{{'changepwd.inputOldLoginPw' | translate}}" type="password"
+                           (keyup)="liginPValidL(oldloginpwd)"  [(ngModel)]="oldloginpwd"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label>{{'changepwd.newLoginPw' | translate}}</ion-label>
+                <ion-input placeholder="{{'changepwd.inputNewLoginPw' | translate}}" type="password"
+                           (keyup)="liginrePValidL(newloginpwd)"    [(ngModel)]="newloginpwd"></ion-input>
+            </ion-item>
+            <!--<ion-item no-lines>
+                <ion-label>{{'changepwd.confirmLoginPw' | translate}}</ion-label>
+                <ion-input placeholder="{{'changepwd.inputConfirmLoginPw' | translate}}" type="password"
+                           [(ngModel)]="confirmloginpw"></ion-input>
+            </ion-item>-->
+
+            <!--<ion-item no-lines style="margin-top: 1px">-->
+            <!--<ion-label >{{'changepwd.confirmLoginPw' | translate}}</ion-label>-->
+            <!--<ion-input placeholder="{{'changepwd.inputConfirmLoginPw' | translate}}" type="password" [(ngModel)]="comloginpwd" ></ion-input>-->
+            <!--</ion-item>-->
+            <button style="margin:20vw auto; display:block; width:92%; background-color: #0dacfa;" ion-button block
+                    tappable (click)="changeLoginPwd()">{{'changepwd.changeLoginPw' | translate}}
+            </button>
+        </ion-list>
+        <ion-list *ngSwitchCase="'finpwd'">
+            <ion-item no-lines>
+                <ion-input item-start type="number" placeholder="{{'forgetPassword.verificationCode' | translate}}"
+                           (keyup)="liginValidF(CaptchaF)"  [(ngModel)]="CaptchaF" clearInput></ion-input>
+                <button item-end ion-button color="secondary" clear [disabled]="!verifyCode.disableF" tappable
+                        (click)="getfinancialIN()" style="color: #0dacfa">{{verifyCode.verifyCodeTipsF}}
+                </button>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label>{{'changepwd.oldAssetPw' | translate}}</ion-label>
+                <ion-input type="password" style="-webkit-text-security:disc"
+                           (keyup)="liginPValidF(oldfinpwd)"   placeholder="{{'changepwd.inputOldAssetPw' | translate}}"
+                           [(ngModel)]="oldfinpwd"></ion-input>
+            </ion-item>
+            <ion-item no-lines>
+                <ion-label>{{'changepwd.newAssetPw' | translate}}</ion-label>
+                <ion-input type="password" style="-webkit-text-security:disc" maxlength="6"
+                           (keyup)="liginrePValidF(newfinpwd)"
+                           placeholder="{{'changepwd.inputNewAssetPw' | translate}}"
+                           [(ngModel)]="newfinpwd"></ion-input>
+            </ion-item>
+            <!--<ion-item no-lines style="margin-top: 1px">-->
+            <!--<ion-label>{{'changepwd.confirmAssetPw' | translate}}</ion-label>-->
+            <!--<ion-input type="number" style="-webkit-text-security:disc" placeholder="{{'changepwd.inputConfirmAssetPw' | translate}}"  [(ngModel)]="comfinpwd" ></ion-input>-->
+            <!--</ion-item >-->
+            <button style="margin:20vw auto; display:block; width:92%; background-color: #0dacfa;" ion-button block
+                    tappable (click)="changeFinPwd()">{{'changepwd.changeAssetPw' | translate}}
+            </button>
+        </ion-list>
+    </div>
+</ion-content>

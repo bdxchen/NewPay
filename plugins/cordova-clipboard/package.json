@@ -1,0 +1,58 @@
+{
+  "_from": "cordova-clipboard",
+  "_id": "cordova-clipboard@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-y4bP8DYbzmHKNNZBYlP5Qsqp/6w=",
+  "_location": "/cordova-clipboard",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-clipboard",
+    "name": "cordova-clipboard",
+    "escapedName": "cordova-clipboard",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/cordova-clipboard/download/cordova-clipboard-1.1.0.tgz",
+  "_shasum": "cb86cff0361bce61ca34d6416253f942caa9ffac",
+  "_spec": "cordova-clipboard",
+  "_where": "/Users/wupeng/ppdpay-cli/node_modules",
+  "author": {
+    "name": "Ibrahim Hadeed"
+  },
+  "bugs": {
+    "url": "https://github.com/ihadeed/cordova-clipboard/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-clipboard",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8"
+    ]
+  },
+  "deprecated": false,
+  "description": "Clipboard management plugin for Cordova/PhoneGap that supports iOS, Android, and WP8",
+  "homepage": "https://github.com/ihadeed/cordova-clipboard#readme",
+  "keywords": [
+    "cordova",
+    "plugin",
+    "clipboard",
+    "phonegap",
+    "ionic"
+  ],
+  "license": "MIT",
+  "name": "cordova-clipboard",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihadeed/cordova-clipboard.git"
+  },
+  "version": "1.1.0"
+}

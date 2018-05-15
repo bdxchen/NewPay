@@ -1,0 +1,53 @@
+{
+    "data": [
+        {
+            "countryName": "Taiwan",
+            "phoneCode": "886",
+            "countryCode": "TW"
+        },{
+            "countryName": "Thailand",
+            "phoneCode": "66",
+            "countryCode": "TH"
+        },{
+            "countryName": "Singapore",
+            "phoneCode": "65",
+            "countryCode": "SG"
+        }, {
+            "countryName": "Philippines",
+            "phoneCode": "63",
+            "countryCode": "PH"
+        },{
+            "countryName": "Macau SAR China",
+            "phoneCode": "853",
+            "countryCode": "MO"
+        },{
+            "countryName": "South Korea",
+            "phoneCode": "82",
+            "countryCode": "KR"
+        }, {
+            "countryName": "Japan",
+            "phoneCode": "81",
+            "countryCode": "JP"
+        },{
+            "countryName": "Isle of Man",
+            "phoneCode": "44",
+            "countryCode": "IM"
+        }, {
+            "countryName": "Hong Kong SAR China",
+            "phoneCode": "852",
+            "countryCode": "HK"
+        }, {
+            "countryName": "China",
+            "phoneCode": "86",
+            "countryCode": "CN"
+        },{
+            "countryName": "Canada",
+            "phoneCode": "1",
+            "countryCode": "CA"
+        },{
+            "countryName": "Australia",
+            "phoneCode": "61",
+            "countryCode": "AU"
+        },
+    ]
+}

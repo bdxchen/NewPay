@@ -1,0 +1,89 @@
+<!--
+  Generated template for the TopupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-toolbar color="primary">
+        <ion-buttons left onclick="" (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-title style="text-align: center">{{'withdraw.title' | translate}}</ion-title>
+        <ion-buttons end onclick="">
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list no-lines style="margin:12px 0;">
+        <!--<button *ngIf="financial_account_type=='3'" ion-item style="border-bottom: 1px solid #dedede;" (click)="optionBank()">-->
+        <!--<img src="assets/img/withdraw/zsyhlogo.png" style="width: 50px;height: 50px;" item-start>-->
+        <!--<div item-left ><div>{{bankData.bankname}}</div> <span>{{'withdraw.lastNo' | translate}}: {{account}}</span></div>-->
+        <!--</button>-->
+        <button ion-item (click)="optionBank()">
+            <img src="assets/img/topupAccount.png" style="width: 50px;height: 50px;" item-start>
+            <div item-left>
+                <div>{{bankData.name}}</div>
+                <span>{{account}}</span></div>
+        </button>
+    </ion-list>
+    <div class="withdrawals_list">
+        <div class="p1">
+            <span>{{'withdraw.amount' | translate}}</span>
+            <div class="currency">{{currency.symbol}}</div>
+        </div>
+        <div class="p2">
+            <div class="symbol">{{'withdraw.symbol' | translate}}</div>
+            <input placeholder="{{'withdraw.inputAmount' | translate}}：{{currency.amount}}" tappable (keyup)="tofix(money)" (ngModelChange)="changAmount($event)" [(ngModel)]="money">
+            <div class="clear"></div>
+            <!--<div class="all">{{'withdraw.all' | translate}}</div>-->
+        </div>
+        <div class="p3">{{'withdraw.feel' | translate}}{{feel}}元</div>
+    </div>
+    <ion-list>
+        <!--<ion-item no-lines style="margin-top: 1px">
+            <ion-label color="dark">{{'withdraw.account' | translate}}:{{Lzjaccount}}</ion-label>
+            &lt;!&ndash;<ion-select   [(ngModel)]="currency"  (ionChange)='getbalance($event)'>&ndash;&gt;
+            &lt;!&ndash;<ion-option *ngFor="let currencyInfo of arrCurrency"  value="{{currencyInfo.name}}">{{currencyInfo.name}}</ion-option>&ndash;&gt;
+            &lt;!&ndash;</ion-select>&ndash;&gt;
+            <p item-end>{{'withdraw.balance' | translate}}:{{currency.symbol}} ({{currency.amount}})</p>
+        </ion-item>-->
+        <!--<ion-item no-lines>
+            &lt;!&ndash;<ion-label stacked color="dark">{{'withdraw.amount' | translate}}</ion-label>&ndash;&gt;
+            <div item-start>
+                <div style="float: left; margin:10px 5px 0 0">{{'withdraw.amount' | translate}}</div>
+                <div class="currency" item-end>{{currency.symbol}}</div>
+            </div>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-input placeholder="{{'withdraw.inputAmount' | translate}}：{{currency.amount}}" tappable
+                       (keyup)="tofix(money)" (ngModelChange)="changAmount($event)" [(ngModel)]="money"></ion-input>
+        </ion-item>
+        <div class="keyongyue">
+            手续费{{feel}}元
+        </div>-->
+        <!--<ion-item no-lines style="margin-top: 1px">-->
+        <!--<ion-label color="dark">{{'withdraw.memo' | translate}}:</ion-label>-->
+        <!--<ion-textarea  placeholder="{{'withdraw.inputMemo' | translate}}"  type="text"  [(ngModel)]="remarks" maxlength="200"></ion-textarea>-->
+        <!--</ion-item>-->
+
+        <!--<ion-note >-->
+        <div class="tishi">
+            <p> *{{'withdraw.warning_1' | translate}}</p>
+            <p> *{{'withdraw.warning_2' | translate}}</p>
+            <!--<p> *{{'withdraw.warning_3' | translate}}</p>-->
+        </div>
+        <!--</ion-note>-->
+
+    </ion-list>
+    <button ion-button block (click)="goComfirmPassword()" style="width: 92%; display: block; margin: 4rem auto;">{{'withdraw.warning_3' |
+        translate}}
+    </button>
+</ion-content>

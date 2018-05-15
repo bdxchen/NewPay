@@ -1,0 +1,76 @@
+page-frienddetail {
+
+  .headerTop {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-image: url(../assets/img/home/homeBg.png);
+    width: 100%;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+  }
+  .headerTop img{
+    margin-top: 30px;
+    width: 94%;
+    margin-left: 3%;
+    height:150px;
+  }
+  .bottomCont button{
+    margin-top: 50px;
+    width: 70%;
+    margin-left: 15%;
+    background-color: #2faff9;
+
+  }
+  .button-outline-ios{
+    border-color: rgb(250,174,114);
+    color: rgb(250,174,114);
+  }
+  .button-outline-ios.activated{
+    border-color: #ef791d;
+    background-color: #ef791d;
+  }
+  .bottomCont button.activated{
+    background-color: #0dacfa;
+  }
+  .innerCss{
+    position: absolute;
+    width: 90%;
+    top: 45px;
+    height: 120px;
+    left: 5%;
+    display: flex;
+  }
+  .leftCss{
+    flex: 1;
+    text-align: center;
+  }
+  .leftCss img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .rightCss{
+    flex:2;
+  }
+  .changeRemark{
+    display: flex;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+  .changeRemark .div1{
+    font-size: 2rem;
+    line-height: 20px;
+  }
+  .changeRemark .div2{
+    line-height: 20px;
+    margin-left: 10px;
+  }
+  .rightCss p{
+    height: 15px;
+  }
+
+}

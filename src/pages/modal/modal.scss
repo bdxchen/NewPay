@@ -1,0 +1,99 @@
+page-modal {
+  .modalCssTop {
+    opacity: .5;
+    height: 100%;
+    background: #ddd;
+  }
+  h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+  .modalCssBottom {
+    opacity: .9;
+    height: 381px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    background-image: url(../assets/img/pwdKeyboard.png);
+  }
+  .rowCss {
+    text-align: center;
+    height: 29px;
+    border-bottom: 1px solid #ddd;
+    padding-top: 5px;
+  }
+  h1.titleQQ {
+    height: 45px;
+    font-size: 18px;
+    line-height: 45px;
+    text-align: center;
+    margin: 0;
+  }
+  .flexable {
+    display: -webkit-box;
+  }
+  .button-small-md{
+    height: 1.2em;
+  }
+  .password {
+    margin: 20px 20px 10px 20px;
+  }
+  .password > div:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  .password > div {
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+  }
+  .flexable > div {
+    -webkit-box-flex: 1;
+  }
+  .flexable.password > div {
+    opacity: 0;
+  }
+  .fogetPsd{
+    text-align: right;
+  }
+  .notice {
+    height: 8px;
+    line-height: 8px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #00a9dd;
+  }
+  .flexable {
+    display: -webkit-box;
+  }
+  .input-box{
+    position: absolute;
+    bottom: 0;
+    height: 218px;
+    width: 100%;
+  }
+  .input-box .flexable > div {
+    height: 55px;
+  }
+  .flexable > div {
+    -webkit-box-flex: 1;
+  }
+  .close {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+  }
+
+}

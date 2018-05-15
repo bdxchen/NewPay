@@ -1,0 +1,53 @@
+<!--<ion-header>-->
+<!--<ion-navbar color="secondary">-->
+<!--<ion-title>-->
+<!--银行卡管理-->
+<!--</ion-title>-->
+<!--</ion-navbar>-->
+<!--</ion-header>-->
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'bankcard.title' | translate}}</ion-title>
+        <ion-buttons end="" icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding style="background-color: #eef5fd !important">
+    <div *ngIf="flag>0">
+        <ion-list no-lines *ngFor="let tag of indexTags">
+            <ion-item-sliding no-lines style="border-radius: 10px">
+                <!--tag.alias-->
+                <ion-item no-lines no-padding [ngStyle]="{'background-image':'url(assets/img/cardAdministration/'+tag.alias+'.png)','min-height':' 8.4em','border-radius': '10px'}">
+                    <div item-start>
+                        <h2>{{tag.bankname}}</h2>
+                        <p>{{tag.name}}</p>
+                        <h2>{{tag.account}} </h2>
+                    </div>
+                </ion-item>
+                <ion-item-options side="right">
+                    <button ion-button color="primary" tappable (click)="deleteCard(tag)">
+                        <ion-icon name="ios-trash-outline"></ion-icon>
+                        {{'bankcard.delete' | translate}}
+                    </button>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </div>
+    <div padding text-center *ngIf="flag==0"><img src="assets/img/alipay/bankcardNull.png"
+                                                  style=" width: 50vw;margin: 10% auto 0;"></div>
+    <div class="cardBtn">
+        <button ion-button outline block icon-left tappable (click)="goBankcardAddPage()">
+            <ion-icon name="add"></ion-icon>
+            {{'bankcard.addBankcard' | translate}}
+        </button>
+    </div>
+
+</ion-content>

@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="07ccc8e7-ed0f-4322-99a9-40c802c675d2" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="NewpayInstance.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="179" column="49" lean-forward="true" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scan.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>coinType</find>
+      <find>checkAccountExists</find>
+      <find>symbol</find>
+      <find>passwordcreateWalletAndAccount</find>
+      <find>newpay_password</find>
+      <find>createWalletAndAccount</find>
+      <find>exportBrainKey</find>
+      <find>验证密码失败</find>
+      <find>transfer</find>
+      <find>password_pubkey</find>
+      <find>importBrainKey</find>
+      <find>getTransferInfo</find>
+      <find>state</find>
+      <find>arguments</find>
+      <find>jpush</find>
+      <find>JPushService</find>
+      <find>ionic-native/in-app-browser</find>
+      <find>this\.fileOpener\.open\(apk\, \'application\/vnd\.android\.package\-archive\'\)\n                \/\/     \.then\(\(\) \=\&gt; console\.log\(\'File is opened\'\)\)\.catch\(err\=\&gt;\{\n                \/\/     console\.log\(\&quot;打开apk\&quot;\)\n                \/\/ \}\)</find>
+      <find>file-opener</find>
+      <find>in-app-browser</find>
+      <find>cordova-plugin-file-opener2</find>
+      <find>photo-library</find>
+      <find>ionic-manup</find>
+      <find>app-browser-service</find>
+      <find>file-chooser</find>
+      <find>notification</find>
+      <find>de.appplant.cordova.plugin.local-notification</find>
+      <find>account-pay</find>
+      <find>head-upload</find>
+      <find>set-money</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/pages/financial</dir>
+      <dir>$PROJECT_DIR$/src/pages</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/pages/mine/mine.scss" />
+        <option value="$PROJECT_DIR$/src/pages/mine/alipay/alipay.ts" />
+        <option value="$PROJECT_DIR$/src/pages/mine/alipay/alipay.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transferreceipt/transferreceipt.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transferreceipt/transferreceipt.scss" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/tabs.scss" />
+        <option value="$PROJECT_DIR$/src/assets/i18n/zh.json" />
+        <option value="$PROJECT_DIR$/src/pages/mine/setting/setting.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.scss" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transfer/transfer.scss" />
+        <option value="$PROJECT_DIR$/src/pages/home/home.html" />
+        <option value="$PROJECT_DIR$/src/pages/mine/mine.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/receive/set-money/set-money.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transfer2/transfer2.html" />
+        <option value="$PROJECT_DIR$/src/pages/mine/mine.html" />
+        <option value="$PROJECT_DIR$/src/pages/mine/my-wallet/my-wallet.ts" />
+        <option value="$PROJECT_DIR$/src/pages/mine/my-wallet/backups-key/backups-key.ts" />
+        <option value="$PROJECT_DIR$/src/pages/home/home.ts" />
+        <option value="$PROJECT_DIR$/node_modules/ionic2-pincode-input/dist/pincode-component.scss" />
+        <option value="$PROJECT_DIR$/node_modules/ionic2-pincode-input/dist/pincode.js" />
+        <option value="$PROJECT_DIR$/node_modules/newpay-wallet-js/es6/WalletActions.js" />
+        <option value="$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/WalletActions.js" />
+        <option value="$PROJECT_DIR$/src/pages/mine/my-wallet/my-wallet.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/receive/set-money/set-money.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transfer/transfer.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transfer/transfer.ts" />
+        <option value="$PROJECT_DIR$/node_modules/newpay-wallet-js/es6/NewpayInstance.js" />
+        <option value="$PROJECT_DIR$/node_modules/bitsharesjs-ws/cjs/src/ChainConfig.js" />
+        <option value="$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/WalletDb.js" />
+        <option value="$PROJECT_DIR$/src/pages/mine/my-wallet/recovery-import/recovery-import.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/transfer2/transfer2.ts" />
+        <option value="$PROJECT_DIR$/src/pages/auth/login/login.ts" />
+        <option value="$PROJECT_DIR$/src/providers/updateApp/NativeService.ts" />
+        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/src/pages/balance/currency/currency.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/receive/receive.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/topup/topup.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/flowdetail/bill-detail/bill-detail.ts" />
+        <option value="$PROJECT_DIR$/src/providers/service.imports.ts" />
+        <option value="$PROJECT_DIR$/src/pages/mine/document/identity-authentication/identity-authentication.ts" />
+        <option value="$PROJECT_DIR$/src/pages/mine/document/document.ts" />
+        <option value="$PROJECT_DIR$/package-lock.json" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/app.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/pages/mine/head-upload/head-upload.ts" />
+        <option value="$PROJECT_DIR$/src/pages/scan/scan.ts" />
+        <option value="$PROJECT_DIR$/src/pages/financial/pay/account-pay/account-pay.html" />
+        <option value="$PROJECT_DIR$/src/pages/financial/pay/account-pay/account-pay.ts" />
+        <option value="$PROJECT_DIR$/src/pages/auth/register/fundpassword/fundpassword.ts" />
+        <option value="$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/platform/cordova/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-custom-config/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-add-swift-support/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-camera/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-camera/tests/ios/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-contacts/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-file/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-photo-library/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-qrscanner/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-qrscanner/tests/project/node_modules" />
+    <handled-path value="$PROJECT_DIR$/plugins/cordova-plugin-swift-support/node_modules" />
+    <handled-path value="$PROJECT_DIR$/prepare/cordova/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="137" />
+    <option name="y" value="158" />
+    <option name="width" value="1235" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="excluded.www.directory" value="true" />
+    <property name="last_opened_file_path" value="E:/echarts" />
+    <property name="node.js.detected.package.prettier" value="true" />
+    <property name="node.js.path.for.package.prettier" value="project" />
+    <property name="node.js.selected.package.prettier" value="" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/src/assets/img/logo" />
+      <recent name="$PROJECT_DIR$/src/assets/img/home" />
+      <recent name="$PROJECT_DIR$/src/assets/img/register" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true" selected="false">
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07ccc8e7-ed0f-4322-99a9-40c802c675d2" name="Default" comment="" />
+      <created>1521339477643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1521339477643</updated>
+      <workItem from="1521339488196" duration="4763000" />
+      <workItem from="1521362889281" duration="1305000" />
+      <workItem from="1521425558664" duration="10000" />
+      <workItem from="1521456717169" duration="1011000" />
+      <workItem from="1521464541150" duration="3383000" />
+      <workItem from="1521511695348" duration="186000" />
+      <workItem from="1521632564292" duration="2544000" />
+      <workItem from="1521684393077" duration="3000" />
+      <workItem from="1521723176897" duration="2216000" />
+      <workItem from="1521771128355" duration="52000" />
+      <workItem from="1521771207088" duration="19000" />
+      <workItem from="1521809552338" duration="5047000" />
+      <workItem from="1521875985096" duration="5504000" />
+      <workItem from="1521883869011" duration="779000" />
+      <workItem from="1522325227027" duration="972000" />
+      <workItem from="1522326964974" duration="150000" />
+      <workItem from="1522375751124" duration="114000" />
+      <workItem from="1522470996709" duration="13816000" />
+      <workItem from="1522596812554" duration="812000" />
+      <workItem from="1522635339853" duration="2000" />
+      <workItem from="1523074826746" duration="4485000" />
+      <workItem from="1523153214459" duration="4000" />
+      <workItem from="1523356148008" duration="1574000" />
+      <workItem from="1523412790278" duration="4000" />
+      <workItem from="1523455813498" duration="2963000" />
+      <workItem from="1523542885234" duration="4252000" />
+      <workItem from="1523692878637" duration="304000" />
+      <workItem from="1523844593896" duration="46000" />
+      <workItem from="1523886115707" duration="1542000" />
+      <workItem from="1523931410114" duration="48000" />
+      <workItem from="1523970589351" duration="787000" />
+      <workItem from="1524017188064" duration="190000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="58887000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33777776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3401">
+          <caret line="179" column="49" lean-forward="false" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="222" column="32" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/auth/register/fundpassword/fundpassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="222" column="32" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/auth/register/fundpassword/fundpassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3330">
+          <caret line="222" column="32" lean-forward="false" selection-start-line="222" selection-start-column="14" selection-end-line="222" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/auth/register/fundpassword/fundpassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="78" column="16" lean-forward="false" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/balance/currency/currency.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="6" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/auth/register/fundpassword/fundpassword.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="66" column="29" lean-forward="false" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/scan/scan.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="68" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/newpay-wallet-js/lib/NewpayInstance.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="179" column="49" lean-forward="true" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

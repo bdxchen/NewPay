@@ -1,0 +1,41 @@
+page-currency-detail {
+
+  .selectable {
+    -webkit-user-select: auto;//控制网页内容选择范围
+  }
+  .card-ios{
+    margin: 0px;
+    border-radius: 0px;
+    width: calc(100%);
+  }
+  .card-md{
+    margin: 0px;
+    border-radius: 0px;
+    width: calc(100%);
+  }
+  .card-background-page {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 20%;
+      font-size: 3em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.4em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+  }
+}

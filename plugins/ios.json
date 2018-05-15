@@ -1,0 +1,123 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.telerik.plugins.nativepagetransitions": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-clipboard": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-custom-config": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-appminimize": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-camera": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-contacts": {
+      "CONTACTS_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-downloadmanager": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-filechooser": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-fullscreen": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-native-keyboard": {
+      "LICENSE": "TRIAL",
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-photo-library": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": "To choose photos",
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-x-socialsharing": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-x-toast": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-sms-plugin": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-jcore": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "cordova-plugin-swift-support": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.yunlian.yuntou"
+    }
+  }
+}

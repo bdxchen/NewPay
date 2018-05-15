@@ -1,0 +1,63 @@
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'bankcard_add.title' | translate}}</ion-title>
+        <ion-buttons right icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content style="background-color: #eef5fd !important">
+    <ion-list style="margin-top: 10px;">
+
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'bankcard_add.name' | translate}}</ion-label>
+            <ion-input placeholder="{{'bankcard_add.inputName' | translate}}" disabled
+                       [(ngModel)]="addBankCard.name"></ion-input>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'bankcard_add.cardNo' | translate}}</ion-label>
+            <ion-input placeholder="{{'bankcard_add.inputCardNo' | translate}}" type="text"
+                       (keyup)="XZlxBC(addBankCard.account)" onpaste="return false" ng-pattern="/[^a-zA-Z]/"
+                       [(ngModel)]="addBankCard.account" tappable
+                       (ngModelChange)=" changCardNO(addBankCard.account)"></ion-input>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'bankcard_add.confirmCardNo' | translate}}</ion-label>
+            <ion-input placeholder="{{'bankcard_add.inputConfirmCard' | translate}}" type="text"
+                       (keyup)="XZlx(account1)" onpaste="return false" ng-pattern="/[^a-zA-Z]/"
+                       [(ngModel)]="account1"></ion-input>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <p item-start>{{'bankcard_add.bankName' | translate}}</p>
+            <!--<ion-input placeholder="{{'bankcard_add.inputBankName' | translate}}" disabled (keyup)="bankNameValid(addBankCard.bankname)" [(ngModel)]="addBankCard.bankname"></ion-input>-->
+            <p item-end> {{addBankCard.bankname}}</p>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'bankcard_add.bankAddress' | translate}}</ion-label>
+            <ion-input placeholder="{{'bankcard_add.inputBankAddress' | translate}}"
+                       (keyup)="BranchNameValid(addBankCard.branchName)"
+                       [(ngModel)]="addBankCard.branchName"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <p class="appPele heihui">
+        {{'bankcard_add.memo' | translate}}
+    </p>
+    <button ion-button full tappable (click)="confirm()" style="width: 92%; margin: 50px auto; border-right-width: 1px; border-left-width: 1px;
+background-color: #2faff9; font-size: 1.7rem;">{{'bankcard_add.confirm' | translate}}
+    </button>
+
+    <!--<button ion-button full outline  (click)="reset()" style="width: 70%;margin-left: 15%;-->
+    <!--border-radius: 8px;-->
+    <!--border-right-width: 1px;-->
+    <!--border-left-width: 1px;-->
+    <!--border-color: red;color: red;" >{{'bankcard_add.reset' | translate}}</button>-->
+
+</ion-content>

@@ -1,0 +1,41 @@
+page-document {
+  ion-item {
+
+    ion-note {
+      color: #2A2B2D !important;
+    }
+    p {
+      color: #888 !important;
+    }
+  }
+  p {
+    font-size: 1.5rem !important;
+  }
+  .content-ios {
+    background-color: #eef5fd !important;
+  }
+  .content-md {
+    background-color: #eef5fd !important;
+  }
+  .item-ios {
+    border-bottom: 1px solid #f1f1f1 !important;
+  }
+  .item-md {
+    border-bottom:none;
+  }
+  .docBtn {
+    width: 92%;
+    margin: 10% auto;
+    display: block;
+    box-shadow: none!important;
+  }
+  .button-md{
+    box-shadow: none!important;
+    background: #0dabfa;
+    border-radius: 4px;
+  }
+
+  //.alertInpusCss{
+  //  margin-top: 50%;
+  //}
+}

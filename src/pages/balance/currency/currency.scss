@@ -1,0 +1,70 @@
+page-currency {
+  .toolbar-md-secondary .toolbar-background-md {
+    background-color: #22a2e1;
+  }
+  .toolbar-ios-secondary .toolbar-background-ios {
+    background-color: #22a2e1;
+  }
+  .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+  left: 0;
+  bottom: -5px;
+  background-position: left 0 top -2px;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-image: url("");
+  content: "";
+}
+  .ewmSkST{
+    position: relative;
+    text-align: center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    -moz-background-size:100% 100%;
+    background-image:  url(../assets/img/home/homeBg.png);
+    //no-repeat 0 0 fixed
+    width: 100%;
+    height:100%;
+    color: white;
+    //position: absolute;
+    top: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .card-basicTP{
+    border-radius: 10px;
+    height: 110vw;
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    margin-left: 5%;
+    top: 8%;
+  }
+
+  .pleaseZHsk{
+    height: 44px;
+    line-height: 44px;
+    border-top: 1px solid #dedede;
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+    position: absolute;
+    bottom: 10px
+
+  }
+  .pleaseP{
+    color: #0dacfa;
+    height: 44px;
+    line-height: 44px;
+    float: left;
+    margin-left: 5px;
+  }
+  ion-card img{
+
+  }
+  img{
+    max-width: 60%;
+    margin-left: 20%;
+  }
+}

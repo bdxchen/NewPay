@@ -1,0 +1,54 @@
+<!--
+  Generated template for the SetMoneyPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'set_money.setAmountTitle' | translate}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only>
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+        <!--<ion-buttons right>-->
+        <!--<button ion-button  color="primary" (click)="goAccountPay()">-->
+        <!--账户支付-->
+        <!--</button>-->
+        <!--</ion-buttons>-->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list style="margin-top: 10px">
+        <ion-item no-lines>
+            <ion-label>{{'set_money.asset' | translate}}</ion-label>
+            <ion-select [selectOptions]="selectOptionsQT" [(ngModel)]="currency"
+                        okText="{{'set_money.confirm' | translate}}" cancelText="{{'set_money.cancel' | translate}}">
+                <ion-option *ngFor="let dataTemp of data" [value]="dataTemp.symbol">{{dataTemp.symbol}}</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label>{{'set_money.amount' | translate}}</ion-label>
+            <ion-input text-end type="text"  placeholder="{{'set_money.inputAmount' | translate}}" [(ngModel)]="bzMoney"
+                       (keyup)="setmoneyJT(bzMoney)"></ion-input>
+        </ion-item>
+        <!--<ion-item no-lines style="margin-top: 1px" [hidden]="showReason" >-->
+        <!--<button ion-button clear item-end tappable (click)="ReasonsCollection()">{{'set_money.addReason' | translate}}</button>-->
+        <!--</ion-item>-->
+
+        <!--<ion-item no-lines style="margin-top: 1px" [hidden]="!showReason">-->
+        <!--<ion-label >{{'set_money.addReason' | translate}}</ion-label>-->
+        <!--<ion-input text-end placeholder="{{'set_money.inputResaon' | translate}}" [(ngModel)]="skreason"></ion-input>-->
+        <!--</ion-item>-->
+    </ion-list>
+    <button ion-button full style="width: 92%; display: block; margin: 2rem auto; background: #f9c215;" tappable (click)="setmoneyC()">{{'set_money.confirm' |
+        translate}}
+    </button>
+</ion-content>

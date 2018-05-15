@@ -1,0 +1,40 @@
+page-payment-mode {
+  .toolbar-ios-primary .toolbar-background-ios{
+    background-color: white;
+  }
+  .toolbar-ios-primary .toolbar-title-ios, .toolbar-ios-primary .bar-button-clear-ios, .toolbar-ios-primary .bar-button-default-ios{
+    color: #dedede;
+  }
+  .list-ios > .item-block:first-child{
+    border-top:none;
+  }
+  .item-radio-checked.item-ios ion-label img{
+    vertical-align: text-bottom;
+  }
+  .item-radio.item-ios ion-label img{
+    vertical-align: text-bottom;
+  }
+  .modalCssTop{
+    opacity: .5;
+    height: 50%;
+    background: #ddd;
+  }
+  h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+  }
+  .modalCssBottom{
+    //opacity: .9;
+    height: 380px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+
+  }
+}

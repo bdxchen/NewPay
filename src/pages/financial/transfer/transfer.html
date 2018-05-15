@@ -1,0 +1,67 @@
+<!--
+  Generated template for the TransferPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+    <ion-toolbar color="primary" >
+        <ion-buttons left onclick="" tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+
+        <ion-title style="text-align: center">{{'transfer.title' | translate}}</ion-title>
+
+        <ion-buttons right tappable>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+
+	<ion-list style="margin: 1rem 0;">
+    <ion-item>
+            <ion-label color="primary">币种</ion-label>
+            <ion-select [selectOptions]="selectOptions" multiple="false" [(ngModel)]="symbol" okText="确认" cancelText="取消">
+            <ion-option *ngFor="let item of coinType"  [value]="coinType.symbol">{{item.symbol}}</ion-option>
+            </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary">收款人账户</ion-label>
+        <!--请输入NewPay账户-->
+      <ion-input type="text"  placeholder="{{'transfer.inputOtherAccount' | translate}}" required   [(ngModel)]="reqCheckPyee.to_userid"></ion-input>
+    </ion-item>
+  </ion-list>
+    <ion-note item-start style="color:#FF8A2C; font-size: 1.2rem;">
+        *{{'transfer.memo' | translate}}
+    </ion-note>
+  <button ion-button block tappable (click)="nextCheckAcc()">{{'transfer.next' | translate}}</button>
+
+    <!--<button ion-button secondary (click)="showKeyboard()">Show Keyboard</button>-->
+</ion-content>
+<!--<ion-digit-keyboard-->
+        <!--[align]="keyboardSettings.align"-->
+        <!--[width]="keyboardSettings.width"-->
+        <!--[visible]="keyboardSettings.visible"-->
+        <!--[leftActionOptions]="keyboardSettings.leftActionOptions"-->
+        <!--[rightActionOptions]="keyboardSettings.rightActionOptions"-->
+        <!--[roundButtons]="keyboardSettings.roundButtons"-->
+        <!--[showLetters]="keyboardSettings.showLetters"-->
+        <!--[swipeToHide]="keyboardSettings.swipeToHide"-->
+        <!--[theme]="keyboardSettings.theme"-->
+        <!--(numberClick)="numberClick($event)"-->
+<!--&gt;-->
+    <!--<ion-toolbar no-border-bottom>-->
+        <!--<ion-buttons start>-->
+            <!--<button ion-button (click)="hideKeyboard()">Cancel</button>-->
+        <!--</ion-buttons>-->
+        <!--<ion-buttons end>-->
+            <!--<button ion-button solid *ngIf="">Next</button>-->
+            <!--<button ion-button (click)="hideKeyboard()">Done</button>-->
+        <!--</ion-buttons>-->
+    <!--</ion-toolbar>-->
+<!--</ion-digit-keyboard>-->

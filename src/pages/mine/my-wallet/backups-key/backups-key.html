@@ -1,0 +1,45 @@
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center"> {{'backups_key.title' | translate}}</ion-title>
+        <ion-buttons end="" icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content style="background-color: #eef5fd !important">
+    <ion-list style="margin-top: 10px">
+        <ion-item no-lines>
+            <ion-label item-start>
+                {{'backups_key.account' | translate}}
+            </ion-label>
+            <p item-end> {{account}}</p>
+        </ion-item>
+        <ion-item no-lines style="margin-top: 1px">
+            <ion-label item-start style="padding: 10px 0;">
+                {{'backups_key.backupWallet' | translate}}
+            </ion-label>
+            {{brainKey}}
+            <ion-textarea style="color: #2a2b2d;" [(ngModel)]="brainKey" item-end value="{{brainKey}}" disabled="disabled" rows="5" cols="20"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <div style="width: 94%;margin-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center">
+        <img src="assets/img/dangerous.png" alt="" style="width: 20px;height: 20px">
+        <p style="flex: 1;width: 94%;margin-left: 3%;color: #ff9b44;font-size: 13px">{{'backups_key.memo' |
+            translate}}</p>
+    </div>
+
+    <button ion-button style="width: 94%; background-color: #f9c215; display: block; margin: 8% auto;" tappable (click)="copyBack()">
+        {{'backups_key.backupBtn' | translate}}
+    </button>
+</ion-content>

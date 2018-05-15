@@ -1,0 +1,95 @@
+
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons left icon-only tappable (click)="goBack()">
+      <button ion-button icon-only>
+        <ion-icon name="ios-arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center">{{ 'currency_detail.balance' | translate }}</ion-title>
+    <ion-buttons end icon-only>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="cards-bg">
+  <div class="card-background-page">
+    <ion-card>
+      <img src="assets/img/home/homeBg.png"/>
+      <div class="card-title">¥200.00</div>
+      <div class="card-subtitle">BitCNY</div>
+    </ion-card>
+  </div>
+
+  <ion-list no-lines margin-top="10px">
+    <!-- Contenedor -->
+
+    <button ion-item style="border-bottom: 1px solid #dedede;" tappable (click)="toTopup()">
+      <img src="assets/img/balance/chongzhi.png" style="width: 21px;height: 21px;" item-start>
+      <span item-left>{{ 'currency_detail.refill' | translate }}</span>
+      <!--<ion-icon name="ios-arrow-forward-outline" item-end></ion-icon>-->
+    </button>
+    <button ion-item style="border-bottom: 1px solid #dedede;" tappable (click)="toWithdraw()">
+      <img src="assets/img/balance/tixian.png" style="width: 21px;height: 21px;" item-start>
+      <span item-left>{{ 'currency_detail.getCash' | translate }}</span>
+      <!--<ion-icon name="ios-arrow-forward-outline" item-end></ion-icon>-->
+    </button>
+    <button ion-item style="border-bottom: 1px solid #dedede;" tappable (click)="toTransfer()">
+      <img src="assets/img/balance/zhuanzhang.png" style="width: 21px;height: 21px;" item-start>
+      <span item-left>{{ 'currency_detail.transfer' | translate }}</span>
+    </button>
+    <button ion-item style="border-bottom: 1px solid #dedede;" tappable (click)="ChargingMoney()">
+      <img src="assets/img/balance/tibi.png" style="width: 21px;height: 21px;" item-start>
+      <span item-left>{{ 'currency_detail.refillCoin' | translate }}</span>
+    </button>
+    <button ion-item style="border-bottom: 1px solid #dedede;" tappable (click)="Currency()">
+      <img src="assets/img/balance/chongbi.png" style="width: 21px;height: 21px;" item-start>
+      <span item-left>{{ 'currency_detail.transferCoin' | translate }}</span>
+    </button>
+  </ion-list>
+</ion-content>
+
+<!--<ion-content padding>-->
+
+  <!--<ion-list >-->
+    <!--<ion-item >-->
+      <!--<ion-thumbnail item-start>-->
+        <!--<img src="assets/img/bitlogo.png">-->
+      <!--</ion-thumbnail>-->
+      <!--<h2>{{currentcurrency}}</h2>-->
+      <!--<p>可用金额:{{amount}}</p>-->
+      <!--<p>冻结金额:{{freeze}}</p>-->
+    <!--</ion-item>-->
+  <!--</ion-list>-->
+  <!--<ion-list no-border>-->
+
+    <!--<ion-list-header>-->
+      <!--<p>操作</p>-->
+    <!--</ion-list-header>-->
+
+    <!--<ion-item (click)="toTopup(currentcurrency)">-->
+      <!--<ion-icon name='md-log-in' item-start></ion-icon>-->
+      <!--充值-->
+      <!--<ion-note item-end>-->
+        <!--(10分钟内到账)-->
+      <!--</ion-note>-->
+    <!--</ion-item>-->
+    <!--<ion-item (click)="toWithdraw(currentcurrency)">-->
+      <!--<ion-icon name='md-log-out' item-start></ion-icon>-->
+      <!--提现-->
+      <!--<ion-note item-end>-->
+        <!--(10分钟内到账)-->
+      <!--</ion-note>-->
+    <!--</ion-item>-->
+    <!--<ion-item (click)="toTransfer(currentcurrency)">-->
+      <!--<ion-icon name='md-git-compare' item-start></ion-icon>-->
+      <!--转账-->
+      <!--<ion-note item-end>-->
+        <!--(实时到账)-->
+      <!--</ion-note>-->
+    <!--</ion-item>-->
+  <!--</ion-list>-->
+<!--</ion-content>-->

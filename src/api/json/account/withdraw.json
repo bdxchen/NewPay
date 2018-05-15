@@ -1,0 +1,11 @@
+{
+  "ret_code" :1,       
+  "ret_msg":"sucess",          
+  "order_no":"20170129000112233123323",		 
+	"trans_info":{
+	    "amount":"1.00",
+	    "comment":"还款",
+	    "coin_type":"BitCNY"   
+	},        
+	"ba_account":"176000000000"
+}

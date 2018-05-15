@@ -1,0 +1,88 @@
+<!--
+  Generated template for the Transfer2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!--<ion-header>-->
+
+<!--<ion-navbar color="secondary">-->
+<!--<ion-title>转账金额</ion-title>-->
+<!--</ion-navbar>-->
+
+<!--</ion-header>-->
+<ion-header no-border>
+    <ion-toolbar color="primary">
+        <ion-buttons left tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">{{'transfer2.title' | translate}}</ion-title>
+        <ion-buttons right>
+            <button ion-button icon-only>
+                <ion-icon></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-card>
+        <ion-card-content>
+            <ion-card-title>
+                <!--<span style="display: inline; font-size: 1.5rem; color: #2a2b2d;">{{'transfer2.to' | translate}}{{reqCheckPyee.nickname}}</span>-->
+                <p style="display: inline; font-size: 1.5rem; color: #2a2b2d;">({{to_userid}})</p>
+                <span style="display: inline; font-size: 1.5rem; color: #2a2b2d;">{{'transfer2.transfer' | translate}}</span>
+            </ion-card-title>
+            <p style="color:#888;font-size: 1.3rem; margin: 5px 0; text-align: center;">{{reqCheckPyee.to_userid}}</p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-list style="margin-top: 2rem">
+        <div class="transfer2_list">
+            <div class="p1">
+                <span>{{'transfer2.transferAmount' | translate}}</span>
+                <!--<div class="currency">{{//reqCheckPyee.coin_type}}</div>-->
+            </div>
+            <div class="p2">
+                <div class="symbol"[ngStyle]="{'background-image':'url(assets/img/blackMoney/CNY.png)'}"></div>
+                <input placeholder="{{'transfer2.balance' | translate}}:{{reqCheckPyee.amount}}" tappable [(ngModel)]="amountOfMoney">
+                <div class="clear"></div>
+                <!--<div class="all">{{'withdraw.all' | translate}}</div>-->
+            </div>
+            <div class="p3"><textarea placeholder="{{'transfer2.addMemo' | translate}}" maxlength="25" rows="3" [(ngModel)]="remarks" #am></textarea></div>
+        </div>
+
+        <!--<ion-item no-lines>
+            &lt;!&ndash;<ion-row>
+              <ion-col color="dark">{{'transfer2.account' | translate}}:{{reqCheckPyee.to_userid}}</ion-col>
+              <ion-col style="text-align: end" >{{'transfer2.balance' | translate}}:{{reqCheckPyee.symbol}} ({{reqCheckPyee.amount}})</ion-col>
+            </ion-row>&ndash;&gt;
+            &lt;!&ndash;<ion-label color="dark"></ion-label>&ndash;&gt;
+            <div item-start>
+                <div item-end class="currency"> {{reqCheckPyee.coin_type}}</div>
+                <p style=" float: left; font-size: 1.5rem; margin: 12px 5px 0 0; color: #a4a4a4;">
+                    {{'transfer2.transferAmount' | translate}}</p>
+            </div>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label color="dark" style="font-size: 2.7rem;">{{'transfer2.price' | translate}}</ion-label>
+            <ion-input style="font-size: 1.5rem;"
+                       placeholder="{{'transfer2.balance' | translate}}:{{reqCheckPyee.amount}}" tappable
+                       (keyup)="changeAMount(amountOfMoney)" [(ngModel)]="amountOfMoney" #am></ion-input>
+        </ion-item>
+        <ion-item no-lines>
+            &lt;!&ndash;(keyup)="beizhuKu(remarks)"&ndash;&gt;
+            <ion-textarea placeholder="{{'transfer2.addMemo' | translate}}" maxlength="25" [(ngModel)]="remarks" #am></ion-textarea>
+        </ion-item>-->
+
+    </ion-list>
+    <div class="note">
+        <div>*{{'transfer.maxmoney' | translate}}</div>
+
+    </div>
+    <button style="margin:5rem auto; width: 92%; display:block; background-color: #f9c215; opacity: .6;" ion-button
+            block tappable
+            (click)="nextFinPwd(am.value)">{{'transfer2.confirmTransfer' | translate}}
+    </button>
+</ion-content>

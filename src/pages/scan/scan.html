@@ -1,0 +1,28 @@
+<ion-header no-border cache-view="false" mode="md">
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="dismiss()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center">扫描中..</ion-title>
+        <ion-buttons end icon-only >
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content no-scroll class="qrscanner" mode="md">
+  <div class="qrscanner-area" >
+  </div> 
+   <div class="through-line"></div>
+  <div class="button-bottom">
+      <button tappable (click)="toggleLight()" ion-fab class="icon-camera" margin-right>
+          <ion-icon name="flash"></ion-icon>                  
+      </button>
+      <!--<button tappable (click)="toggleCamera()" ion-fab class="icon-camera">-->
+          <!--<ion-icon name="reverse-camera"></ion-icon>                  -->
+      <!--</button>-->
+  </div>    
+</ion-content>

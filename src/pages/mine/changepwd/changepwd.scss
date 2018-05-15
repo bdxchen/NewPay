@@ -1,0 +1,75 @@
+page-changepwd {
+  .item-md .item-button {
+    padding: 0 2.6em;
+    height: 25px;
+    font-size: 1.4rem;
+  }
+  .toolbar-ios .segment-button{
+    max-width: 100%;
+    font-size: 1.6rem;
+  }
+  /***** segment颜色定制 start *********/
+  .segment-md .segment-button {
+    color: color($colors, gray) !important;
+  }
+  .segment-md .segment-button.segment-activated {
+    color: color($colors, actColor) !important;
+    //font-weight: bold;
+    .bolder-sm{
+      border: 5px solid color($colors, actColor);
+      width: 20px;
+      margin: 0 auto;
+    }
+  }
+  .segment-md .segment-button.segment-activated {
+    color: #2196f3 !important;
+    //font-weight: bold;
+  }
+  /***** segment颜色定制 end ********/
+
+  /*********** 背景色 start **********/
+  .primary-bg {
+    .toolbar {
+      .toolbar-background {
+        background-color: color($colors, primary);
+      }
+      .toolbar-title{
+        color: color($colors, light1);
+      }
+    }
+    .segment-md .segment-button {
+      color: color($colors, light-gray) !important;
+    }
+    //.segment-md .segment-button.segment-activated{
+    //  color: color($colors, light2) ;
+    //  font-weight: bold;
+    //  .bolder-sm{
+    //    border: 5px solid color($colors, light2);
+    //    width: 20px;
+    //    margin: 0 auto;
+    //  }
+    //}
+  }
+  .segment-md .segment-button.segment-activated .bolder-sm{
+    border: 3px solid #2196f3;
+    width: 25px;
+    margin: 0 auto;
+  }
+
+  /*********** 背景色 end **********/
+  .segment-md .segment-button{
+    background-color: white;
+  }
+  .toolbar-background-ios {
+    background: #ffffff;
+  }
+  .toolbar-background-md {
+    background: #ffffff;
+  }
+  .segment-md .segment-button {
+    color: #888888 !important;
+  }
+  .segment-md .segment-button {
+    color: #888888 !important;
+  }
+}

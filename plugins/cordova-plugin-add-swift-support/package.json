@@ -1,0 +1,74 @@
+{
+  "_from": "cordova-plugin-add-swift-support@1.6.0",
+  "_id": "cordova-plugin-add-swift-support@1.6.0",
+  "_inBundle": false,
+  "_integrity": "sha1-KG8AFR7e4Rh2eKibblVlrHrBOj8=",
+  "_location": "/cordova-plugin-add-swift-support",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cordova-plugin-add-swift-support@1.6.0",
+    "name": "cordova-plugin-add-swift-support",
+    "escapedName": "cordova-plugin-add-swift-support",
+    "rawSpec": "1.6.0",
+    "saveSpec": null,
+    "fetchSpec": "1.6.0"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/cordova-plugin-add-swift-support/download/cordova-plugin-add-swift-support-1.6.0.tgz",
+  "_shasum": "286f00151edee1187678a89b6e5565ac7ac13a3f",
+  "_spec": "cordova-plugin-add-swift-support@1.6.0",
+  "_where": "/Users/wupeng/ppdpay-cli",
+  "author": {
+    "name": "Alexis Kofman",
+    "email": "alexis.kofman@gmail.com",
+    "url": "http://twitter.com/alexiskofman"
+  },
+  "bugs": {
+    "url": "https://github.com/akofman/cordova-plugin-add-swift-support/issues"
+  },
+  "bundleDependencies": [
+    "xcode"
+  ],
+  "cordova": {
+    "id": "cordova-plugin-add-swift-support",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "dependencies": {
+    "xcode": "^0.8.9"
+  },
+  "deprecated": false,
+  "description": "Add Swift support to your iOS plugins",
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "homepage": "https://github.com/akofman/cordova-plugin-add-swift-support",
+  "keywords": [
+    "cordova",
+    "ios",
+    "swift",
+    "swift-support",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova:plugin"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-add-swift-support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akofman/cordova-plugin-add-swift-support.git"
+  },
+  "scripts": {
+    "test": "eslint src"
+  },
+  "version": "1.6.0"
+}

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: __local_jars__:E.\newpay\newpay\platforms\android\libs\jcore-android-1.1.7.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/jcore-android-1.1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

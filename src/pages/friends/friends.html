@@ -1,0 +1,156 @@
+<!--
+  Generated template for the FriendsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border no-lines>
+    <ion-navbar color="secondary">
+        <ion-title content style="text-align: center">{{'friends.title' | translate}}</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <!--<ion-searchbar tappable (ionInput)="getItems($event)" placeholder="{{'friends.searchMemo' | translate}}"-->
+    <!--autocomplete="on" mode='ios' color='orange' showCancelButton='true'-->
+    <!--cancelButtonText="{{'friends.cancel' | translate}}" (ionCancel)="onCancelSearch($event)">-->
+    <!--</ion-searchbar>-->
+    <!--<div *ngIf="!isSearching">-->
+        <!--<div #IndexedMenu class="indexed-menu">-->
+            <!--<div class="indexed-item"-->
+                 <!--[class.activate]="item === index"-->
+                 <!--*ngFor="let item of indexes;let i = index"-->
+                 <!--(click)="selectIndex(i)">-->
+                <!--{{ item }}-->
+            <!--</div>-->
+    <!--</div>-->
+    <!--<ion-list #scheduleList>-->
+            <!--<ion-item-group *ngFor="let group of formatContacts" #IonItemGroup>-->
+
+                <!--<ion-item-divider sticky index-key="item.belong" style="background: #F4F6F9;">-->
+                    <!--<ion-label style="background: #F4F6F9;">-->
+                        <!--{{group.key}}-->
+                    <!--</ion-label>-->
+                <!--</ion-item-divider>-->
+
+                <!--<ion-item-sliding *ngFor="let i of group.value" #slidingItem>-->
+                    <!--<ion-item no-lines (click)="calling(i)">-->
+                        <!--<ion-thumbnail item-start>-->
+                            <!--&lt;!&ndash;<img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=48412762,3957934545&fm=27&gp=0.jpg">&ndash;&gt;-->
+                            <!--<div class="user_head">{{i.lastName}}</div>-->
+                        <!--</ion-thumbnail>-->
+                        <!--<div item-left>-->
+                            <!--<h2>{{i.displayName}}</h2>-->
+                            <!--<p>{{i.phoneNumber}}</p >-->
+                        <!--</div>-->
+                        <!--<button item-end *ngIf="i.flag==1" ion-button style="background-color: #2faff9"-->
+                                <!--(click)="validate(i)">{{'friends.invitation' | translate}}-->
+                        <!--</button>-->
+                        <!--<button item-end *ngIf="i.flag==2" ion-button clear style="color: #dedede">-->
+                            <!--{{'friends.alreadyInvitation' | translate}}-->
+                        <!--</button>-->
+                    <!--</ion-item>-->
+                    <!--&lt;!&ndash;<ion-item>&ndash;&gt;-->
+                    <!--&lt;!&ndash;{{ i.displayName + ' ' + i.name }}&ndash;&gt;-->
+                    <!--&lt;!&ndash;</ion-item>&ndash;&gt;-->
+                <!--</ion-item-sliding>-->
+
+            <!--</ion-item-group>-->
+        <!--</ion-list>-->
+
+        <!--<div class="modal"-->
+             <!--[class.show]="showModal">-->
+            <!--{{index}}-->
+        <!--</div>-->
+    <!--</div>-->
+
+
+    <!--<ion-index-list *ngIf="!isSearching">-->
+    <!--<ion-index-list>-->
+    <!--<ion-index-section *ngFor="let group of formatContacts"  [index]="group.key">-->
+    <!--<ion-index-cell *ngFor="let item of group.value | orderBy:['pinyinName']">-->
+    <!--<ion-item no-lines (click)="calling(item)">-->
+    <!--<ion-thumbnail item-start>-->
+        <!--<div class="user_head">{{item.lastName}}</div>-->
+    <!--</ion-thumbnail>-->
+    <!--<div item-left>-->
+    <!--<h2>{{item.displayName}}</h2>-->
+    <!--<p>{{item.phoneNumber}}</p >-->
+    <!--</div>-->
+    <!--<button item-end *ngIf="item.flag==1" ion-button style="background-color: #2faff9"-->
+    <!--(click)="validate(item)">{{'friends.invitation' | translate}}-->
+    <!--</button>-->
+    <!--<button item-end *ngIf="item.flag==2" ion-button clear style="color: #dedede">-->
+    <!--{{'friends.alreadyInvitation' | translate}}-->
+    <!--</button>-->
+    <!--</ion-item>-->
+    <!--</ion-index-cell>-->
+    <!--</ion-index-section>-->
+    <!--</ion-index-list>-->
+    <!--<ion-list *ngIf="isSearching" class="contacts-list">-->
+        <!--<ion-item no-lines style="margin-top: 1px" *ngFor="let item of searchingItems" tappable (click)="calling(item)">-->
+
+            <!--<div item-left>-->
+                <!--<h2>{{item.displayName}}</h2>-->
+                <!--<p>{{item.phoneNumber}}</p >-->
+            <!--</div>-->
+            <!--<button *ngIf="item.flag==1" ion-button item-end style="background-color: #2faff9" tappable-->
+                    <!--(click)="validate(item)">{{'friends.invitation' | translate}}-->
+            <!--</button>-->
+            <!--<button *ngIf="item.flag==2" ion-button item-end clear style="color: #dedede">{{'friends.alreadyInvitation'-->
+                <!--| translate}}-->
+            <!--</button>-->
+        <!--</ion-item>-->
+    <!--</ion-list>-->
+    <ion-index-list [hasTop]="true">
+        <div top>
+            <ion-searchbar tappable (ionInput)="getItems($event)" placeholder="{{'friends.searchMemo' | translate}}"
+            autocomplete="on" mode='ios' color='orange' showCancelButton='true'
+            cancelButtonText="{{'friends.cancel' | translate}}" (ionCancel)="onCancelSearch($event)">
+            </ion-searchbar>
+        </div>
+        <div *ngIf="!isSearching">
+            <ng-container   *ngFor="let group of formatContacts">
+                <ion-index-section  [index] = "group.key">
+                    <ng-container *ngFor="let item of group.value | orderBy:['pinyinName']">
+                        <ion-index-cell >
+                            <ion-item  (click)="calling(item)">
+                                <ion-thumbnail item-start>
+                                    <div class="user_head">{{item.lastName}}</div>
+                                </ion-thumbnail>
+                                <div item-left>
+                                    <h2>{{item.displayName}}</h2>
+                                    <p>{{item.phoneNumber}}</p >
+                                </div>
+                                <button item-end *ngIf="item.flag==1" ion-button style="background-color: #2faff9"
+                                        (click)="validate(item)">{{'friends.invitation' | translate}}
+                                </button>
+                                <button item-end *ngIf="item.flag==2" ion-button clear style="color: #dedede">
+                                    {{'friends.alreadyInvitation' | translate}}
+                                </button>
+                            </ion-item>
+                        </ion-index-cell>
+                    </ng-container>
+
+                </ion-index-section>
+            </ng-container>
+        </div>
+
+        <ng-container *ngIf="isSearching">
+            <ion-list  class="contacts-list">
+            <ion-item  style="" *ngFor="let item of searchingItems" tappable (click)="calling(item)">
+            <div item-left>
+            <h2>{{item.displayName}}</h2>
+            <p>{{item.phoneNumber}}</p >
+            </div>
+            <button *ngIf="item.flag==1" ion-button item-end style="background-color: #2faff9" tappable
+            (click)="validate(item)">{{'friends.invitation' | translate}}
+            </button>
+            <button *ngIf="item.flag==2" ion-button item-end clear style="color: #dedede">{{'friends.alreadyInvitation'
+            | translate}}
+            </button>
+            </ion-item>
+            </ion-list>
+        </ng-container>
+    </ion-index-list>
+</ion-content>

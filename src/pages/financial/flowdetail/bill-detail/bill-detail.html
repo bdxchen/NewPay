@@ -1,0 +1,150 @@
+<!--
+  Generated template for the BillDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header no-border>
+    <ion-toolbar color="secondary">
+        <ion-buttons left icon-only tappable (click)="goBack()">
+            <button ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title style="text-align: center" *ngIf="temp=='topup'">{{'bill_detail.topup' |
+            translate}}{{'bill_detail.title' | translate }}
+        </ion-title>
+        <ion-title style="text-align: center" *ngIf="temp=='transfer'">{{'bill_detail.transfer' |
+            translate}}{{'bill_detail.title' | translate }}
+        </ion-title>
+        <ion-title style="text-align: center" *ngIf="temp=='withdraw'">{{'bill_detail.withdraw' |
+            translate}}{{'bill_detail.title' | translate }}
+        </ion-title>
+        <ion-title style="text-align: center" *ngIf="temp=='withdrawcoin'">{{'bill_detail.withdrawcoin' |
+            translate}}{{'bill_detail.title' | translate }}
+        </ion-title>
+        <ion-buttons end icon-only>
+            <button ion-button icon-only>
+                <ion-icon name=""></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!--<div class="contents">
+        <span style="">{{order.oppaccountno}}</span>
+        <img src="assets/img/bill/transfer.png" alt="" style="width: 21px;
+    height: 18px;
+    margin-left: 5px;">
+    </div>
+    <div class="card-background-page">
+        <ion-card>
+            <div class="card-title"><span *ngIf="order.identity=='0'">-</span><span *ngIf="order.identity=='1'">+</span>{{order.quantity}}
+            </div>
+            <div class="card-subtitle">{{order.statusTemp}}</div>
+        </ion-card>
+
+    </div>-->
+    <div class="cont">
+        <p class="p1">{{order.oppaccountno}}</p>
+        <p class="p2">
+            <span *ngIf="order.identity=='0'">-</span>
+            <span *ngIf="order.identity=='1'">+</span>
+            <span>{{order.quantity}}</span>
+        </p>
+        <p class="p3">{{order.statusTemp}}</p>
+    </div>
+
+    <ul class="details_list">
+        <li>
+            <span>{{'bill_detail.coinType' | translate }}</span>
+            <span>{{order.coin}}</span>
+        </li>
+        <li *ngIf="temp=='topup' || temp=='withdraw'">
+            <span>{{'bill_detail.payType' | translate }}</span>
+            <span *ngIf="order.payType=='1'">{{'bill_detail.weixinPay' | translate }}</span>
+            <span *ngIf="order.payType=='2'">{{'bill_detail.aliPay' | translate }}</span>
+            <span *ngIf="order.payType=='3'">{{'bill_detail.bankCard' | translate }}</span>
+        </li>
+        <li>
+            <span>订单类型</span>
+            <span *ngIf="temp=='topup'">充值</span>
+            <span *ngIf="temp=='transfer'">转账</span>
+            <span *ngIf="temp=='withdraw'">提现</span>
+            <span *ngIf="temp=='withdrawcoin'">提币</span>
+        </li>
+        <li>
+            <span>{{'bill_detail.memo' | translate }}</span>
+            <span>{{order.comment}}</span>
+        </li>
+        <li *ngIf="temp=='!withdraw'">
+            <span>{{'bill_detail.otherAccount' | translate }}</span>
+            <span>{{order.oppaccountno}}</span>
+        </li>
+    </ul>
+    <ul class="details_list" style="border-top: 1px solid #f1f1f1;">
+        <li>
+            <span>{{'bill_detail.datetime' | translate }}</span>
+            <span>{{order.time}}</span>
+        </li>
+        <li>
+            <span>{{'bill_detail.orderNo' | translate }}</span>
+            <span>{{order.orderno}}</span>
+        </li>
+    </ul>
+    <!--<ion-item no-lines style="margin-top: 25px">
+        <span item-start>{{'bill_detail.coinType' | translate }}</span>
+        <span item-end>{{order.coin}}</span>
+    </ion-item>
+    <ion-item no-lines *ngIf="temp=='topup' || temp=='withdraw'">
+        <span item-start>{{'bill_detail.payType' | translate }}</span>
+        <span item-end *ngIf="order.payType=='1'">{{'bill_detail.weixinPay' | translate }}</span>
+        <span item-end *ngIf="order.payType=='2'">{{'bill_detail.aliPay' | translate }}</span>
+        <span item-end *ngIf="order.payType=='3'">{{'bill_detail.bankCard' | translate }}</span>
+    </ion-item>
+    <ion-item no-lines>
+        <span item-start>订单类型</span>
+        <span item-end *ngIf="temp=='topup'">充值</span>
+        <span item-end *ngIf="temp=='transfer'">转账</span>
+        <span item-end *ngIf="temp=='withdraw'">提现</span>
+        <span item-end *ngIf="temp=='withdrawcoin'">提币</span>
+    </ion-item>
+    <ion-item no-lines>
+        <span item-start>{{'bill_detail.memo' | translate }}</span>
+        <span item-end>{{order.comment}}</span>
+    </ion-item>
+    <ion-item no-lines style="border-bottom: 1px solid #dedede">
+        <span item-start>{{'bill_detail.otherAccount' | translate }}</span>
+        <span item-end>{{order.oppaccountno}}</span>
+
+    </ion-item>
+    <ion-item no-lines>
+        <span item-start>{{'bill_detail.datetime' | translate }}</span>
+        <span item-end>{{order.time}}</span>
+    </ion-item>
+    <ion-item no-lines>
+        <span item-start>{{'bill_detail.orderNo' | translate }}</span>
+        <span item-end>{{order.orderno}}</span>
+    </ion-item>-->
+
+    <div style="position: fixed;bottom: 0;left: 10px;right: 10px;" *ngIf="temp=='topup' && order.status=='0'">
+        <ion-row>
+            <ion-col col-4 class="text-left">
+                <button ion-button style="background-color:#2faff9" tappable (click)="Order('0')">
+                    {{'bill_detail.cancelOrder' | translate }}
+                </button>
+            </ion-col>
+            <ion-col col-4 class="text-center">
+                <button ion-button style="background-color:#2faff9" tappable (click)="Order('1')">
+                    {{'bill_detail.continuePay' | translate }}
+                </button>
+            </ion-col>
+            <ion-col col-4 class="text-right">
+                <button ion-button style="background-color:#2faff9" tappable (click)="Order('2')">{{'bill_detail.finish' | translate }}
+                </button>
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>
